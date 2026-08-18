@@ -25,8 +25,7 @@ export default function ProductInfo({
   const [selectedOptions, setSelectedOptions] = useState({});
   const [unitPrice, setUnitPrice] = useState(discountedPrice);
   const [unitOriginal, setUnitOriginal] = useState(originalPrice);
-  const [checkingOut, setCheckingOut] = useState(false);
-  const { addToCart, checkout, loading } = useCart();
+  const { buyNow, loading } = useCart();
 
   const handleOption = (optionName, choiceValue) => {
     const newOptions = { ...selectedOptions, [optionName]: choiceValue };
@@ -41,23 +40,13 @@ export default function ProductInfo({
   };
 
   const handleShopNow = async () => {
-    setCheckingOut(true);
-    try {
-      await addToCart(productId, 1);
-      await checkout();
-    } catch (err) {
-      console.error("Checkout error:", err);
-    }
-    setCheckingOut(false);
+    await buyNow(productId, 1);
   };
 
-  const totalPrice = unitPrice?.toFixed(2);
-  const totalOriginal = unitOriginal?.toFixed(2);
   const currentDiscount = Math.round((1 - unitPrice / unitOriginal) * 100);
 
   return (
     <div className={styles.info}>
-
       <h1 className={styles.title}>{productName}</h1>
 
       <div className={styles.meta}>
@@ -69,8 +58,8 @@ export default function ProductInfo({
       </div>
 
       <div className={styles.priceRow}>
-        <span className={styles.original}>${totalOriginal} USD</span>
-        <span className={styles.discounted}>${totalPrice} USD</span>
+        <span className={styles.original}>${unitOriginal?.toFixed(2)} USD</span>
+        <span className={styles.discounted}>${unitPrice?.toFixed(2)} USD</span>
         {currentDiscount > 0 && (
           <span className={styles.badge}>{currentDiscount}% OFF</span>
         )}
@@ -119,13 +108,12 @@ export default function ProductInfo({
         </div>
       ))}
 
-      {/* Single checkout button */}
       <button
         className={styles.shopNow}
         onClick={handleShopNow}
-        disabled={checkingOut}
+        disabled={loading}
       >
-        {checkingOut ? "Processing..." : "Shop Now"}
+        {loading ? "Processing..." : "Shop Now"}
       </button>
 
       <p className={styles.shopPay}>Zero-Interest Installments with Shop Pay</p>
@@ -138,7 +126,6 @@ export default function ProductInfo({
           className={styles.paymentImg}
         />
       </div>
-
     </div>
   );
 }

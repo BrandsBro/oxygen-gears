@@ -25,8 +25,7 @@ export default function ProductActions({
   const [selectedOptions, setSelectedOptions] = useState({});
   const [unitPrice, setUnitPrice] = useState(discountedPrice);
   const [unitOriginal, setUnitOriginal] = useState(originalPrice);
-  const [checkingOut, setCheckingOut] = useState(false);
-  const { addToCart, checkout } = useCart();
+  const { buyNow, loading } = useCart();
 
   const handleOption = (optionName, choiceValue) => {
     const newOptions = { ...selectedOptions, [optionName]: choiceValue };
@@ -40,19 +39,6 @@ export default function ProductActions({
     }
   };
 
-  const handleShopNow = async () => {
-    setCheckingOut(true);
-    try {
-      await addToCart(productId, 1);
-      await checkout();
-    } catch (err) {
-      console.error("Checkout error:", err);
-    }
-    setCheckingOut(false);
-  };
-
-  const totalPrice = unitPrice?.toFixed(2);
-  const totalOriginal = unitOriginal?.toFixed(2);
   const currentDiscount = Math.round((1 - unitPrice / unitOriginal) * 100);
 
   return (
@@ -65,8 +51,8 @@ export default function ProductActions({
       </div>
 
       <div className={styles.priceRow}>
-        <span className={styles.original}>${totalOriginal} USD</span>
-        <span className={styles.discounted}>${totalPrice} USD</span>
+        <span className={styles.original}>${unitOriginal?.toFixed(2)} USD</span>
+        <span className={styles.discounted}>${unitPrice?.toFixed(2)} USD</span>
         {currentDiscount > 0 && (
           <span className={styles.badge}>{currentDiscount}% OFF</span>
         )}
@@ -118,10 +104,10 @@ export default function ProductActions({
 
       <button
         className={styles.buyNow}
-        onClick={handleShopNow}
-        disabled={checkingOut}
+        onClick={() => buyNow(productId, 1)}
+        disabled={loading}
       >
-        {checkingOut ? "Processing..." : "Shop Now"}
+        {loading ? "Processing..." : "Shop Now"}
       </button>
 
       <p className={styles.morePayment}>Zero-Interest Installments with Shop Pay</p>
