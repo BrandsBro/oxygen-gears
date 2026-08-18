@@ -43,7 +43,7 @@ export default function ProductInfo({
   const handleShopNow = async () => {
     setCheckingOut(true);
     try {
-      await addToCart(productId, selectedOptions, 1);
+      await addToCart(productId, 1);
       await checkout();
     } catch (err) {
       console.error("Checkout error:", err);
