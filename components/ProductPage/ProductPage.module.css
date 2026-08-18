@@ -1,0 +1,46 @@
+.page {
+  width: 100%;
+  background: #fff;
+  padding: 40px;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* LEFT — sticky */
+.left {
+  position: sticky;
+  top: 90px; /* below navbar */
+}
+
+/* RIGHT — scrolls normally */
+.right {
+  min-height: 100vh;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .page {
+    padding: 0;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .left {
+    position: static;
+  }
+
+  .right {
+    padding: 20px;
+    min-height: auto;
+  }
+}

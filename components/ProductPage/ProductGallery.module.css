@@ -1,0 +1,132 @@
+.gallery {
+  width: 100%;
+}
+
+/* ── DESKTOP ── */
+.desktopWrap {
+  display: flex;
+  gap: 12px;
+  align-items: start;
+}
+
+/* Vertical thumbnail column */
+.thumbCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 80px;
+  flex-shrink: 0;
+  max-height: 520px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.thumbCol::-webkit-scrollbar {
+  display: none;
+}
+
+.thumb {
+  width: 80px;
+  height: 80px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  background: #f5f5f5;
+  flex-shrink: 0;
+  transition: border-color 0.2s;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb.active {
+  border-color: #0a74da;
+}
+
+/* Main image */
+.mainWrap {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.mainImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── MOBILE ── hidden on desktop */
+.mobileSlider {
+  display: none;
+}
+
+.mobileDots {
+  display: none;
+}
+
+/* ── MOBILE breakpoint ── */
+@media (max-width: 768px) {
+  .desktopWrap {
+    display: none;
+  }
+
+  .mobileSlider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    width: 100%;
+  }
+
+  .mobileSlider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobileSlide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    aspect-ratio: 1 / 1;
+  }
+
+  .mobileImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+  }
+
+  .mobileDots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 0;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .dotActive {
+    background: #0a74da;
+    transform: scale(1.3);
+  }
+}

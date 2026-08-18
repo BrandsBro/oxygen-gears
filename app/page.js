@@ -1,17 +1,19 @@
-import { wixClient } from "@/lib/wixClient";
+import Hero from "@/components/Hero/Hero";
+import Features from "@/components/Features/Features";
+import ProductShowcase from "@/components/ProductShowcase/ProductShowcase";
+import EverydayLife from "@/components/EverydayLife/EverydayLife";
+import OurStory from "@/components/OurStory/OurStory";
+import FAQ from "@/components/FAQ/FAQ";
 
-export default async function Home() {
-  const { items } = await wixClient.products.queryProducts().find();
-
+export default function Home() {
   return (
-    <div>
-      <h1>My Store</h1>
-      {items.map((product) => (
-        <div key={product._id}>
-          <h2>{product.name}</h2>
-          <p>${product.price?.price}</p>
-        </div>
-      ))}
-    </div>
+    <main>
+      <Hero />
+      <Features />
+      <ProductShowcase />
+      <EverydayLife />
+      <OurStory />
+      <FAQ />
+    </main>
   );
 }

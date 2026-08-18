@@ -1,0 +1,118 @@
+.section {
+  width: 100%;
+  padding: 80px 40px;
+  background: #fff;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 64px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Each row */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Reverse — image right, text left */
+.reverse {
+  direction: rtl;
+}
+
+.reverse .imgWrap,
+.reverse .text {
+  direction: ltr;
+}
+
+/* Image */
+.imgWrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text */
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.number {
+  font-size: 48px;
+  font-weight: 900;
+  color: #0a74da;
+  line-height: 1;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.3;
+}
+
+.desc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Mobile — stack everything */
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 20px;
+  }
+
+  .heading {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .list {
+    gap: 48px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    direction: ltr !important;
+  }
+
+  .number {
+    font-size: 36px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+}
