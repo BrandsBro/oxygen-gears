@@ -22,11 +22,10 @@ export default function ProductInfo({
   variants,
   productId,
 }) {
-  const [quantity, setQuantity] = useState(1);
   const [selectedOptions, setSelectedOptions] = useState({});
   const [unitPrice, setUnitPrice] = useState(discountedPrice);
   const [unitOriginal, setUnitOriginal] = useState(originalPrice);
-  const [added, setAdded] = useState(false);
+  const [checkingOut, setCheckingOut] = useState(false);
   const { addToCart, checkout, loading } = useCart();
 
   const handleOption = (optionName, choiceValue) => {
@@ -41,14 +40,19 @@ export default function ProductInfo({
     }
   };
 
-  const handleAddToCart = async () => {
-    await addToCart(productId, selectedOptions, quantity);
-    setAdded(true);
-    setTimeout(() => setAdded(false), 2000);
+  const handleShopNow = async () => {
+    setCheckingOut(true);
+    try {
+      await addToCart(productId, selectedOptions, 1);
+      await checkout();
+    } catch (err) {
+      console.error("Checkout error:", err);
+    }
+    setCheckingOut(false);
   };
 
-  const totalPrice = (unitPrice * quantity).toFixed(2);
-  const totalOriginal = (unitOriginal * quantity).toFixed(2);
+  const totalPrice = unitPrice?.toFixed(2);
+  const totalOriginal = unitOriginal?.toFixed(2);
   const currentDiscount = Math.round((1 - unitPrice / unitOriginal) * 100);
 
   return (
@@ -115,22 +119,13 @@ export default function ProductInfo({
         </div>
       ))}
 
-      {/* Shop Now — goes straight to checkout */}
+      {/* Single checkout button */}
       <button
         className={styles.shopNow}
-        onClick={checkout}
-        disabled={loading}
+        onClick={handleShopNow}
+        disabled={checkingOut}
       >
-        {loading ? "Processing..." : "Shop Now"}
-      </button>
-
-      {/* Add to Cart */}
-      <button
-        className={styles.addToCart}
-        onClick={handleAddToCart}
-        disabled={loading}
-      >
-        {loading ? "Adding..." : added ? "✓ Added!" : "Add to Cart"}
+        {checkingOut ? "Processing..." : "Shop Now"}
       </button>
 
       <p className={styles.shopPay}>Zero-Interest Installments with Shop Pay</p>

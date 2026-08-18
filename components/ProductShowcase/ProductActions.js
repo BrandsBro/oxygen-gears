@@ -22,12 +22,11 @@ export default function ProductActions({
   variants,
   productId,
 }) {
-  const [quantity, setQuantity] = useState(1);
   const [selectedOptions, setSelectedOptions] = useState({});
   const [unitPrice, setUnitPrice] = useState(discountedPrice);
   const [unitOriginal, setUnitOriginal] = useState(originalPrice);
-  const [added, setAdded] = useState(false);
-  const { addToCart, checkout, loading } = useCart();
+  const [checkingOut, setCheckingOut] = useState(false);
+  const { addToCart, checkout } = useCart();
 
   const handleOption = (optionName, choiceValue) => {
     const newOptions = { ...selectedOptions, [optionName]: choiceValue };
@@ -41,14 +40,19 @@ export default function ProductActions({
     }
   };
 
-  const handleAddToCart = async () => {
-    await addToCart(productId, selectedOptions, quantity);
-    setAdded(true);
-    setTimeout(() => setAdded(false), 2000);
+  const handleShopNow = async () => {
+    setCheckingOut(true);
+    try {
+      await addToCart(productId, selectedOptions, 1);
+      await checkout();
+    } catch (err) {
+      console.error("Checkout error:", err);
+    }
+    setCheckingOut(false);
   };
 
-  const totalPrice = (unitPrice * quantity).toFixed(2);
-  const totalOriginal = (unitOriginal * quantity).toFixed(2);
+  const totalPrice = unitPrice?.toFixed(2);
+  const totalOriginal = unitOriginal?.toFixed(2);
   const currentDiscount = Math.round((1 - unitPrice / unitOriginal) * 100);
 
   return (
@@ -112,32 +116,15 @@ export default function ProductActions({
         </div>
       ))}
 
-      <div className={styles.quantityGroup}>
-        <p className={styles.optionLabel}>Quantity</p>
-        <div className={styles.quantity}>
-          <button onClick={() => setQuantity((q) => Math.max(1, q - 1))} className={styles.qtyBtn}>−</button>
-          <span className={styles.qtyNum}>{quantity}</span>
-          <button onClick={() => setQuantity((q) => q + 1)} className={styles.qtyBtn}>+</button>
-        </div>
-      </div>
-
-      <button
-        className={styles.addToCart}
-        onClick={handleAddToCart}
-        disabled={loading}
-      >
-        {loading ? "Adding..." : added ? "✓ Added to Cart!" : "Add to Cart"}
-      </button>
-
       <button
         className={styles.buyNow}
-        onClick={checkout}
-        disabled={loading}
+        onClick={handleShopNow}
+        disabled={checkingOut}
       >
-        Buy Now
+        {checkingOut ? "Processing..." : "Shop Now"}
       </button>
 
-      <p className={styles.morePayment}>More payment options</p>
+      <p className={styles.morePayment}>Zero-Interest Installments with Shop Pay</p>
       <Link href={`/products/${brand.featuredProductSlug}`} className={styles.viewDetails}>
         View full details →
       </Link>
