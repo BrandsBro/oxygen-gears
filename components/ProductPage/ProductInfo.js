@@ -2,6 +2,7 @@
 import { useState } from "react";
 import styles from "./ProductInfo.module.css";
 import UrgencyBar from "./UrgencyBar";
+import { useCart } from "@/lib/cartContext";
 
 const bullets = [
   "Adjustable 1–7L/min Oxygen Flow",
@@ -19,11 +20,14 @@ export default function ProductInfo({
   discountPercent,
   options,
   variants,
+  productId,
 }) {
   const [quantity, setQuantity] = useState(1);
   const [selectedOptions, setSelectedOptions] = useState({});
   const [unitPrice, setUnitPrice] = useState(discountedPrice);
   const [unitOriginal, setUnitOriginal] = useState(originalPrice);
+  const [added, setAdded] = useState(false);
+  const { addToCart, checkout, loading } = useCart();
 
   const handleOption = (optionName, choiceValue) => {
     const newOptions = { ...selectedOptions, [optionName]: choiceValue };
@@ -37,6 +41,12 @@ export default function ProductInfo({
     }
   };
 
+  const handleAddToCart = async () => {
+    await addToCart(productId, selectedOptions, quantity);
+    setAdded(true);
+    setTimeout(() => setAdded(false), 2000);
+  };
+
   const totalPrice = (unitPrice * quantity).toFixed(2);
   const totalOriginal = (unitOriginal * quantity).toFixed(2);
   const currentDiscount = Math.round((1 - unitPrice / unitOriginal) * 100);
@@ -44,10 +54,8 @@ export default function ProductInfo({
   return (
     <div className={styles.info}>
 
-      {/* Title */}
       <h1 className={styles.title}>{productName}</h1>
 
-      {/* Stars */}
       <div className={styles.meta}>
         <div className={styles.stars}>
           {"★★★★★"}
@@ -56,7 +64,6 @@ export default function ProductInfo({
         </div>
       </div>
 
-      {/* Price */}
       <div className={styles.priceRow}>
         <span className={styles.original}>${totalOriginal} USD</span>
         <span className={styles.discounted}>${totalPrice} USD</span>
@@ -65,17 +72,14 @@ export default function ProductInfo({
         )}
       </div>
 
-      {/* Bullets */}
       <ul className={styles.bullets}>
         {bullets.map((b, i) => (
           <li key={i} className={styles.bullet}>• {b}</li>
         ))}
       </ul>
 
-      {/* Urgency — dynamic + animated */}
       <UrgencyBar />
 
-      {/* Options */}
       {options.map((option) => (
         <div key={option.name} className={styles.optionGroup}>
           <p className={styles.optionLabel}>{option.name}</p>
@@ -111,11 +115,26 @@ export default function ProductInfo({
         </div>
       ))}
 
-      {/* Shop Now */}
-      <button className={styles.shopNow}>Shop Now</button>
+      {/* Shop Now — goes straight to checkout */}
+      <button
+        className={styles.shopNow}
+        onClick={checkout}
+        disabled={loading}
+      >
+        {loading ? "Processing..." : "Shop Now"}
+      </button>
+
+      {/* Add to Cart */}
+      <button
+        className={styles.addToCart}
+        onClick={handleAddToCart}
+        disabled={loading}
+      >
+        {loading ? "Adding..." : added ? "✓ Added!" : "Add to Cart"}
+      </button>
+
       <p className={styles.shopPay}>Zero-Interest Installments with Shop Pay</p>
 
-      {/* Secure Checkout */}
       <div className={styles.secureBox}>
         <p className={styles.secureTitle}>100% Secure Checkout</p>
         <img

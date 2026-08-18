@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./ProductActions.module.css";
 import Link from "next/link";
 import brand from "@/config/brand";
+import { useCart } from "@/lib/cartContext";
 
 const bullets = [
   "90–94% Pure Oxygen",
@@ -19,11 +20,14 @@ export default function ProductActions({
   discountedPrice,
   options,
   variants,
+  productId,
 }) {
   const [quantity, setQuantity] = useState(1);
   const [selectedOptions, setSelectedOptions] = useState({});
   const [unitPrice, setUnitPrice] = useState(discountedPrice);
   const [unitOriginal, setUnitOriginal] = useState(originalPrice);
+  const [added, setAdded] = useState(false);
+  const { addToCart, checkout, loading } = useCart();
 
   const handleOption = (optionName, choiceValue) => {
     const newOptions = { ...selectedOptions, [optionName]: choiceValue };
@@ -35,6 +39,12 @@ export default function ProductActions({
       setUnitPrice(match.variant.priceData.discountedPrice ?? match.variant.priceData.price);
       setUnitOriginal(match.variant.priceData.price);
     }
+  };
+
+  const handleAddToCart = async () => {
+    await addToCart(productId, selectedOptions, quantity);
+    setAdded(true);
+    setTimeout(() => setAdded(false), 2000);
   };
 
   const totalPrice = (unitPrice * quantity).toFixed(2);
@@ -111,8 +121,22 @@ export default function ProductActions({
         </div>
       </div>
 
-      <button className={styles.addToCart}>Add to Cart</button>
-      <button className={styles.buyNow}>Buy with G Pay</button>
+      <button
+        className={styles.addToCart}
+        onClick={handleAddToCart}
+        disabled={loading}
+      >
+        {loading ? "Adding..." : added ? "✓ Added to Cart!" : "Add to Cart"}
+      </button>
+
+      <button
+        className={styles.buyNow}
+        onClick={checkout}
+        disabled={loading}
+      >
+        Buy Now
+      </button>
+
       <p className={styles.morePayment}>More payment options</p>
       <Link href={`/products/${brand.featuredProductSlug}`} className={styles.viewDetails}>
         View full details →
