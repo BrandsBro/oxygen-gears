@@ -5,6 +5,8 @@ import Link from "next/link";
 import brand from "@/config/brand";
 import { useCart } from "@/lib/cartContext";
 
+const DEFAULT_VARIANT_ID = "c0bb889f-9bfb-47ea-ad3d-e5ff250cd2fb";
+
 const bullets = [
   "90–94% Pure Oxygen",
   "Up to 4 hrs Battery Life",
@@ -25,6 +27,7 @@ export default function ProductActions({
   const [selectedOptions, setSelectedOptions] = useState({});
   const [unitPrice, setUnitPrice] = useState(discountedPrice);
   const [unitOriginal, setUnitOriginal] = useState(originalPrice);
+  const [selectedVariantId, setSelectedVariantId] = useState(DEFAULT_VARIANT_ID);
   const { buyNow, loading } = useCart();
 
   const handleOption = (optionName, choiceValue) => {
@@ -33,9 +36,12 @@ export default function ProductActions({
     const match = variants.find((v) =>
       Object.entries(newOptions).every(([k, val]) => v.choices?.[k] === val)
     );
-    if (match?.variant?.priceData) {
-      setUnitPrice(match.variant.priceData.discountedPrice ?? match.variant.priceData.price);
-      setUnitOriginal(match.variant.priceData.price);
+    if (match) {
+      setSelectedVariantId(match._id);
+      if (match?.variant?.priceData) {
+        setUnitPrice(match.variant.priceData.discountedPrice ?? match.variant.priceData.price);
+        setUnitOriginal(match.variant.priceData.price);
+      }
     }
   };
 
@@ -104,7 +110,7 @@ export default function ProductActions({
 
       <button
         className={styles.buyNow}
-        onClick={() => buyNow(productId, 1)}
+        onClick={() => buyNow(productId, selectedVariantId, 1)}
         disabled={loading}
       >
         {loading ? "Processing..." : "Shop Now"}

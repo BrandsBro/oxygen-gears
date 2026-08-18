@@ -4,6 +4,8 @@ import styles from "./ProductInfo.module.css";
 import UrgencyBar from "./UrgencyBar";
 import { useCart } from "@/lib/cartContext";
 
+const DEFAULT_VARIANT_ID = "c0bb889f-9bfb-47ea-ad3d-e5ff250cd2fb";
+
 const bullets = [
   "Adjustable 1–7L/min Oxygen Flow",
   "Up to 8 Hours Continuous Flow",
@@ -25,6 +27,7 @@ export default function ProductInfo({
   const [selectedOptions, setSelectedOptions] = useState({});
   const [unitPrice, setUnitPrice] = useState(discountedPrice);
   const [unitOriginal, setUnitOriginal] = useState(originalPrice);
+  const [selectedVariantId, setSelectedVariantId] = useState(DEFAULT_VARIANT_ID);
   const { buyNow, loading } = useCart();
 
   const handleOption = (optionName, choiceValue) => {
@@ -33,14 +36,17 @@ export default function ProductInfo({
     const match = variants.find((v) =>
       Object.entries(newOptions).every(([k, val]) => v.choices?.[k] === val)
     );
-    if (match?.variant?.priceData) {
-      setUnitPrice(match.variant.priceData.discountedPrice ?? match.variant.priceData.price);
-      setUnitOriginal(match.variant.priceData.price);
+    if (match) {
+      setSelectedVariantId(match._id);
+      if (match?.variant?.priceData) {
+        setUnitPrice(match.variant.priceData.discountedPrice ?? match.variant.priceData.price);
+        setUnitOriginal(match.variant.priceData.price);
+      }
     }
   };
 
   const handleShopNow = async () => {
-    await buyNow(productId, 1);
+    await buyNow(productId, selectedVariantId, 1);
   };
 
   const currentDiscount = Math.round((1 - unitPrice / unitOriginal) * 100);
