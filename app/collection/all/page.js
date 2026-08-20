@@ -6,20 +6,21 @@ import styles from "@/components/ProductGrid/ProductGrid.module.css";
 export default async function CollectionPage() {
   const { items } = await wixClient.products.queryProducts().find();
 
-  const products = items.map((p) => ({
-    id: p._id,
-    slug: p.slug,
-    name: p.name,
-    price: p.price?.discountedPrice ?? p.price?.price,
-    originalPrice: p.price?.price,
-    image1: getWixImageUrl(p.media?.items?.[0]?.image?.url),
-    image2: getWixImageUrl(p.media?.items?.[1]?.image?.url),
-    description: p.description,
-  }));
+  const products = items
+    .map((p) => ({
+      id: p._id,
+      slug: p.slug,
+      name: p.name,
+      price: p.price?.discountedPrice ?? p.price?.price,
+      originalPrice: p.price?.price,
+      image1: getWixImageUrl(p.media?.items?.[0]?.image?.url),
+      image2: getWixImageUrl(p.media?.items?.[1]?.image?.url),
+    }))
+    .sort((a, b) => b.price - a.price); // highest price first
 
   return (
     <div>
-      {/* Banner */}
+      {/* Banner — full width */}
       <div className={styles.banner}>
         <img
           src="https://static.wixstatic.com/media/8f1bc7_57ef4012d7f841b182e19656f9ad97f2~mv2.webp"
@@ -41,7 +42,6 @@ export default async function CollectionPage() {
         </div>
       </div>
 
-      {/* Products Grid */}
       <ProductGrid products={products} />
     </div>
   );
