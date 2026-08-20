@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./ProductInfo.module.css";
-import UrgencyBar from "./UrgencyBar";
+import UrgencyBar, { SoldCount } from "./UrgencyBar";
 import { useCart } from "@/lib/cartContext";
 
 const DEFAULT_VARIANT_ID = "c0bb889f-9bfb-47ea-ad3d-e5ff250cd2fb";
@@ -55,12 +55,14 @@ export default function ProductInfo({
     <div className={styles.info}>
       <h1 className={styles.title}>{productName}</h1>
 
+      {/* Stars + Sold Count */}
       <div className={styles.meta}>
         <div className={styles.stars}>
           {"★★★★★"}
           <span className={styles.rating}>4.9/5</span>
           <span className={styles.reviewCount}>(450+ reviews)</span>
         </div>
+        <SoldCount />
       </div>
 
       <div className={styles.priceRow}>
@@ -114,11 +116,7 @@ export default function ProductInfo({
         </div>
       ))}
 
-      <button
-        className={styles.shopNow}
-        onClick={handleShopNow}
-        disabled={loading}
-      >
+      <button className={styles.shopNow} onClick={handleShopNow} disabled={loading}>
         {loading ? "Processing..." : "Shop Now"}
       </button>
 

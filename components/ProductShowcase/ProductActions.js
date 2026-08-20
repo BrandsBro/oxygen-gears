@@ -4,7 +4,7 @@ import styles from "./ProductActions.module.css";
 import Link from "next/link";
 import brand from "@/config/brand";
 import { useCart } from "@/lib/cartContext";
-import UrgencyBar from "@/components/ProductPage/UrgencyBar";
+import UrgencyBar, { SoldCount } from "@/components/ProductPage/UrgencyBar";
 
 const DEFAULT_VARIANT_ID = "c0bb889f-9bfb-47ea-ad3d-e5ff250cd2fb";
 
@@ -52,10 +52,12 @@ export default function ProductActions({
     <div className={styles.info}>
       <h1 className={styles.title}>{productName}</h1>
 
+      {/* Stars + Sold Count */}
       <div className={styles.stars}>
         {"★★★★★"}
         <span className={styles.reviewCount}>450 Reviews</span>
       </div>
+      <SoldCount />
 
       <div className={styles.priceRow}>
         <span className={styles.original}>${unitOriginal?.toFixed(2)} USD</span>
@@ -74,7 +76,6 @@ export default function ProductActions({
         ))}
       </div>
 
-      {/* Urgency Bar */}
       <UrgencyBar />
 
       {options.map((option) => (
@@ -122,7 +123,6 @@ export default function ProductActions({
 
       <p className={styles.morePayment}>Zero-Interest Installments with Shop Pay</p>
 
-      {/* Secure Checkout */}
       <div className={styles.secureBox}>
         <p className={styles.secureTitle}>100% Secure Checkout</p>
         <img

@@ -202,3 +202,18 @@
   .discounted { font-size: 20px; }
   .choiceBtn { min-width: 130px; }
 }
+
+@media (max-width: 768px) {
+  .optionChoices {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .optionChoices::-webkit-scrollbar { display: none; }
+  .choiceBtn {
+    flex-shrink: 0;
+    min-width: 120px;
+  }
+}
