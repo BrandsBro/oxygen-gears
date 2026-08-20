@@ -15,6 +15,7 @@ export default async function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
 
+        {/* Col 1 — Logo + Featured Product */}
         <div className={styles.col}>
           <Image src={brand.logo} alt={brand.name} width={180} height={45} style={{ objectFit: "contain" }} />
           <p className={styles.latestLabel}>LATEST MODEL!</p>
@@ -27,25 +28,29 @@ export default async function Footer() {
           </Link>
         </div>
 
-        <div className={styles.col}>
-          <p className={styles.colHeading}>PAGES</p>
-          <Link href="/">Home</Link>
-          <Link href="/collection/all">Oxygen Concentrator</Link>
-          <Link href="/about">About Us</Link>
-          <Link href="/faq">FAQ's</Link>
-          <Link href="/contact">Contact Us</Link>
+        {/* Cols 2+3 wrapped in menusRow on mobile */}
+        <div className={styles.menusRow}>
+          <div className={styles.col}>
+            <p className={styles.colHeading}>PAGES</p>
+            <Link href="/">Home</Link>
+            <Link href="/collection/all">Oxygen Concentrator</Link>
+            <Link href="/about">About Us</Link>
+            <Link href="/faq">FAQ's</Link>
+            <Link href="/contact">Contact Us</Link>
+          </div>
+
+          <div className={styles.col}>
+            <p className={styles.colHeading}>POLICY PAGES</p>
+            <Link href="/refund-policy">Refund Policy</Link>
+            <Link href="/return-policy">Return Policy</Link>
+            <Link href="/payment-policy">Payment Policy</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/shipping-policy">Shipping Policy</Link>
+            <Link href="/terms">Terms of Service</Link>
+          </div>
         </div>
 
-        <div className={styles.col}>
-          <p className={styles.colHeading}>POLICY PAGES</p>
-          <Link href="/refund-policy">Refund Policy</Link>
-          <Link href="/return-policy">Return Policy</Link>
-          <Link href="/payment-policy">Payment Policy</Link>
-          <Link href="/privacy-policy">Privacy Policy</Link>
-          <Link href="/shipping-policy">Shipping Policy</Link>
-          <Link href="/terms">Terms of Service</Link>
-        </div>
-
+        {/* Col 4 — Contact */}
         <div className={styles.col}>
           <p className={styles.colHeading}>CONTACT INFO</p>
           <a href={`tel:${brand.phone}`} className={styles.contact}>
@@ -57,6 +62,7 @@ export default async function Footer() {
         </div>
 
       </div>
+
       <div className={styles.bottomBar}>
         <p>© {new Date().getFullYear()} {brand.name}. All rights reserved.</p>
       </div>

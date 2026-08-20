@@ -6,13 +6,12 @@
 .inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 40px;
+  padding: 60px 0;
   display: grid;
   grid-template-columns: 1.6fr 1fr 1fr 1fr;
   gap: 40px;
 }
 
-/* Columns */
 .col {
   display: flex;
   flex-direction: column;
@@ -26,9 +25,7 @@
   transition: color 0.2s;
 }
 
-.col a:hover {
-  color: #0a74da;
-}
+.col a:hover { color: #0a74da; }
 
 .colHeading {
   font-size: 12px;
@@ -38,7 +35,6 @@
   margin: 0 0 4px;
 }
 
-/* Latest Model */
 .latestLabel {
   font-size: 11px;
   font-weight: 800;
@@ -52,7 +48,6 @@
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  margin-top: 4px;
 }
 
 .productImg {
@@ -88,7 +83,6 @@
   margin: 0;
 }
 
-/* Contact */
 .contact {
   display: flex;
   align-items: center;
@@ -99,14 +93,11 @@
   transition: color 0.2s;
 }
 
-.contact:hover {
-  color: #0a74da;
-}
+.contact:hover { color: #0a74da; }
 
-/* Bottom Bar */
 .bottomBar {
   border-top: 2px solid #0a74da;
-  padding: 16px 40px;
+  padding: 16px 0;
   text-align: center;
 }
 
@@ -121,6 +112,7 @@
   .inner {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    padding: 40px 20px;
   }
 }
 
@@ -129,10 +121,72 @@
   .inner {
     grid-template-columns: 1fr;
     padding: 40px 20px;
-    gap: 32px;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .bottomBar {
-    padding: 16px 20px;
+  /* Featured product centered */
+  .col:first-child {
+    align-items: center;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+  }
+
+  .productCard {
+    justify-content: center;
+  }
+
+  /* Pages + Policy side by side */
+  .col:nth-child(2),
+  .col:nth-child(3) {
+    width: 50%;
+  }
+
+  .menusRow {
+    display: flex;
+    width: 100%;
+    gap: 0;
+    padding: 24px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Contact centered below */
+  .col:last-child {
+    align-items: center;
+    padding-top: 24px;
+    width: 100%;
+  }
+
+  .bottomBar { padding: 16px 20px; }
+}
+
+.menusRow {
+  display: contents;
+}
+
+@media (max-width: 768px) {
+  .menusRow {
+    display: flex;
+    width: 100%;
+    gap: 0;
+    padding: 24px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .menusRow .col {
+    flex: 1;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 12px;
+  }
+
+  .menusRow .col:first-child {
+    border-right: 1px solid #ddd;
+    border-bottom: none;
+    padding-bottom: 0;
   }
 }

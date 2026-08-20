@@ -7,36 +7,31 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-/* Top Banner */
 .banner {
   background: #0a74da;
   color: #fff;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  padding: 8px 40px;
+  padding: 8px 0;
 }
 
 .bannerInner {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  /* Offset left to align text above logo which is center of nav */
-  padding-left: 0;
+  text-align: center;
+  padding: 0 40px;
 }
 
-/* Nav */
 .nav {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 40px;
+  padding: 14px 0;
 }
 
-/* Left Links */
 .navLeft {
   display: flex;
   gap: 24px;
@@ -51,21 +46,15 @@
   transition: color 0.2s;
 }
 
-.navLeft a:hover {
-  color: #0a74da;
-}
+.navLeft a:hover { color: #0a74da; }
 
-/* Logo — always centered */
 .logo {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-.logo a {
-  display: flex;
-  align-items: center;
-}
+.logo a { display: flex; align-items: center; }
 
 .logoImg {
   width: 260px;
@@ -73,7 +62,6 @@
   object-fit: contain;
 }
 
-/* Right Actions */
 .navRight {
   display: flex;
   align-items: center;
@@ -93,69 +81,7 @@
   transition: background 0.2s;
 }
 
-.orderBtn:hover {
-  background: #085bb5;
-}
-
-.cartIcon {
-  font-size: 22px;
-  text-decoration: none;
-}
-
-/* Hamburger - mobile only */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-/* Mobile Menu */
-.mobileMenu {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 20px 24px;
-  background: #fff;
-  border-top: 1px solid #eee;
-}
-
-.mobileMenu a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .navLeft {
-    display: none;
-  }
-
-  .navRight {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .nav {
-    padding: 14px 20px;
-  }
-
-  .banner {
-    padding: 8px 20px;
-  }
-
-  /* Mobile logo separate control */
-  .logoImg {
-    width: 180px;
-    height: 40px;
-  }
-}
+.orderBtn:hover { background: #085bb5; }
 
 .cartIcon {
   position: relative;
@@ -177,5 +103,43 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.mobileMenu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .navLeft { display: none; }
+  .navRight { display: none; }
+  .hamburger { display: block; }
+
+  .nav { padding: 14px 20px; }
+  .banner { padding: 8px 20px; }
+  .bannerInner { padding: 0; }
+
+  .logoImg {
+    width: 180px;
+    height: 40px;
+  }
 }
