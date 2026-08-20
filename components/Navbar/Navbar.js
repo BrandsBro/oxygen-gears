@@ -19,7 +19,7 @@ export default function Navbar() {
       <nav className={styles.nav}>
         <div className={styles.navLeft}>
           <Link href="/">Home</Link>
-          <Link href="/products">All Products</Link>
+          <Link href="/collection/all">All Products</Link>
           <Link href="/about">About Us</Link>
           <Link href="/track">Track Order</Link>
         </div>
@@ -44,7 +44,7 @@ export default function Navbar() {
       {menuOpen && (
         <div className={styles.mobileMenu}>
           <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link href="/products" onClick={() => setMenuOpen(false)}>All Products</Link>
+          <Link href="/collection/all" onClick={() => setMenuOpen(false)}>All Products</Link>
           <Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
           <Link href="/track" onClick={() => setMenuOpen(false)}>Track Order</Link>
           <Link href={`/products/${brand.featuredProductSlug}`} onClick={() => setMenuOpen(false)} className={styles.orderBtn}>Order Now</Link>

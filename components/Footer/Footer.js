@@ -30,7 +30,7 @@ export default async function Footer() {
         <div className={styles.col}>
           <p className={styles.colHeading}>PAGES</p>
           <Link href="/">Home</Link>
-          <Link href="/products">Oxygen Concentrator</Link>
+          <Link href="/collection/all">Oxygen Concentrator</Link>
           <Link href="/about">About Us</Link>
           <Link href="/faq">FAQ's</Link>
           <Link href="/contact">Contact Us</Link>
