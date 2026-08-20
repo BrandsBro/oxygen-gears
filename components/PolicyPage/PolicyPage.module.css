@@ -8,6 +8,7 @@
 .inner {
   max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .heading {
@@ -26,6 +27,7 @@
   font-size: 15px;
   color: #444;
   line-height: 1.8;
+  text-align: center;
 }
 
 .content h2 {
@@ -37,12 +39,34 @@
 
 .content p { margin: 0; }
 
-.content ul, .content ol {
-  padding-left: 24px;
+.content ul,
+.content ol {
+  padding-left: 0;
   margin: 0;
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.content li::before {
+  content: "• ";
+  color: #0a74da;
+  font-weight: 700;
+}
+
+.content ol {
+  counter-reset: item;
+}
+
+.content ol li {
+  counter-increment: item;
+}
+
+.content ol li::before {
+  content: counter(item) ". ";
+  color: #0a74da;
+  font-weight: 700;
 }
 
 .content a {
@@ -60,6 +84,7 @@
   font-size: 13px;
   color: #666;
   line-height: 1.7;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
