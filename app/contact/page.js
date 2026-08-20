@@ -11,14 +11,16 @@ export default function ContactPage() {
     orderNumber: "", orderDate: "", paymentMethod: "",
     state: "", city: "", message: "",
   });
-  const [status, setStatus] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setError(false);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -26,10 +28,14 @@ export default function ContactPage() {
         body: JSON.stringify(form),
       });
       const data = await res.json();
-      setStatus(data.success ? "success" : "error");
-      if (data.success) setForm({ firstName: "", lastName: "", email: "", phone: "", orderNumber: "", orderDate: "", paymentMethod: "", state: "", city: "", message: "" });
+      if (data.success) {
+        setShowPopup(true);
+        setForm({ firstName: "", lastName: "", email: "", phone: "", orderNumber: "", orderDate: "", paymentMethod: "", state: "", city: "", message: "" });
+      } else {
+        setError(true);
+      }
     } catch {
-      setStatus("error");
+      setError(true);
     }
     setLoading(false);
   };
@@ -43,8 +49,7 @@ export default function ContactPage() {
           <h1 className={styles.heading}>Contact Us</h1>
           <p className={styles.subtext}>Have questions or need help? We'll get back to you as soon as possible!</p>
 
-          {status === "success" && <div className={styles.successMsg}>✅ Message sent! We'll be in touch soon.</div>}
-          {status === "error" && <div className={styles.errorMsg}>❌ Something went wrong. Please try again.</div>}
+          {error && <div className={styles.errorMsg}>❌ Something went wrong. Please try again.</div>}
 
           <form onSubmit={handleSubmit} className={styles.form}>
             <div className={styles.row}>
@@ -112,11 +117,7 @@ export default function ContactPage() {
         <div className={styles.infoSide}>
           <h2 className={styles.infoHeading}>Don't be Shy, Say Hello!</h2>
           <p className={styles.infoText}>Have questions or need help? Contact us below, and we'll get back to you as soon as possible!</p>
-          <img
-            src="https://static.wixstatic.com/media/8f1bc7_378e4bc11f3f4cb8bb4d98c4f32a8c34~mv2.avif"
-            alt="Contact"
-            className={styles.img}
-          />
+          <img src="https://static.wixstatic.com/media/8f1bc7_378e4bc11f3f4cb8bb4d98c4f32a8c34~mv2.avif" alt="Contact" className={styles.img} />
           <div className={styles.contactInfo}>
             <p><strong>Contact Info:</strong></p>
             <p>📧 <a href={`mailto:${brand.email}`}>{brand.email}</a></p>
@@ -125,6 +126,26 @@ export default function ContactPage() {
         </div>
 
       </div>
+
+      {/* Success Popup */}
+      {showPopup && (
+        <div className={styles.overlay} onClick={() => setShowPopup(false)}>
+          <div className={styles.popup} onClick={e => e.stopPropagation()}>
+            <div className={styles.popupIcon}>✅</div>
+            <h2 className={styles.popupTitle}>Message Sent!</h2>
+            <p className={styles.popupText}>
+              Thank you for reaching out! Our team will get back to you within <strong>24–48 hours</strong>.
+            </p>
+            <p className={styles.popupEmail}>
+              A confirmation has been sent to your email.
+            </p>
+            <button className={styles.popupBtn} onClick={() => setShowPopup(false)}>
+              Done
+            </button>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
