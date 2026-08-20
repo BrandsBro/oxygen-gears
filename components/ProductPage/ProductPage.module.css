@@ -13,15 +13,16 @@
   align-items: start;
 }
 
-/* LEFT — sticky */
+/* LEFT — sticky so it stays in view while right side scrolls */
 .left {
   position: sticky;
-  top: 90px; /* below navbar */
+  top: 90px;
+  align-self: start;
 }
 
 /* RIGHT — scrolls normally */
 .right {
-  min-height: 100vh;
+  align-self: start;
 }
 
 /* Mobile */
@@ -41,6 +42,5 @@
 
   .right {
     padding: 20px;
-    min-height: auto;
   }
 }
