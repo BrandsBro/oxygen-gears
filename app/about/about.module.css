@@ -1,0 +1,37 @@
+.page {
+  width: 100%;
+  background: #fff;
+  padding: 80px 40px;
+  min-height: 60vh;
+}
+
+.inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 40px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.9;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .page { padding: 48px 20px; }
+  .heading { font-size: 26px; }
+  .content p { font-size: 14px; }
+}

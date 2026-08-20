@@ -8,6 +8,7 @@ import { useCart } from "@/lib/cartContext";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const { cartCount } = useCart();
 
   return (
@@ -20,7 +21,25 @@ export default function Navbar() {
         <div className={styles.navLeft}>
           <Link href="/">Home</Link>
           <Link href="/collection/all">All Products</Link>
-          <Link href="/about">About Us</Link>
+
+          {/* About Us Dropdown */}
+          <div
+            className={styles.dropdown}
+            onMouseEnter={() => setAboutOpen(true)}
+            onMouseLeave={() => setAboutOpen(false)}
+          >
+            <button className={styles.dropdownTrigger}>
+              About Us <span className={styles.arrow}>{aboutOpen ? "∧" : "∨"}</span>
+            </button>
+            {aboutOpen && (
+              <div className={styles.dropdownMenu}>
+                <Link href="/about" onClick={() => setAboutOpen(false)}>About Us</Link>
+                <Link href="/user-manual" onClick={() => setAboutOpen(false)}>User Manual</Link>
+                <Link href="/faq" onClick={() => setAboutOpen(false)}>FAQ's</Link>
+              </div>
+            )}
+          </div>
+
           <Link href="/track">Track Order</Link>
         </div>
 
@@ -46,6 +65,8 @@ export default function Navbar() {
           <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link href="/collection/all" onClick={() => setMenuOpen(false)}>All Products</Link>
           <Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
+          <Link href="/user-manual" onClick={() => setMenuOpen(false)}>User Manual</Link>
+          <Link href="/faq" onClick={() => setMenuOpen(false)}>FAQ's</Link>
           <Link href="/track" onClick={() => setMenuOpen(false)}>Track Order</Link>
           <Link href={`/products/${brand.featuredProductSlug}`} onClick={() => setMenuOpen(false)} className={styles.orderBtn}>Order Now</Link>
         </div>
