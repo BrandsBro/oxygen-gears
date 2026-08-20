@@ -198,3 +198,23 @@
 .field select:focus {
   border-color: #0a74da;
 }
+
+.field select {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  cursor: pointer;
+  appearance: auto;
+}
+
+.field select:focus {
+  border-color: #0a74da;
+}
