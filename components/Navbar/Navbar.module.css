@@ -195,3 +195,19 @@
   background: #f0f7ff;
   color: #0a74da;
 }
+
+/* Fix dropdown gap — menu closes before mouse reaches it */
+.dropdownMenu {
+  margin-top: 0 !important;
+  padding-top: 16px !important;
+  top: 100% !important;
+}
+
+.dropdown::after {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 100%;
+  left: 0;
+  top: 100%;
+}
