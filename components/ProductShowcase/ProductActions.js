@@ -4,6 +4,7 @@ import styles from "./ProductActions.module.css";
 import Link from "next/link";
 import brand from "@/config/brand";
 import { useCart } from "@/lib/cartContext";
+import UrgencyBar from "@/components/ProductPage/UrgencyBar";
 
 const DEFAULT_VARIANT_ID = "c0bb889f-9bfb-47ea-ad3d-e5ff250cd2fb";
 
@@ -73,6 +74,9 @@ export default function ProductActions({
         ))}
       </div>
 
+      {/* Urgency Bar */}
+      <UrgencyBar />
+
       {options.map((option) => (
         <div key={option.name} className={styles.optionGroup}>
           <p className={styles.optionLabel}>{option.name}</p>
@@ -117,6 +121,17 @@ export default function ProductActions({
       </button>
 
       <p className={styles.morePayment}>Zero-Interest Installments with Shop Pay</p>
+
+      {/* Secure Checkout */}
+      <div className={styles.secureBox}>
+        <p className={styles.secureTitle}>100% Secure Checkout</p>
+        <img
+          src="https://static.wixstatic.com/media/20cc08_07f97ca4fab44dff946baa18b969876e~mv2.webp"
+          alt="Secure Payment Methods"
+          className={styles.paymentImg}
+        />
+      </div>
+
       <Link href={`/products/${brand.featuredProductSlug}`} className={styles.viewDetails}>
         View full details →
       </Link>

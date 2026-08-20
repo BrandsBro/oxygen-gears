@@ -231,3 +231,25 @@
   .bullet { font-size: 12px; }
   .choiceBtn { min-width: 130px; }
 }
+
+.secureBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  border: none;
+}
+
+.secureTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  margin: 0;
+  text-align: center;
+}
+
+.paymentImg {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
