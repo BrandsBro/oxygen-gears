@@ -1,34 +1,22 @@
 import styles from "./Footer.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { wixClient } from "@/lib/wixClient";
-import { getWixImageUrl } from "@/lib/wixUtils";
 import brand from "@/config/brand";
 
-export default async function Footer() {
-  const { items } = await wixClient.products.queryProducts().find();
-  const product = items.find((p) => p.slug === brand.featuredProductSlug) || items[0];
-  const productImage = getWixImageUrl(product?.media?.items?.[0]?.image?.url);
-  const productPrice = product?.price?.discountedPrice ?? product?.price?.price;
-
+export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
 
-        {/* Col 1 — Logo + Featured Product */}
+        {/* Col 1 — Logo + Disclaimer */}
         <div className={styles.col}>
           <Image src={brand.logo} alt={brand.name} width={180} height={45} style={{ objectFit: "contain" }} />
-          <p className={styles.latestLabel}>LATEST MODEL!</p>
-          <Link href={`/products/${brand.featuredProductSlug}`} className={styles.productCard}>
-            <img src={productImage} alt={product?.name} className={styles.productImg} />
-            <div className={styles.productInfo}>
-              <p className={styles.productName}>{product?.name}</p>
-              <p className={styles.productPrice}>${productPrice?.toFixed(2)}</p>
-            </div>
-          </Link>
+          <p className={styles.disclaimer}>
+            <strong>Important Disclaimer:</strong> This product is intended for general wellness, comfort, and lifestyle use only. It is not a medical device and is not intended to diagnose, treat, cure, prevent, or monitor any disease or health condition. It should not be used as a substitute for professional medical care or any device recommended by a healthcare provider. Please consult a licensed healthcare professional if you have questions about whether this type of product is appropriate for you.
+          </p>
         </div>
 
-        {/* Cols 2+3 wrapped in menusRow on mobile */}
+        {/* Cols 2+3 */}
         <div className={styles.menusRow}>
           <div className={styles.col}>
             <p className={styles.colHeading}>PAGES</p>
