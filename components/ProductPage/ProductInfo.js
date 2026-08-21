@@ -6,7 +6,7 @@ import { useCart } from "@/lib/cartContext";
 
 const DEFAULT_VARIANT_ID = "c0bb889f-9bfb-47ea-ad3d-e5ff250cd2fb";
 
-const bullets = [
+const defaultBullets = [
   "Adjustable 1–7L/min Oxygen Flow",
   "AI-Powered Breath Detection",
   "Portable & Lightweight Design",
@@ -15,10 +15,11 @@ const bullets = [
   "Designed for Freedom and Flexibility",
 ];
 
-export default function ProductInfo({
+export default function ProductInfo({ bullets: propBullets,
   productName, originalPrice, discountedPrice,
   discountPercent, options, variants, productId,
 }) {
+  const bullets = propBullets || defaultBullets;
   const [selectedOptions, setSelectedOptions] = useState({});
   const [unitPrice, setUnitPrice] = useState(discountedPrice);
   const [unitOriginal, setUnitOriginal] = useState(originalPrice);

@@ -17,17 +17,28 @@ import styles from "@/components/ProductPage/ProductPage.module.css";
 import { notFound } from "next/navigation";
 import brand from "@/config/brand";
 
+// Map slug → product config
+const productConfigs = {
+  "1-7lmin-smart-portable-oxygen-concentrator-10-hours-battery-adjustable-flow": () =>
+    import("@/config/products/1-7lmin-smart-portable-oxygen-concentrator-10-hours-battery-adjustable-flow"),
+};
+
 export default async function ProductPage({ params }) {
   const { slug } = await params;
   const { items } = await wixClient.products.queryProducts().find();
   const product = items.find((p) => p.slug === slug);
   if (!product) return notFound();
 
-  const imageItems = getMediaItems(product.media?.items);
+  // Load product config or empty fallback
+  let config = {};
+  if (productConfigs[slug]) {
+    const mod = await productConfigs[slug]();
+    config = mod.default;
+  }
 
-  // Prepend video if this is the featured product
-  const mediaItems = (brand.featuredProductVideo && slug === brand.featuredProductSlug)
-    ? [{ type: "video", url: brand.featuredProductVideo, thumbnail: imageItems[0]?.url }, ...imageItems]
+  const imageItems = getMediaItems(product.media?.items);
+  const mediaItems = config.videoUrl
+    ? [{ type: "video", url: config.videoUrl, thumbnail: imageItems[0]?.url }, ...imageItems]
     : imageItems;
 
   const originalPrice = product.price?.price;
@@ -52,21 +63,21 @@ export default async function ProductPage({ params }) {
               options={options}
               variants={variants}
               productId={product._id}
-              description={product.description}
+              bullets={config.productBullets}
             />
           </div>
         </div>
       </div>
-      <ProductFeatures />
+      {config.productFeatures && <ProductFeatures config={config.productFeatures} />}
       <WhySwitching />
-      <OxygenOnTheGo />
-      <ProductDetails />
+      {config.oxygenOnTheGo && <OxygenOnTheGo config={config.oxygenOnTheGo} />}
+      {config.productDetails && <ProductDetails sections={config.productDetails} />}
       <StayPowered />
-      <AdditionalInfo />
-      <InsideBox />
+      {config.additionalInfo && <AdditionalInfo config={config.additionalInfo} />}
+      {config.insideBox && <InsideBox config={config.insideBox} />}
       <TrustedBy />
-      <Reviews />
-      <ProductFAQ />
+      <Reviews csvUrl={config.reviewsCsv} />
+      {config.productFaq && <ProductFAQ faqs={config.productFaq} />}
       <ContactBar />
     </>
   );

@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "./Reviews.module.css";
 
-const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7ViyXXaS8ztprK23idlwxqx7Yew74w1QT-qHyjr4EjZHccxdA_DD3yfhsQmsBmWPzK5t00a2m--qh/pub?output=csv";
+
 
 const INITIAL_LOAD = 20;
 const LOAD_MORE_COUNT = 10;
@@ -27,7 +27,7 @@ function formatDate(d) {
   } catch { return d; }
 }
 
-export default function Reviews() {
+export default function Reviews({ csvUrl }) {
   const [allReviews, setAllReviews] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [limit, setLimit] = useState(INITIAL_LOAD);
@@ -42,7 +42,7 @@ export default function Reviews() {
   const gridRef = useRef(null);
 
   useEffect(() => {
-    fetch(CSV_URL + "&t=" + Date.now())
+    fetch(csvUrl || "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7ViyXXaS8ztprK23idlwxqx7Yew74w1QT-qHyjr4EjZHccxdA_DD3yfhsQmsBmWPzK5t00a2m--qh/pub?output=csv" + "&t=" + Date.now())
       .then(r => r.text())
       .then(text => {
         const rows = csvToArray(text);
