@@ -6,7 +6,7 @@ const brand = {
   email: "hello@oxygengears.com",
   phone: "+1 000-000-0000",
   freeShippingText: "🚚 FREE SHIPPING ON ALL ORDERS",
-  featuredProductSlug: "1-7lmin-smart-portable-oxygen-concentrator-adjustable-flow",
+  featuredProductSlug: "1-7lmin-smart-portable-oxygen-concentrator-10-hours-battery-adjustable-flow",
 };
 
 export default brand;
