@@ -5,21 +5,13 @@ import brand from "@/config/brand";
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      {/* Desktop Image */}
+
+      {/* Desktop */}
       <img
         src="https://static.wixstatic.com/media/8f1bc7_b623cc5ebfe543fda64c27ddf0d209bc~mv2.avif"
         alt="Hero"
         className={styles.desktopImg}
       />
-
-      {/* Mobile Image */}
-      <img
-        src="https://static.wixstatic.com/media/8f1bc7_b623cc5ebfe543fda64c27ddf0d209bc~mv2.avif"
-        alt="Hero Mobile"
-        className={styles.mobileImg}
-      />
-
-      {/* Desktop Overlay */}
       <div className={styles.overlay}>
         <div className={styles.content}>
           <h1 className={styles.title}>
@@ -37,9 +29,14 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Mobile Overlay — heading + button only */}
-      <div className={styles.mobileOverlay}>
-        <div className={styles.mobileContent}>
+      {/* Mobile — image with text overlay */}
+      <div className={styles.mobileHero}>
+        <img
+          src="https://static.wixstatic.com/media/8f1bc7_b623cc5ebfe543fda64c27ddf0d209bc~mv2.avif"
+          alt="Hero Mobile"
+          className={styles.mobileImg}
+        />
+        <div className={styles.mobileOverlay}>
           <h1 className={styles.mobileTitle}>
             Non-Medical Oxygen Concentrators Built for Comfort and Mobility
           </h1>
@@ -48,6 +45,7 @@ export default function Hero() {
           </Link>
         </div>
       </div>
+
     </section>
   );
 }
