@@ -1,12 +1,11 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import styles from "./ImageGallery.module.css";
 
-export default function ImageGallery({ images, productName }) {
+export default function ImageGallery({ mediaItems = [], productName }) {
   const [selected, setSelected] = useState(0);
   const mobileSliderRef = useRef(null);
 
-  // Mobile — sync scroll to selected
   const handleMobileScroll = () => {
     if (!mobileSliderRef.current) return;
     const index = Math.round(
@@ -24,51 +23,76 @@ export default function ImageGallery({ images, productName }) {
     setSelected(index);
   };
 
+  const current = mediaItems[selected];
+
   return (
     <div className={styles.gallery}>
 
-      {/* ── DESKTOP ── Main Image */}
+      {/* ── DESKTOP ── Main Media */}
       <div className={styles.desktopMain}>
-        <img
-          src={images[selected]}
-          alt={`${productName} ${selected + 1}`}
-          className={styles.mainImg}
-        />
+        {current?.type === "video" ? (
+          <video
+            key={current.url}
+            src={current.url}
+            controls
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={styles.mainImg}
+          />
+        ) : (
+          <img src={current?.url} alt={productName} className={styles.mainImg} />
+        )}
       </div>
 
       {/* ── DESKTOP ── Thumbnails */}
       <div className={styles.desktopThumbs}>
-        {images.map((img, i) => (
+        {mediaItems.map((media, i) => (
           <button
             key={i}
             className={`${styles.thumb} ${selected === i ? styles.active : ""}`}
             onClick={() => setSelected(i)}
           >
-            <img src={img} alt={`${productName} ${i + 1}`} />
+            {media.type === "video" ? (
+              <div className={styles.videoThumb}>
+                <img src={media.thumbnail} alt={`${productName} ${i + 1}`} />
+                <span className={styles.playIcon}>▶</span>
+              </div>
+            ) : (
+              <img src={media.url} alt={`${productName} ${i + 1}`} />
+            )}
           </button>
         ))}
       </div>
 
-      {/* ── MOBILE ── Full width swipeable slider */}
+      {/* ── MOBILE ── Swipe slider */}
       <div
         className={styles.mobileSlider}
         ref={mobileSliderRef}
         onScroll={handleMobileScroll}
       >
-        {images.map((img, i) => (
+        {mediaItems.map((media, i) => (
           <div key={i} className={styles.mobileSlide}>
-            <img
-              src={img}
-              alt={`${productName} ${i + 1}`}
-              className={styles.mobileImg}
-            />
+            {media.type === "video" ? (
+              <video
+                src={media.url}
+                controls
+                muted
+                playsInline
+                loop
+                className={styles.mobileImg}
+              />
+            ) : (
+              <img src={media.url} alt={`${productName} ${i + 1}`} className={styles.mobileImg} />
+            )}
           </div>
         ))}
       </div>
 
       {/* ── MOBILE ── Dots */}
       <div className={styles.mobileDots}>
-        {images.map((_, i) => (
+        {mediaItems.map((_, i) => (
           <button
             key={i}
             className={`${styles.dot} ${selected === i ? styles.dotActive : ""}`}

@@ -1,5 +1,5 @@
 import { wixClient } from "@/lib/wixClient";
-import { getWixImageUrl } from "@/lib/wixUtils";
+import { getMediaItems } from "@/lib/wixUtils";
 import ImageGallery from "@/components/ProductShowcase/ImageGallery";
 import ProductInfo from "@/components/ProductPage/ProductInfo";
 import ProductFeatures from "@/components/ProductFeatures/ProductFeatures";
@@ -9,8 +9,8 @@ import ProductDetails from "@/components/ProductDetails/ProductDetails";
 import StayPowered from "@/components/StayPowered/StayPowered";
 import AdditionalInfo from "@/components/AdditionalInfo/AdditionalInfo";
 import InsideBox from "@/components/InsideBox/InsideBox";
-import Reviews from "@/components/Reviews/Reviews";
 import TrustedBy from "@/components/TrustedBy/TrustedBy";
+import Reviews from "@/components/Reviews/Reviews";
 import ProductFAQ from "@/components/ProductFAQ/ProductFAQ";
 import ContactBar from "@/components/ContactBar/ContactBar";
 import styles from "@/components/ProductPage/ProductPage.module.css";
@@ -22,7 +22,7 @@ export default async function ProductPage({ params }) {
   const product = items.find((p) => p.slug === slug);
   if (!product) return notFound();
 
-  const images = product.media?.items?.map((item) => getWixImageUrl(item.image?.url)).filter(Boolean) || [];
+  const mediaItems = getMediaItems(product.media?.items);
   const originalPrice = product.price?.price;
   const discountedPrice = product.price?.discountedPrice ?? originalPrice;
   const discountPercent = Math.round((1 - discountedPrice / originalPrice) * 100);
@@ -34,7 +34,7 @@ export default async function ProductPage({ params }) {
       <div className={styles.page}>
         <div className={styles.inner}>
           <div className={styles.left}>
-            <ImageGallery images={images} productName={product.name} />
+            <ImageGallery mediaItems={mediaItems} productName={product.name} />
           </div>
           <div className={styles.right}>
             <ProductInfo
@@ -57,9 +57,8 @@ export default async function ProductPage({ params }) {
       <StayPowered />
       <AdditionalInfo />
       <InsideBox />
-      
-      <Reviews />
       <TrustedBy />
+      <Reviews />
       <ProductFAQ />
       <ContactBar />
     </>

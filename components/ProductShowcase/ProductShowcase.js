@@ -1,5 +1,5 @@
 import { wixClient } from "@/lib/wixClient";
-import { getWixImageUrl } from "@/lib/wixUtils";
+import { getMediaItems } from "@/lib/wixUtils";
 import ImageGallery from "./ImageGallery";
 import ProductActions from "./ProductActions";
 import styles from "./ProductShowcase.module.css";
@@ -7,36 +7,21 @@ import brand from "@/config/brand";
 
 export default async function ProductShowcase() {
   try {
-    const { items } = await wixClient.products
-      .queryProducts()
-      .find();
-
-    const product = items.find(
-      (p) => p.slug === brand.featuredProductSlug
-    ) || items[0];
-
+    const { items } = await wixClient.products.queryProducts().find();
+    const product = items.find((p) => p.slug === brand.featuredProductSlug) || items[0];
     if (!product) return null;
 
     const originalPrice = product.price?.price;
     const discountedPrice = product.price?.discountedPrice ?? originalPrice;
-    const discountPercent = Math.round(
-      (1 - discountedPrice / originalPrice) * 100
-    );
-
-    const images = product.media?.items
-      ?.map((item) => getWixImageUrl(item.image?.url))
-      .filter(Boolean) || [];
-
+    const discountPercent = Math.round((1 - discountedPrice / originalPrice) * 100);
     const options = product.productOptions || [];
     const variants = product.variants || [];
-
-    // Product description bullets — coming from Wix product description
-    const description = product.description || "";
+    const mediaItems = getMediaItems(product.media?.items);
 
     return (
       <section className={styles.section}>
         <div className={styles.inner}>
-          <ImageGallery images={images} productName={product.name} />
+          <ImageGallery mediaItems={mediaItems} productName={product.name} />
           <ProductActions
             productName={product.name}
             originalPrice={originalPrice}
@@ -45,7 +30,6 @@ export default async function ProductShowcase() {
             options={options}
             variants={variants}
             productId={product._id}
-            description={description}
           />
         </div>
       </section>
