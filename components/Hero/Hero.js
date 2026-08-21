@@ -5,16 +5,21 @@ import brand from "@/config/brand";
 export default function Hero() {
   return (
     <section className={styles.hero}>
+      {/* Desktop Image */}
       <img
         src="https://static.wixstatic.com/media/8f1bc7_b623cc5ebfe543fda64c27ddf0d209bc~mv2.avif"
         alt="Hero"
         className={styles.desktopImg}
       />
+
+      {/* Mobile Image */}
       <img
-        src="https://static.wixstatic.com/media/20cc08_5b1061c8d88248d4b0ff12144d0893ef~mv2.jpeg"
+        src="https://static.wixstatic.com/media/8f1bc7_b623cc5ebfe543fda64c27ddf0d209bc~mv2.avif"
         alt="Hero Mobile"
         className={styles.mobileImg}
       />
+
+      {/* Desktop Overlay */}
       <div className={styles.overlay}>
         <div className={styles.content}>
           <h1 className={styles.title}>
@@ -26,6 +31,18 @@ export default function Hero() {
             adjustable flow and reliable battery power. Choose the model that fits your
             routine and enjoy greater freedom every day.
           </p>
+          <Link href={`/products/${brand.featuredProductSlug}`} className={styles.btn}>
+            Order Now
+          </Link>
+        </div>
+      </div>
+
+      {/* Mobile Overlay — heading + button only */}
+      <div className={styles.mobileOverlay}>
+        <div className={styles.mobileContent}>
+          <h1 className={styles.mobileTitle}>
+            Non-Medical Oxygen Concentrators Built for Comfort and Mobility
+          </h1>
           <Link href={`/products/${brand.featuredProductSlug}`} className={styles.btn}>
             Order Now
           </Link>
