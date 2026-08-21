@@ -25,7 +25,7 @@
   transition: color 0.2s;
 }
 
-.col a:hover { color: #0a74da; }
+.col a:hover { color: #58ACAF; }
 
 .colHeading {
   font-size: 12px;
@@ -93,10 +93,10 @@
   transition: color 0.2s;
 }
 
-.contact:hover { color: #0a74da; }
+.contact:hover { color: #58ACAF; }
 
 .bottomBar {
-  border-top: 2px solid #0a74da;
+  border-top: 2px solid #58ACAF;
   padding: 16px 0;
   text-align: center;
 }

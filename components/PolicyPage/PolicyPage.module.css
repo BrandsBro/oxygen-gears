@@ -17,7 +17,7 @@
   color: #111;
   margin-bottom: 40px;
   padding-bottom: 16px;
-  border-bottom: 2px solid #0a74da;
+  border-bottom: 2px solid #58ACAF;
 }
 
 .content {
@@ -51,7 +51,7 @@
 
 .content li::before {
   content: "• ";
-  color: #0a74da;
+  color: #58ACAF;
   font-weight: 700;
 }
 
@@ -65,12 +65,12 @@
 
 .content ol li::before {
   content: counter(item) ". ";
-  color: #0a74da;
+  color: #58ACAF;
   font-weight: 700;
 }
 
 .content a {
-  color: #0a74da;
+  color: #58ACAF;
   text-decoration: none;
 }
 

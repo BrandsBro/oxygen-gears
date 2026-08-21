@@ -119,7 +119,7 @@
 }
 
 .choiceBtn.selected {
-  border-color: #0a74da;
+  border-color: #58ACAF;
   background: #e8f4ff;
 }
 
@@ -154,7 +154,7 @@
   padding: 18px;
   border: none;
   border-radius: 8px;
-  background: #0a74da;
+  background: #58ACAF;
   color: #fff;
   font-size: 16px;
   font-weight: 800;

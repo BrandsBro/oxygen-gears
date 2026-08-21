@@ -31,7 +31,7 @@
 }
 
 .item.active {
-  border-color: #0a74da;
+  border-color: #58ACAF;
 }
 
 .question {
@@ -67,8 +67,8 @@
 }
 
 .iconOpen {
-  border-color: #0a74da;
-  color: #0a74da;
+  border-color: #58ACAF;
+  color: #58ACAF;
 }
 
 .body {

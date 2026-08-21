@@ -8,7 +8,7 @@
 }
 
 .banner {
-  background: #0a74da;
+  background: #58ACAF;
   color: #fff;
   font-size: 13px;
   font-weight: 600;
@@ -46,7 +46,7 @@
   transition: color 0.2s;
 }
 
-.navLeft a:hover { color: #0a74da; }
+.navLeft a:hover { color: #58ACAF; }
 
 .logo {
   flex: 1;
@@ -71,7 +71,7 @@
 }
 
 .orderBtn {
-  background: #0a74da;
+  background: #58ACAF;
   color: #fff !important;
   padding: 10px 20px;
   border-radius: 6px;
@@ -163,7 +163,7 @@
   transition: color 0.2s;
 }
 
-.dropdownTrigger:hover { color: #0a74da; }
+.dropdownTrigger:hover { color: #58ACAF; }
 
 .arrow { font-size: 10px; }
 
@@ -193,7 +193,7 @@
 
 .dropdownMenu a:hover {
   background: #f0f7ff;
-  color: #0a74da;
+  color: #58ACAF;
 }
 
 /* Fix dropdown gap — menu closes before mouse reaches it */

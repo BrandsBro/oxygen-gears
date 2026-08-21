@@ -75,7 +75,7 @@
 
 .field input:focus,
 .field textarea:focus {
-  border-color: #0a74da;
+  border-color: #58ACAF;
 }
 
 .field textarea {
@@ -85,7 +85,7 @@
 .submitBtn {
   width: 100%;
   padding: 16px;
-  background: #0a74da;
+  background: #58ACAF;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -157,7 +157,7 @@
 }
 
 .contactInfo a {
-  color: #0a74da;
+  color: #58ACAF;
   text-decoration: none;
 }
 
@@ -196,7 +196,7 @@
 }
 
 .field select:focus {
-  border-color: #0a74da;
+  border-color: #58ACAF;
 }
 
 .field select {
@@ -216,7 +216,7 @@
 }
 
 .field select:focus {
-  border-color: #0a74da;
+  border-color: #58ACAF;
 }
 
 /* Popup Overlay */
@@ -287,7 +287,7 @@
 .popupBtn {
   margin-top: 8px;
   padding: 14px 48px;
-  background: #0a74da;
+  background: #58ACAF;
   color: #fff;
   border: none;
   border-radius: 8px;

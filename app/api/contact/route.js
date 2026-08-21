@@ -24,14 +24,14 @@ export async function POST(req) {
           <style>
             body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
             .container { max-width: 600px; margin: 40px auto; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-            .header { background: #0a74da; padding: 32px; text-align: center; }
+            .header { background: #58ACAF; padding: 32px; text-align: center; }
             .header h1 { color: #fff; margin: 0; font-size: 22px; }
             .header p { color: rgba(255,255,255,0.85); margin: 8px 0 0; font-size: 14px; }
             .body { padding: 32px; }
             .row { display: flex; margin-bottom: 16px; border-bottom: 1px solid #f0f0f0; padding-bottom: 16px; }
             .label { font-weight: 700; color: #333; min-width: 160px; font-size: 14px; }
             .value { color: #555; font-size: 14px; flex: 1; }
-            .message-box { background: #f8faff; border-left: 4px solid #0a74da; padding: 16px; border-radius: 4px; margin-top: 8px; }
+            .message-box { background: #f8faff; border-left: 4px solid #58ACAF; padding: 16px; border-radius: 4px; margin-top: 8px; }
             .message-box p { margin: 0; color: #444; font-size: 14px; line-height: 1.7; }
             .footer { background: #f8f8f8; padding: 20px 32px; text-align: center; border-top: 1px solid #eee; }
             .footer p { color: #999; font-size: 12px; margin: 0; }

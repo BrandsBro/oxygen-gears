@@ -78,9 +78,9 @@
 }
 
 .filterBtn.active {
-  background: #0a74da;
+  background: #58ACAF;
   color: #fff;
-  border-color: #0a74da;
+  border-color: #58ACAF;
 }
 
 .sortSelect {
@@ -267,7 +267,7 @@
 
 .loadMore {
   padding: 14px 48px;
-  background: #0a74da;
+  background: #58ACAF;
   color: #fff;
   border: none;
   border-radius: 30px;

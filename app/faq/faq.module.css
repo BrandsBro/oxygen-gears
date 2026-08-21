@@ -32,7 +32,7 @@
   transition: border-color 0.2s;
 }
 
-.item.active { border-color: #0a74da; }
+.item.active { border-color: #58ACAF; }
 
 .question {
   width: 100%;
@@ -67,8 +67,8 @@
 }
 
 .iconOpen {
-  border-color: #0a74da;
-  color: #0a74da;
+  border-color: #58ACAF;
+  color: #58ACAF;
 }
 
 .body {

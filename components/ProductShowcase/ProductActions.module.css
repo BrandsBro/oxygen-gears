@@ -110,7 +110,7 @@
 }
 
 .choiceBtn.selected {
-  border-color: #0a74da;
+  border-color: #58ACAF;
   background: #e8f4ff;
 }
 
@@ -218,7 +218,7 @@
 .viewDetails {
   text-align: center;
   font-size: 14px;
-  color: #0a74da;
+  color: #58ACAF;
   font-weight: 600;
   text-decoration: none;
 }

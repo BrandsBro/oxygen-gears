@@ -47,7 +47,7 @@
 }
 
 .thumb.active {
-  border-color: #0a74da;
+  border-color: #58ACAF;
 }
 
 /* ── MOBILE ── hidden on desktop */
@@ -120,7 +120,7 @@
   }
 
   .dotActive {
-    background: #0a74da;
+    background: #58ACAF;
     transform: scale(1.3);
   }
 }
