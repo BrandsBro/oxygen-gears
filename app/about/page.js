@@ -4,10 +4,10 @@ export default function AboutPage() {
   return (
     <div className={styles.page}>
       <div className={styles.inner}>
-        <h1 className={styles.heading}>About OxygenGears</h1>
+        <h1 className={styles.heading}>About Oxliv</h1>
         <div className={styles.content}>
           <p>
-            The OxygenGears is committed to providing high-quality oxygen therapy solutions,
+            Oxliv is committed to providing high-quality oxygen therapy solutions,
             specializing in portable and home-use concentrators. With over two decades of
             experience, our certified experts help you find the best products for your needs,
             ensuring greater mobility and independence.

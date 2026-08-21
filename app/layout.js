@@ -2,17 +2,18 @@ import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { CartProvider } from "@/lib/cartContext";
+import brand from "@/config/brand";
 
 export const metadata = {
-  title: "OxygenGears",
-  description: "Portable Oxygen Concentrators",
+  title: "Oxliv — Non-Medical Oxygen Concentrators",
+  description: "Stay comfortable at home or on the move. Lightweight oxygen concentrators with adjustable flow and reliable battery power.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="https://static.wixstatic.com/media/20cc08_36a5efa395264583a64742a8c3f8ae06~mv2.png" type="image/png" />
+        <link rel="icon" href={brand.favicon} type="image/webp" />
       </head>
       <body>
         <CartProvider>
