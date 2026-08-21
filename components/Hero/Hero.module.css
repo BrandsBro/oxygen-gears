@@ -47,7 +47,7 @@
 
 .btn {
   display: inline-block;
-  background: #58ACAF;
+  background: #FFF;
   color: #fff;
   padding: 14px 32px;
   border-radius: 6px;
@@ -57,7 +57,7 @@
   transition: background 0.2s;
 }
 
-.btn:hover { background: #085bb5; }
+.btn:hover { background: #58ACAF; }
 
 .mobileHero { display: none; }
 
