@@ -41,7 +41,7 @@ export async function POST(req) {
           <div class="container">
             <div class="header">
               <h1>📬 New Contact Form Submission</h1>
-              <p>Someone reached out through OxygenGears</p>
+              <p>Someone reached out through Oxliv</p>
             </div>
             <div class="body">
               <div class="row"><span class="label">👤 Full Name</span><span class="value">${firstName} ${lastName}</span></div>
