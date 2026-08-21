@@ -116,3 +116,29 @@
     font-size: 14px;
   }
 }
+
+/* Box list for item 05 */
+.boxList {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.boxItem {
+  font-size: 15px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.5;
+}
+
+.dot {
+  color: #0a74da;
+  font-weight: 800;
+  font-size: 18px;
+  flex-shrink: 0;
+}

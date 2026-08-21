@@ -3,30 +3,55 @@ import styles from "./EverydayLife.module.css";
 const items = [
   {
     number: "01",
-    title: "Zero Tanks Required",
-    description: "It generates its own high-purity oxygen as you use it, so there is never a cylinder to refill or replace. You pick it up, switch it on, and go. The hassle of tanks simply disappears from your routine.",
-    image: "https://static.wixstatic.com/media/20cc08_05867547279840a8bd9c49aa8f4937d6~mv2.jpeg",
+    title: "Tank-Free Design",
+    description: "No tanks to refill and no spares to store. It produces high-purity oxygen on its own the moment it switches on. You just pick it up and head out.",
+    image: "https://static.wixstatic.com/media/8f1bc7_9b3c694b0d61440a82b9a9149dc9aeed~mv2.avif",
     reverse: false,
   },
   {
     number: "02",
-    title: "Comfort You Control",
-    description: "Set the continuous flow where it feels comfortable, and reset it any time you need to. Clear, simple controls keep every change effortless. You end up with oxygen suited to your needs, not a fixed number.",
-    image: "https://static.wixstatic.com/media/20cc08_048bd326f8f24d89825e6966474f8345~mv2.jpeg",
+    title: "Flow You Control",
+    description: "Turn the flow up when you need more and ease it back when you don't. The controls are simple, so any change takes a second. Your oxygen matches the moment instead of one fixed setting.",
+    image: "https://static.wixstatic.com/media/8f1bc7_441be3d229d24be6b6b039d3c73e3f44~mv2.avif",
     reverse: true,
   },
   {
     number: "03",
-    title: "Power That Lasts",
-    description: "Charge it at home, top it off in the car, or run it from the wall when you settle in. With more than one way to power up, you are never stuck hunting for an outlet. It holds steady right through a long day.",
-    image: "https://static.wixstatic.com/media/20cc08_736c5747676744e588231841e25765ff~mv2.jpeg",
+    title: "Lightweight Build",
+    description: "Compact and easy to carry, it travels on a shoulder or in a bag without weighing you down. A busy day goes by, and you hardly notice it. The oxygen comes with you the whole way.",
+    image: "https://static.wixstatic.com/media/8f1bc7_441be3d229d24be6b6b039d3c73e3f44~mv2.avif",
     reverse: false,
   },
   {
     number: "04",
-    title: "Light Enough for Long Days",
-    description: "Light and compact, it rides over a shoulder or tucks into a bag with ease. You can move through a full day of errands and visits and barely notice it at all. The support stays steady while you get on with things.",
-    image: "https://static.wixstatic.com/media/20cc08_61b99693a54445fbac08ecdc2686fee1~mv2.jpeg",
+    title: "Flexible Power",
+    description: "Run it from a wall outlet, the car, or its own battery. With more than one way to power up, a missing socket never slows you down. It keeps working right through a long day.",
+    image: "https://static.wixstatic.com/media/8f1bc7_a86af8fce3e14a44b2f98fa596d29dcd~mv2.avif",
+    reverse: true,
+  },
+  {
+    number: "05",
+    title: "What's In The Box?",
+    isList: true,
+    intro: "Getting started should feel simple, not incomplete. Oxliv includes all the essentials for setup, daily use, travel, and comfortable breathing, right out of the box.",
+    items: [
+      "1 Oxygen concentrator",
+      "1 Rechargeable battery",
+      "1 Car charging cable",
+      "2 Nasal oxygen tubes",
+      "1 Portable carry bag",
+      "1 Wall adapter",
+      "1 Case",
+      "1 Instruction manual",
+    ],
+    image: "https://static.wixstatic.com/media/8f1bc7_e767bdc107604d6ebec0f486e8feb84b~mv2.avif",
+    reverse: false,
+  },
+  {
+    number: "06",
+    title: "Pick the Right Flow for Your Day",
+    description: "Choose from seven flow settings to match your daily needs. Lower settings offer up to five hours of battery life. Quiet performance keeps use comfortable. Simple controls make adjustments quick and easy, so you can keep moving confidently.",
+    image: "https://static.wixstatic.com/media/8f1bc7_e3eb66811c8240318ab794d275e9c40e~mv2.avif",
     reverse: true,
   },
 ];
@@ -44,18 +69,27 @@ export default function EverydayLife() {
             >
               {/* Image */}
               <div className={styles.imgWrap}>
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className={styles.img}
-                />
+                <img src={item.image} alt={item.title} className={styles.img} />
               </div>
 
               {/* Text */}
               <div className={styles.text}>
                 <span className={styles.number}>{item.number}</span>
                 <h3 className={styles.title}>{item.title}</h3>
-                <p className={styles.desc}>{item.description}</p>
+                {item.isList ? (
+                  <>
+                    <p className={styles.desc}>{item.intro}</p>
+                    <ul className={styles.boxList}>
+                      {item.items.map((li, i) => (
+                        <li key={i} className={styles.boxItem}>
+                          <span className={styles.dot}>•</span> {li}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <p className={styles.desc}>{item.description}</p>
+                )}
               </div>
             </div>
           ))}
