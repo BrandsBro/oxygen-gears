@@ -16,7 +16,12 @@ export default async function ProductShowcase() {
     const discountPercent = Math.round((1 - discountedPrice / originalPrice) * 100);
     const options = product.productOptions || [];
     const variants = product.variants || [];
-    const mediaItems = getMediaItems(product.media?.items);
+
+    // Prepend video as first media item
+    const imageItems = getMediaItems(product.media?.items);
+    const mediaItems = brand.featuredProductVideo
+      ? [{ type: "video", url: brand.featuredProductVideo, thumbnail: imageItems[0]?.url }, ...imageItems]
+      : imageItems;
 
     return (
       <section className={styles.section}>

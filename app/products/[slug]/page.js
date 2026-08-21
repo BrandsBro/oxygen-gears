@@ -15,6 +15,7 @@ import ProductFAQ from "@/components/ProductFAQ/ProductFAQ";
 import ContactBar from "@/components/ContactBar/ContactBar";
 import styles from "@/components/ProductPage/ProductPage.module.css";
 import { notFound } from "next/navigation";
+import brand from "@/config/brand";
 
 export default async function ProductPage({ params }) {
   const { slug } = await params;
@@ -22,7 +23,13 @@ export default async function ProductPage({ params }) {
   const product = items.find((p) => p.slug === slug);
   if (!product) return notFound();
 
-  const mediaItems = getMediaItems(product.media?.items);
+  const imageItems = getMediaItems(product.media?.items);
+
+  // Prepend video if this is the featured product
+  const mediaItems = (brand.featuredProductVideo && slug === brand.featuredProductSlug)
+    ? [{ type: "video", url: brand.featuredProductVideo, thumbnail: imageItems[0]?.url }, ...imageItems]
+    : imageItems;
+
   const originalPrice = product.price?.price;
   const discountedPrice = product.price?.discountedPrice ?? originalPrice;
   const discountPercent = Math.round((1 - discountedPrice / originalPrice) * 100);

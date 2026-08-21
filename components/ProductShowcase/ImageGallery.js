@@ -5,6 +5,7 @@ import styles from "./ImageGallery.module.css";
 export default function ImageGallery({ mediaItems = [], productName }) {
   const [selected, setSelected] = useState(0);
   const mobileSliderRef = useRef(null);
+  const videoRef = useRef(null);
 
   const handleMobileScroll = () => {
     if (!mobileSliderRef.current) return;
@@ -33,12 +34,13 @@ export default function ImageGallery({ mediaItems = [], productName }) {
         {current?.type === "video" ? (
           <video
             key={current.url}
+            ref={videoRef}
             src={current.url}
-            controls
             autoPlay
             muted
             loop
             playsInline
+            controls
             className={styles.mainImg}
           />
         ) : (
@@ -56,7 +58,10 @@ export default function ImageGallery({ mediaItems = [], productName }) {
           >
             {media.type === "video" ? (
               <div className={styles.videoThumb}>
-                <img src={media.thumbnail} alt={`${productName} ${i + 1}`} />
+                {media.thumbnail
+                  ? <img src={media.thumbnail} alt="Video" />
+                  : <div className={styles.videoPlaceholder} />
+                }
                 <span className={styles.playIcon}>▶</span>
               </div>
             ) : (
@@ -77,10 +82,11 @@ export default function ImageGallery({ mediaItems = [], productName }) {
             {media.type === "video" ? (
               <video
                 src={media.url}
-                controls
+                autoPlay
                 muted
-                playsInline
                 loop
+                playsInline
+                controls
                 className={styles.mobileImg}
               />
             ) : (

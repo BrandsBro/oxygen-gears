@@ -153,3 +153,40 @@
   font-size: 10px;
   pointer-events: none;
 }
+
+.videoThumb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #111;
+}
+
+.videoThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.videoPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: #222;
+}
+
+.playIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.9);
+  color: #111;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  pointer-events: none;
+}
