@@ -47,11 +47,12 @@ export default function ProductInfo({
       <h1 className={styles.title}>{productName}</h1>
 
       <div className={styles.meta}>
-        <div className={styles.stars}>
-          {"★★★★★"}
+        {/* Clickable stars → scrolls to reviews */}
+        <a href="#reviews" className={styles.starsLink}>
+          <span className={styles.stars}>★★★★★</span>
           <span className={styles.rating}>4.9/5</span>
           <span className={styles.reviewCount}>(450+ reviews)</span>
-        </div>
+        </a>
         <SoldCount />
       </div>
 
@@ -94,6 +95,7 @@ export default function ProductInfo({
       </button>
 
       <div className={styles.secureBox}>
+        <p className={styles.secureTitle}>100% Secure Checkout</p>
         <img src="https://static.wixstatic.com/media/20cc08_07f97ca4fab44dff946baa18b969876e~mv2.webp" alt="Secure Payment Methods" className={styles.paymentImg} />
       </div>
     </div>

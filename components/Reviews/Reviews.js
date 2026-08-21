@@ -139,7 +139,7 @@ export default function Reviews() {
   }, [modal, slideIndex, lightboxList]);
 
   return (
-    <section className={styles.section}>
+    <section id="reviews" className={styles.section}>
       <div className={styles.inner}>
         <h2 className={styles.heading}>Customer Reviews</h2>
 
