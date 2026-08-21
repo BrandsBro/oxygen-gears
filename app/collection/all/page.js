@@ -1,12 +1,18 @@
-import { wixClient } from "@/lib/wixClient";
+import { createClient, OAuthStrategy } from "@wix/sdk";
+import { products } from "@wix/stores";
 import { getWixImageUrl } from "@/lib/wixUtils";
 import ProductGrid from "@/components/ProductGrid/ProductGrid";
 import styles from "@/components/ProductGrid/ProductGrid.module.css";
 
 export default async function CollectionPage() {
-  const { items } = await wixClient.products.queryProducts().find();
+  const client = createClient({
+    modules: { products },
+    auth: OAuthStrategy({ clientId: process.env.NEXT_PUBLIC_WIX_CLIENT_ID }),
+  });
 
-  const products = items
+  const { items } = await client.products.queryProducts().find();
+
+  const prods = items
     .map((p) => ({
       id: p._id,
       slug: p.slug,
@@ -27,7 +33,6 @@ export default async function CollectionPage() {
           className={styles.bannerImg}
         />
       </div>
-
       <div className={styles.intro}>
         <div className={styles.introInner}>
           <h1 className={styles.heading}>All Products</h1>
@@ -40,8 +45,7 @@ export default async function CollectionPage() {
           </p>
         </div>
       </div>
-
-      <ProductGrid products={products} />
+      <ProductGrid products={prods} />
     </div>
   );
 }
