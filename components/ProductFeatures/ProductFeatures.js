@@ -27,12 +27,9 @@ export default function ProductFeatures() {
   return (
     <section className={styles.section}>
       <div className={styles.wrapper}>
-        <h2 className={styles.title}>Oxygen Therapy That Moves With You</h2>
+        <h2 className={styles.title}>Go Further With a Smarter Portable Oxygen</h2>
         <p className={styles.description}>
-          Stop planning your life around heavy tanks and constant refills. The Portable
-          Oxygen Concentrator gives you medical-grade support in a lightweight, smart
-          device designed for your total independence. No limits, no stress, just pure air
-          wherever you go.
+        Oxygen support should move at your speed, and this concentrator does exactly that. It reads your breathing and sends a pulse of oxygen with every inhale. Carry it to the park, out to dinner, or across town without a second thought. Everything you need in one compact case.
         </p>
 
         <div className={styles.grid}>
