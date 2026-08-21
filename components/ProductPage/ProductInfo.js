@@ -48,7 +48,7 @@ export default function ProductInfo({
 
       <div className={styles.meta}>
         {/* Clickable stars → scrolls to reviews */}
-        <a href="#reviews" className={styles.starsLink}>
+        <a href="#reviews" className={styles.starsLink} scroll={false}>
           <span className={styles.stars}>★★★★★</span>
           <span className={styles.rating}>4.9/5</span>
           <span className={styles.reviewCount}>(450+ reviews)</span>
