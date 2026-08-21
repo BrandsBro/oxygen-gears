@@ -5,7 +5,7 @@ import { CartProvider } from "@/lib/cartContext";
 import brand from "@/config/brand";
 
 export const metadata = {
-  title: "Oxliv — Non-Medical Oxygen Concentrators",
+  title: "Oxliv — Best Portable Oxygen Concentrators Built for Comfort and Mobility",
   description: "Stay comfortable at home or on the move. Lightweight oxygen concentrators with adjustable flow and reliable battery power.",
 };
 
