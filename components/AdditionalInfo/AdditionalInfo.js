@@ -4,46 +4,31 @@ import styles from "./AdditionalInfo.module.css";
 
 const sections = [
   {
-    title: "What's in the Package?",
+    title: "Features & Benefits",
     content: [
-      "1 Oxygen generator",
-      "1 Charger",
-      "1 Battery",
-      "1 Instruction manual + warranty card",
-      "1 Car charging cable",
-      "2 Nasal oxygen tubes",
-      "1 Certificate of conformity",
-      "1 Backpack",
-      "1 Case",
-    ],
-    type: "list",
-  },
-  {
-    title: "Features & Benefits for the New Product",
-    content: [
-      "Delivers high-purity oxygen up to 94% for reliable daily breathing support",
+      "Delivers high-purity oxygen up to 90% for reliable daily breathing support",
       "Uses pulse oxygen technology that responds to your natural inhalation",
       "Automatically switches to fixed-frequency mode when no breath is detected",
       "Runs quietly below 60dB for comfortable use on the go",
-      "Provides 1.5-4 hours of portable power with the replaceable battery box",
+      "Provides 1.5-5 hours of portable power with the replaceable battery box",
       "Offers seven adjustable oxygen levels for personalized airflow",
       "Compact 1.4 kg design fits easily in a backpack or travel bag",
       "Supports home, car, outdoor, and travel use with three power options",
       "Simple one-touch operation with a clear digital screen",
-      "Includes a free carry bag, chargers, and nasal tubes for instant setup",
+      "Includes a free carry bag, chargers, car charger and nasal tubes for instant setup",
     ],
     type: "list",
   },
   {
     title: "Specifications",
     content: [
-      { label: "Oxygen Flow Range", value: "1-7L/min flow levels" },
-      { label: "Oxygen Purity", value: "90%-94% (varies with breathing frequency & gear)" },
-      { label: "Weight", value: "3lbs (excluding battery)" },
-      { label: "Battery Life", value: "Up to 4 hours (single battery)" },
+      { label: "Oxygen Flow Range", value: "1-7L pulse gear levels" },
+      { label: "Oxygen Purity", value: "85%-90% (varies with breathing frequency & gear)" },
+      { label: "Weight", value: "1.4 kg (excluding battery)" },
+      { label: "Battery Life", value: "1.5-5 hours (single battery)" },
       { label: "Charging Time", value: "~4 hours" },
       { label: "Dimensions", value: "195 × 85 × 175 mm" },
-      { label: "Operating Noise", value: "≤ 60 dB" },
+      { label: "Operating Noise", value: "≤ 56 dB" },
       { label: "Atmospheric Pressure Range", value: "86-106 kPa" },
       { label: "Power Input", value: "AC100-240V, 50/60 Hz" },
       { label: "Battery Capacity", value: "16.8V, 6400 mAh" },
@@ -63,11 +48,7 @@ export default function AdditionalInfo() {
         <div className={styles.list}>
           {sections.map((sec, i) => (
             <div key={i} className={`${styles.item} ${open === i ? styles.active : ""}`}>
-
-              <button
-                className={styles.trigger}
-                onClick={() => setOpen(open === i ? null : i)}
-              >
+              <button className={styles.trigger} onClick={() => setOpen(open === i ? null : i)}>
                 <span>{sec.title}</span>
                 <span className={`${styles.icon} ${open === i ? styles.iconOpen : ""}`}>
                   {open === i ? "−" : "+"}
@@ -97,10 +78,18 @@ export default function AdditionalInfo() {
                   )}
                 </div>
               </div>
-
             </div>
           ))}
         </div>
+
+        {/* Disclaimer */}
+        <div className={styles.disclaimer}>
+          <p>
+            <strong><u>Disclaimer:</u></strong><br />
+            <em>The Oxliv 1-7L Portable Oxygen Concentrator is not a medical device. They are designed for travel, recreation, fitness, and everyday comfort, not to diagnose, treat, or prevent any illness or condition. Anyone with a medical condition should speak with a healthcare professional before using the device.</em>
+          </p>
+        </div>
+
       </div>
     </section>
   );

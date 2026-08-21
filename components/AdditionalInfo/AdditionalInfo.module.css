@@ -139,3 +139,15 @@
   .tdLabel { width: 50%; font-size: 12px; }
   .tdValue { font-size: 12px; }
 }
+
+.disclaimer {
+  margin-top: 32px;
+  padding: 20px 24px;
+  background: #e8f4f8;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.8;
+}
+
+.disclaimer p { margin: 0; }
