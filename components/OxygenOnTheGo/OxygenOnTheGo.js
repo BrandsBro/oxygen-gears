@@ -2,20 +2,20 @@ import styles from "./OxygenOnTheGo.module.css";
 
 const items = [
   {
-    image: "https://static.wixstatic.com/media/20cc08_4fbbac48cb774448936481699047e4e2~mv2.jpg",
-    label: "Travel",
+    image: "https://static.wixstatic.com/media/8f1bc7_906a51bcb5db46399f98d2934416cee0~mv2.avif",
+    label: "Walking",
   },
   {
-    image: "https://static.wixstatic.com/media/20cc08_e460888872b0417fb50837f388aef588~mv2.jpg",
-    label: "At Home",
+    image: "https://static.wixstatic.com/media/8f1bc7_4958f1b6e25f43c7b84b186250c69fd7~mv2.avif",
+    label: "At Indoors",
   },
   {
-    image: "https://static.wixstatic.com/media/20cc08_e97f548a94c84df98821c93880af0a40~mv2.webp",
+    image: "https://static.wixstatic.com/media/8f1bc7_1cd09645060d4913b904fb36add92f08~mv2.avif",
     label: "In a Car",
   },
   {
-    image: "https://static.wixstatic.com/media/20cc08_043bf9d67234417b9ea5331b487fea10~mv2.jpg",
-    label: "Outdoor",
+    image: "https://static.wixstatic.com/media/8f1bc7_d6af48e45af746dcbf8765685502a08b~mv2.avif",
+    label: "Outdoors",
   },
 ];
 
@@ -23,11 +23,9 @@ export default function OxygenOnTheGo() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <h2 className={styles.heading}>Oxygen on the go, anytime, anywhere</h2>
+        <h2 className={styles.heading}>Your Oxygen, Always With You</h2>
         <p className={styles.subtext}>
-          Instead of being tied to bulky tanks, you get a compact, intelligent device that delivers
-          oxygen exactly when you need it. Up-to 94% oxygen support at home, in the car, or on
-          the go. You're no longer planning your life around oxygen; your oxygen adapts to your life.
+     Your day should not wait on your oxygen. Oxliv is light, easy to carry, and ready to go, keeping up to 90% oxygen purity with you from morning to night. 
         </p>
 
         <div className={styles.grid}>
