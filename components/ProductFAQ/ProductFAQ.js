@@ -3,16 +3,34 @@ import { useState } from "react";
 import styles from "./ProductFAQ.module.css";
 
 const faqs = [
-  { q: "How pure is the oxygen this device produces?", a: "The concentrator delivers oxygen at 90-94% purity, depending on the gear level and your breathing pattern. Its molecular sieve system keeps the purity stable throughout use." },
-  { q: "How long does the battery last on a full charge?", a: "You can expect up to 4 hours of use, depending on which oxygen gear you select. Higher gear levels use more power, while lower settings extend the runtime." },
-  { q: "Can I adjust the oxygen level?", a: "Yes, the device has 1-7 gear levels that let you choose the oxygen strength that feels most comfortable. Adjusting the level takes only one button press." },
-  { q: "Does it work while I'm breathing normally?", a: "The concentrator uses breath-responsive pulse delivery that activates when you inhale. If you pause for a moment, it switches automatically to fixed-frequency mode to maintain support." },
-  { q: "Is it loud during use?", a: "The device runs at under 60dB, which sounds similar to a quiet room or gentle conversation. It's comfortable for home use, travel, or resting." },
-  { q: "Can I use it in the car?", a: "Yes, a car charging cable is included in the kit. You can use it during long drives or while charging the battery on the road." },
-  { q: "What comes in the box?", a: "Your kit includes the main device, battery box, AC charger, car charger, nasal tubes, carry bag, and the user manual. Everything you need is included, so setup is immediate." },
-  { q: "How do I maintain the device?", a: "Wipe the surface gently, keep the air vents clear, and replace the nasal tubes regularly. The filter cotton should be replaced when it appears blocked or dirty." },
-  { q: "Can seniors operate it easily?", a: "Yes, the device is designed with simple controls and a clear display that make it easy for anyone to use. No complicated menus or technical steps are required." },
-  { q: "How heavy is the machine?", a: "The unit weighs 1.4 kg. That makes it lightweight and easy to carry. With the included strap and bag, it's comfortable for daily movement and travel." },
+  {
+    q: "Is this a continuous flow oxygen concentrator?",
+    a: "No, our portable concentrators use a smart pulse flow system that detects your breath and delivers oxygen precisely when you inhale.",
+  },
+  {
+    q: "Is the oxygen clean and pure?",
+    a: "Yes, our portable oxygen concentrators deliver 85-90% pure oxygen, drawn directly from the surrounding air. The advanced filtration and purification process ensures you receive clean, high-quality oxygen with every breath.",
+  },
+  {
+    q: "How long does the battery last?",
+    a: "A single charge runs up to 5 hours, depending on your level. The battery is replaceable, so a spare keeps you going longer.",
+  },
+  {
+    q: "How can I power the device?",
+    a: "You can run it on home AC power, a car DC socket, or its battery. It also works while plugged in and charging.",
+  },
+  {
+    q: "How heavy is it to carry?",
+    a: "It weighs about 3 lbs, light enough for a shoulder strap. The compact build fits errands, travel, and time around the house.",
+  },
+  {
+    q: "When can I expect delivery?",
+    a: "Orders ship free across the USA and usually arrive within 8 to 11 business days. You will get a tracking link once it leaves our warehouse.",
+  },
+  {
+    q: "Can I see the product specification?",
+    a: "Yes, please check the details in our product specification page.",
+  },
 ];
 
 export default function ProductFAQ() {
