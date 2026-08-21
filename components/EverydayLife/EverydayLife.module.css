@@ -1,7 +1,7 @@
 .section {
   width: 100%;
-  padding: 80px 40px;
   background: #fff;
+  padding: 80px 40px;
 }
 
 .inner {
@@ -23,7 +23,6 @@
   gap: 80px;
 }
 
-/* Each row */
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -31,32 +30,36 @@
   align-items: center;
 }
 
-/* Reverse — image right, text left */
 .reverse {
   direction: rtl;
 }
 
 .reverse .imgWrap,
+.reverse .imgWrapLandscape,
 .reverse .text {
   direction: ltr;
 }
 
-/* Image */
+/* Natural height — no fixed ratio */
 .imgWrap {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.imgWrapLandscape {
+  width: 100%;
   border-radius: 16px;
   overflow: hidden;
 }
 
 .img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 
-/* Text */
 .text {
   display: flex;
   flex-direction: column;
@@ -81,43 +84,10 @@
   font-size: 15px;
   color: #555;
   line-height: 1.8;
+  margin: 0;
 }
 
-/* Mobile — stack everything */
-@media (max-width: 768px) {
-  .section {
-    padding: 48px 20px;
-  }
-
-  .heading {
-    font-size: 24px;
-    margin-bottom: 40px;
-  }
-
-  .list {
-    gap: 48px;
-  }
-
-  .row {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    direction: ltr !important;
-  }
-
-  .number {
-    font-size: 36px;
-  }
-
-  .title {
-    font-size: 20px;
-  }
-
-  .desc {
-    font-size: 14px;
-  }
-}
-
-/* Box list for item 05 */
+/* Box list */
 .boxList {
   list-style: none;
   padding: 0;
@@ -143,10 +113,20 @@
   flex-shrink: 0;
 }
 
-/* Landscape image for 6th item */
-.imgWrapLandscape {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 16px;
-  overflow: hidden;
+/* Mobile */
+@media (max-width: 768px) {
+  .section { padding: 48px 20px; }
+  .heading { font-size: 24px; margin-bottom: 40px; }
+  .list { gap: 48px; }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    direction: ltr !important;
+  }
+
+  .number { font-size: 36px; }
+  .title { font-size: 20px; }
+  .desc { font-size: 14px; }
+  .boxItem { font-size: 14px; }
 }
