@@ -37,8 +37,8 @@
   border-radius: 20px;
   background: repeating-linear-gradient(
     45deg,
-    #58ACAF,
-    #58ACAF 10px,
+    black,
+    black 10px,
     #43a3f5 10px,
     #43a3f5 20px
   );
