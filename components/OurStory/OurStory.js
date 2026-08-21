@@ -17,17 +17,13 @@ export default function OurStory() {
 
         {/* Right — Text */}
         <div className={styles.content}>
-          <span className={styles.tag}>WHO WE ARE</span>
+          <span className={styles.tag}>HOW IT BEGAN</span>
           <h2 className={styles.heading}>Our Story</h2>
           <p className={styles.para}>
-            Oxygen Gears was built on one simple idea: oxygen support
-            should be light, portable, and easy to trust. Our concentrator
-            pulls oxygen straight from the air, so there are no tanks to refill
-            and no bulk to carry around.
+           At Oxliv, we started with a simple mission: to make breathing support feel less like a burden and more like a natural part of everyday life. We set out to create a portable oxygen solution that's lightweight, easy to use, and designed to help you maintain your independence.
           </p>
           <p className={styles.para}>
-            It's ready to keep up with you, at home or on the road. We keep
-            refining our gear so reliable oxygen always stays within reach.
+           Our smart pulse flow concentrator embodies this philosophy inside and out. Using advanced AI breath detection, it takes in ambient air and precisely delivers the oxygen you need, right when you need it most. By generating oxygen on demand, our device eliminates the need for heavy tanks and constant refills, ensuring you always have a steady, reliable source of oxygen that moves with you
           </p>
 
           {/* Stats */}
