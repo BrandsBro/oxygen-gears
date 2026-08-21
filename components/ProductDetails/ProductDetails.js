@@ -2,28 +2,34 @@ import styles from "./ProductDetails.module.css";
 
 const sections = [
   {
-    image: "https://static.wixstatic.com/media/20cc08_7d613217808243619a943be3e7407243~mv2.webp",
-    heading: "Advanced Breath Detection Technology!",
-    content: "Stop worrying about adjusting your settings. Our Smart AI Breath Detection senses your inhalation pattern and delivers precise oxygen support instantly. Whether you are resting, walking, or traveling, adapts to your rhythm so you never miss a beat—or a breath.",
+    image: "https://static.wixstatic.com/media/8f1bc7_7113ffd2d15e4eb99f7dda9dbcf1bb02~mv2.avif",
+    heading: "Only 3lbs: take oxygen like your purse",
+    content: "Some days the hardest part is just getting out the door. Oxliv makes it simple. It rides light on your shoulder and goes wherever you go. Take that walk, meet a friend, or run an errand, and keep your oxygen close the whole way.",
     reverse: false,
   },
   {
-    image: "https://static.wixstatic.com/media/20cc08_72bc134bf53640e9abaa8603bc08794b~mv2.webp",
-    heading: "High Pure Oxygen You Can Trust",
-    content: "The advanced molecular sieve system delivers oxygen purity up to 94 percent. Each pulse is filtered and concentrated before reaching you. You get clean support you can rely on throughout the day.",
+    image: "https://static.wixstatic.com/media/8f1bc7_f56810431420481394f65b01a0a7bf28~mv2.avif",
+    heading: "90% Oxygen Purity on Demand",
+    content: "Oxliv pulls in ordinary room air and turns it into oxygen up to 90% pure, delivered fresh with every breath. The purity holds steady as you relax, so quiet hours feel easy and the oxygen you get is always dependable.",
     reverse: true,
   },
   {
-    image: "https://static.wixstatic.com/media/20cc08_c63883fca3d8407f977cc94405d7c2fc~mv2.jpg",
-    heading: "Swap a Fresh Battery Anytime",
-    content: "Our unique detachable battery design lets you swap a depleted battery for a fresh one in seconds. It's the ultimate \"peace of mind\" feature. This gives you the flexibility to stay out longer, travel further, and live life on your own terms.",
+    image: "https://static.wixstatic.com/media/8f1bc7_82ae2437c3d1409b8157907abdf27913~mv2.avif",
+    heading: "10 Hours of Tankless Oxygen Support",
+    content: "A single battery gives you up to 5 hours of cord-free use, enough for a walk, a visit, and errands in between. Keep 1 or 2 extra batteries on hand for up to 10 or 15 hours of continuous oxygen support. Plus, get an extra $50 off when you purchase an additional battery.",
     reverse: false,
   },
   {
-    image: "https://static.wixstatic.com/media/20cc08_f27074d21d44415bb6b0f907f1bdb4b4~mv2.webp",
-    heading: "Simple Screen, Smarter Control",
-    content: "Our crystal-clear display shows your battery level, gear selection, and remaining usage time at a single glance. With simple, intuitive controls, you stay completely informed and in control of your health without any technical stress.",
+    image: "https://static.wixstatic.com/media/8f1bc7_a69ba8c59e7b4a1ba1d258067eef9f9e~mv2.avif",
+    heading: "Fresh Oxygen, Wherever You Go",
+    content: "Head outside and stay as long as you please, because Oxliv draws oxygen right from the open air. No refills to order and no deliveries to wait on, so the afternoon runs on your terms and the fresh air never runs out.",
     reverse: true,
+  },
+   {
+    image: "https://static.wixstatic.com/media/8f1bc7_121427af9c2f4dd1b2d42b7a2dc919d3~mv2.avif",
+    heading: "Find Your Perfect Flow Setting",
+    content: "You stay in control with seven easy flow settings, from a light stream to a strong one. Lower levels reach up to 90% purity and give you close to five hours per charge. Set it once, adjust anytime, and keep your day moving. ",
+    reverse: false,
   },
 ];
 
