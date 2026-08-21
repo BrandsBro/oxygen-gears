@@ -9,7 +9,7 @@ export default function OurStory() {
         {/* Left — Image */}
         <div className={styles.imgWrap}>
           <img
-            src="https://static.wixstatic.com/media/20cc08_509de56efa774930baaba76fbb0a2028~mv2.jpeg"
+            src="https://static.wixstatic.com/media/8f1bc7_76a27f9949d1412eaba1b9ed97ea54c3~mv2.avif"
             alt="Our Story"
             className={styles.img}
           />
