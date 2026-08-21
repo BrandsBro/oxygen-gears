@@ -4,7 +4,7 @@ import brand from "@/config/brand";
 const items = [
   { icon: "📞", title: "Speak With Us", sub: brand.phone },
   { icon: "✉️", title: "Get In Touch", sub: brand.email },
-  { icon: "🕐", title: "U.S. Delivery", sub: "in 4–7 Business Days" },
+  { icon: "🕐", title: "U.S. Delivery", sub: "in 8–11 Business Days" },
   { icon: "🚚", title: "Free Shipping", sub: "On All Orders" },
 ];
 
