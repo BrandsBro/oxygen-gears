@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <img
-        src="https://static.wixstatic.com/media/20cc08_7738ba2bb0474eea8ab45b8dfcda3215~mv2.jpeg"
+        src="https://static.wixstatic.com/media/8f1bc7_b623cc5ebfe543fda64c27ddf0d209bc~mv2.avif"
         alt="Hero"
         className={styles.desktopImg}
       />
@@ -18,13 +18,13 @@ export default function Hero() {
       <div className={styles.overlay}>
         <div className={styles.content}>
           <h1 className={styles.title}>
-            Reclaim Your Freedom<br />
-            With Portable Oxygen<br />
-            Concentrator
+            Non-Medical Oxygen Concentrators<br />
+            Built for Comfort and Mobility
           </h1>
           <p className={styles.subtitle}>
-            No heavy tanks holding you back. Our oxygen concentrators
-            are light and easy to trust. A companion you can rely on.
+            Stay comfortable at home or on the move. Our lightweight concentrators offer
+            adjustable flow and reliable battery power. Choose the model that fits your
+            routine and enjoy greater freedom every day.
           </p>
           <Link href={`/products/${brand.featuredProductSlug}`} className={styles.btn}>
             Order Now
