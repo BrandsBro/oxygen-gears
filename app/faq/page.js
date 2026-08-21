@@ -3,19 +3,58 @@ import { useState } from "react";
 import styles from "./faq.module.css";
 
 const faqs = [
-  { q: "What Types of Oxygen Concentrators Are Available?", a: "We offer portable oxygen concentrators to meet your needs. These are ideal for users who require mobility, allowing you to easily move around while receiving oxygen therapy." },
-  { q: "How Long Will It Take to Receive My Order?", a: "Once your order is placed, we typically process it within 24hr. After processing, delivery usually takes between 8-11 business days, depending on your location." },
-  { q: "How Can I Track My Order?", a: "Tracking your order is easy! Simply reach out to us at hi@supportoxygengears.com or call us and our customer service team will provide you with the most current status of your order." },
-  { q: "How Can I Return an Item?", a: "To request a return, contact us before sending the item back. Products damaged through misuse, mishandling, or unauthorized modifications are not eligible for return. Please review our Refund Policy for complete eligibility requirements and instructions." },
-  { q: "What Should I Do if I Receive a Damaged Product or Missing Items?", a: "If your order arrives with damage or missing items, please report the issue to us within 3 business days of receiving your package. Email us or call us and we'll assist you promptly. To help with the claims process, please retain the original packaging and box." },
-  { q: "What Should I Do If My Order Is Late?", a: "In rare cases where your order hasn't arrived after 30 days, please get in touch with us. Our team will investigate the issue and take the necessary steps to resolve it." },
-  { q: "What Forms of Payment Do You Accept?", a: "Currently, we accept cards (Visa, Mastercard, American Express, etc.), digital wallets (Apple Pay, Google Pay, etc.) as the sole payment method on our checkout page." },
-  { q: "Do I Need a Doctor's Prescription?", a: "If a prescription is required for any items in your cart, our system will notify you during checkout. If there is no notification, you can proceed with the purchase without a prescription." },
-  { q: "Can I Use Medicare to Pay for My Oxygen Concentrator?", a: "At this time, we do not work directly with insurance providers, including Medicare. However, you may choose to pay out-of-pocket and seek reimbursement from your insurance provider." },
-  { q: "Do the Machines Come with a Warranty?", a: "Yes! All of our oxygen concentrators come with a one-year warranty to ensure peace of mind with your purchase." },
-  { q: "How Can I Modify My Order After It Has Been Placed?", a: "If you need to make any changes to your order, please contact us via email before your order ships. We'll assist you in making the necessary modifications." },
-  { q: "Can I see the user manual?", a: "Yes, please check the details in our User Manual page." },
-  { q: "How soon do I need to change/Clean the filter?", a: "The filter doesn't require regular cleaning or replacement, thanks to the device's automatic cleaning system. If it gets clogged, feel free to purchase a replacement from us." },
+  {
+    q: "Can I control the oxygen flow rate based on my needs?",
+    a: "Yes, our concentrator offers seven adjustable levels from 1 to 7 L/min. You can raise or lower the flow to match rest, errands, or more active moments.",
+  },
+  {
+    q: "What types of oxygen concentrators are available?",
+    a: "At Oxliv, we offer advanced portable oxygen concentrators featuring smart pulse flow technology. With no heavy tanks to manage or refill it provides discreet, reliable breathing support that moves with you. Discover the freedom and independence of hassle-free oxygen therapy.",
+  },
+  {
+    q: "How long will it take to receive my order?",
+    a: "Orders ship free across the USA and usually arrive within 8 to 11 business days. You will get a confirmation as soon as your package is on its way.",
+  },
+  {
+    q: "How can I track my order?",
+    a: "Once your order ships, we email you a tracking link to follow its progress. If you cannot find it, reach out to us at support@oxliv.store, and we will resend the details.",
+  },
+  {
+    q: "How can I return an item?",
+    a: "You can return an item within two weeks of delivery for a refund. Just email support@oxliv.store to start the process, and keep the device in its original packaging.",
+  },
+  {
+    q: "What should I do if I receive a damaged product or a missing item?",
+    a: "Contact us right away at support@oxliv.store or +1 307-310-7781 with your order number and a photo. We will arrange a replacement or sort out the issue as quickly as we can.",
+  },
+  {
+    q: "What should I do if my order is late?",
+    a: "If your order passes the 8 to 11-day window, reach out at support@oxliv.store. We will check the status with the carrier and keep you updated.",
+  },
+  {
+    q: "What forms of payment do you accept?",
+    a: "We accept Visa, Mastercard, American Express, PayPal, Apple Pay, Google Pay, and other major digital wallets. All payments are processed through secure systems to help protect your personal and payment information.",
+  },
+  {
+    q: "Do I need a doctor's prescription?",
+    a: "This is not a medical device. You do not need a prescription to order from us. If you have a medical condition, please consult a healthcare professional.",
+  },
+  {
+    q: "Do the machines come with a warranty?",
+    a: "Yes, every machine includes a one-year warranty. Keep your receipt and warranty card so we can help if anything comes up.",
+  },
+  {
+    q: "Can I take this oxygen concentrator on an airplane?",
+    a: "Airline rules vary, so confirm their oxygen and battery policies before you fly. Packing a spare battery and your documents ahead of time keeps boarding smooth.",
+  },
+  {
+    q: "How can I modify my order after it has been placed?",
+    a: "Email us at support@oxliv.store as soon as possible with your changes. We can usually update an order before it ships, but not once it has left our warehouse.",
+  },
+  {
+    q: "Can I see the product specification?",
+    a: "Yes, please check the details in our product specification page.",
+  },
 ];
 
 export default function FAQPage() {
