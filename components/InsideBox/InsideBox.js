@@ -20,7 +20,7 @@ export default function InsideBox() {
         {/* Left — Image */}
         <div className={styles.imgWrap}>
           <img
-            src="https://static.wixstatic.com/media/20cc08_cfe1bee4bba04c99a23aa8b58e2d5ea8~mv2.webp"
+            src="https://static.wixstatic.com/media/8f1bc7_fe9d6e01321c4763ad7c7c477a211ed0~mv2.avif"
             alt="What's inside the box"
             className={styles.img}
           />
