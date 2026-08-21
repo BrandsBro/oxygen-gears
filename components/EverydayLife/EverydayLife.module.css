@@ -142,3 +142,11 @@
   font-size: 18px;
   flex-shrink: 0;
 }
+
+/* Landscape image for 6th item */
+.imgWrapLandscape {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+}

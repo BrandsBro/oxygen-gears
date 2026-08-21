@@ -53,6 +53,7 @@ const items = [
     description: "Choose from seven flow settings to match your daily needs. Lower settings offer up to five hours of battery life. Quiet performance keeps use comfortable. Simple controls make adjustments quick and easy, so you can keep moving confidently.",
     image: "https://static.wixstatic.com/media/8f1bc7_e3eb66811c8240318ab794d275e9c40e~mv2.avif",
     reverse: true,
+    landscape: true,
   },
 ];
 
@@ -67,12 +68,10 @@ export default function EverydayLife() {
               key={item.number}
               className={`${styles.row} ${item.reverse ? styles.reverse : ""}`}
             >
-              {/* Image */}
-              <div className={styles.imgWrap}>
+              <div className={item.landscape ? styles.imgWrapLandscape : styles.imgWrap}>
                 <img src={item.image} alt={item.title} className={styles.img} />
               </div>
 
-              {/* Text */}
               <div className={styles.text}>
                 <span className={styles.number}>{item.number}</span>
                 <h3 className={styles.title}>{item.title}</h3>
