@@ -23,7 +23,7 @@ export default function ReturnPolicy() {
       <p>If a defect is the reason, the video showing the problem is the most helpful thing you can send. We won't reject a return over a blurry photo.</p>
 
       <h2>How to Start a Return</h2>
-      <p>Email <a href="mailto:support@oxliv.store">support@oxliv.store</a> with:</p>
+      <p>Email <a href="mailto:support@oxliv.com">support@oxliv.com</a> with:</p>
       <ul>
         <li>Your order number</li>
         <li>The reason for return</li>
@@ -55,12 +55,12 @@ export default function ReturnPolicy() {
         <li>Defective or damaged unit: full refund, or a free replacement — your choice.</li>
         <li>Wrong or missing item: full refund or correct item sent.</li>
         <li>Device doesn't meet the needs you described to us: full refund.</li>
-        <li>Change of mind: refund minus up to 30% restocking fee; return shipping is your responsibility.</li>
+        <li>Change of mind: refund minus 15% restocking fee; return shipping is your responsibility.</li>
       </ul>
       <p>Defective units are covered by a 1-year limited warranty for replacement.</p>
 
       <h2>Before You Dispute a Charge</h2>
-      <p>If something's wrong, email <a href="mailto:support@oxliv.store">support@oxliv.store</a> first. We resolve almost every return faster than a bank dispute, and if you're owed a refund, we'll process it promptly.</p>
+      <p>If something's wrong, email <a href="mailto:support@oxliv.com">support@oxliv.com</a> first. We resolve almost every return faster than a bank dispute. Contacting us gives us the chance to make it right quickly.</p>
     </PolicyPage>
   );
 }
