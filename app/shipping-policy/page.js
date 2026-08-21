@@ -16,13 +16,13 @@ export default function ShippingPolicy() {
       <p>Please double-check your shipping address at checkout. Orders ship to the exact address provided. If you catch a mistake, email us right away and we'll correct it if the order hasn't shipped.</p>
 
       <h2>Tracking Your Order</h2>
-      <p>Once your order ships, we email you tracking so you can monitor it. If you don't receive it, contact <a href="mailto:support@oxliv.com">support@oxliv.com</a> and we'll resend it.</p>
+      <p>Once your order ships, we email you tracking so you can monitor it. If you don't receive it, contact <a href="mailto:support@oxliv.store">support@oxliv.store</a> and we'll resend it.</p>
 
       <h2>Tracking & Delivery Responsibility</h2>
       <p>Once you have a tracking number, you can monitor delivery progress and arrange missed-delivery redelivery or local pickup directly with the courier. If you have any trouble, contact us and we'll help.</p>
 
       <h2>Damaged Packages</h2>
-      <p>If your package arrives damaged, take photos right away and email <a href="mailto:support@oxliv.com">support@oxliv.com</a> with the evidence. We'll make it right.</p>
+      <p>If your package arrives damaged, take photos right away and email <a href="mailto:support@oxliv.store">support@oxliv.store</a> with the evidence. We'll make it right.</p>
 
       <h2>Customs & Duties</h2>
       <p>All shipments are Delivery Duty Paid (DDP) — taxes and duties are included in your price. If a courier ever requests an additional charge at delivery, contact us before paying and we'll assist.</p>

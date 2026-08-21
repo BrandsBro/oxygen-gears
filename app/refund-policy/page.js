@@ -44,7 +44,7 @@ export default function RefundPolicy() {
 
       <h2>Refund Timeline</h2>
       <ol>
-        <li><strong>Support Review (2–3 business days):</strong> Email support@oxliv.com with your order number and details.</li>
+        <li><strong>Support Review (2–3 business days):</strong> Email support@oxliv.store with your order number and details.</li>
         <li><strong>Return Authorization:</strong> If approved, you will receive the correct return address. Customers are responsible for return shipping costs for change-of-mind returns. OXLIV covers return shipping for verified defects, wrong items, or shipping damage.</li>
         <li><strong>Inspection (5–7 business days after receipt):</strong> We inspect the returned product.</li>
         <li><strong>Refund Processing (3–5 business days after inspection):</strong> Approved refunds are issued to the original payment method. A 15% restocking fee will be deducted from eligible change-of-mind returns.</li>
@@ -52,7 +52,7 @@ export default function RefundPolicy() {
       <p>The overall process normally takes approximately 10–15 business days, excluding return-transit and bank-processing time.</p>
 
       <h2>How to Request a Refund</h2>
-      <p>Email <a href="mailto:support@oxliv.com">support@oxliv.com</a> with your order number, purchase date, a clear description of the issue, and the required photos or documents.</p>
+      <p>Email <a href="mailto:support@oxliv.store">support@oxliv.store</a> with your order number, purchase date, a clear description of the issue, and the required photos or documents.</p>
 
       <h2>Unauthorized Returns</h2>
       <p>The approved return address is provided only after you contact our support team and receive authorization. Products sent to an unauthorized address cannot be processed and may be returned to the sender.</p>
@@ -61,10 +61,10 @@ export default function RefundPolicy() {
       <p>Product specifications are available on our website before purchase. Customers should review these and confirm the product is appropriate for their needs before ordering. If unsure, contact us before purchasing and we will help you evaluate the product honestly.</p>
 
       <h2>Before Disputing a Charge</h2>
-      <p>If there is a problem with your order, please contact <a href="mailto:support@oxliv.com">support@oxliv.com</a> before initiating a payment dispute. Contacting us first usually allows us to resolve the issue faster. This does not limit any rights available to you through your bank or applicable consumer-protection law.</p>
+      <p>If there is a problem with your order, please contact <a href="mailto:support@oxliv.store">support@oxliv.store</a> before initiating a payment dispute. Contacting us first usually allows us to resolve the issue faster. This does not limit any rights available to you through your bank or applicable consumer-protection law.</p>
 
       <h2>Questions?</h2>
-      <p>📧 <a href="mailto:support@oxliv.com">support@oxliv.com</a><br />📞 <a href="tel:+13074301707">+1 307-430-1707</a></p>
+      <p>📧 <a href="mailto:support@oxliv.store">support@oxliv.store</a><br />📞 <a href="tel:+13074301707">+1 307-430-1707</a></p>
     </PolicyPage>
   );
 }

@@ -23,7 +23,7 @@ export default function ReturnPolicy() {
       <p>If a defect is the reason, the video showing the problem is the most helpful thing you can send. We won't reject a return over a blurry photo.</p>
 
       <h2>How to Start a Return</h2>
-      <p>Email <a href="mailto:support@oxliv.com">support@oxliv.com</a> with:</p>
+      <p>Email <a href="mailto:support@oxliv.store">support@oxliv.store</a> with:</p>
       <ul>
         <li>Your order number</li>
         <li>The reason for return</li>
@@ -60,7 +60,7 @@ export default function ReturnPolicy() {
       <p>Defective units are covered by a 1-year limited warranty for replacement.</p>
 
       <h2>Before You Dispute a Charge</h2>
-      <p>If something's wrong, email <a href="mailto:support@oxliv.com">support@oxliv.com</a> first. We resolve almost every return faster than a bank dispute. Contacting us gives us the chance to make it right quickly.</p>
+      <p>If something's wrong, email <a href="mailto:support@oxliv.store">support@oxliv.store</a> first. We resolve almost every return faster than a bank dispute. Contacting us gives us the chance to make it right quickly.</p>
     </PolicyPage>
   );
 }
