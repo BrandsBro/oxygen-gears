@@ -28,7 +28,7 @@ export default function Features() {
           {features.map((f, i) => (
             <div key={i} className={styles.item}>
               <div className={styles.iconWrap}>
-                <img src={f.icon} alt={f.label} className={styles.icon} />
+                <img src={f.icon} loading="lazy" alt={f.label} className={styles.icon} />
               </div>
               <p className={styles.label}>{f.label}</p>
             </div>

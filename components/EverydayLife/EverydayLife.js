@@ -69,7 +69,7 @@ export default function EverydayLife() {
               className={`${styles.row} ${item.reverse ? styles.reverse : ""}`}
             >
               <div className={item.landscape ? styles.imgWrapLandscape : styles.imgWrap}>
-                <img src={item.image} alt={item.title} className={styles.img} />
+                <img src={item.image} loading="lazy" alt={item.title} className={styles.img} />
               </div>
 
               <div className={styles.text}>

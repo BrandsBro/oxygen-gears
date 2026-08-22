@@ -9,7 +9,7 @@ export default function ProductDetails({ sections }) {
         {sections.map((item, i) => (
           <div key={i} className={`${styles.row} ${item.reverse ? styles.reverse : ""}`}>
             <div className={styles.imgWrap}>
-              <img src={item.image} alt={item.heading} className={styles.img} />
+              <img src={item.image} alt={item.heading} loading="lazy" className={styles.img} />
             </div>
             <div className={styles.text}>
               <h2 className={styles.heading}>{item.heading}</h2>

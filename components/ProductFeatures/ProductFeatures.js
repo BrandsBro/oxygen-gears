@@ -14,11 +14,11 @@ export default function ProductFeatures({ config }) {
             <div key={i} className={styles.card}>
               <div className={styles.inner}>
                 <div className={`${styles.face} ${styles.front}`}>
-                  <img src={card.front} alt={card.label} />
+                  <img src={card.front} loading="lazy" alt={card.label} />
                   <p className={styles.label}>{card.label}</p>
                 </div>
                 <div className={`${styles.face} ${styles.back}`}>
-                  <img src={card.back} alt={card.label} />
+                  <img src={card.back} loading="lazy" alt={card.label} />
                 </div>
               </div>
             </div>

@@ -13,7 +13,7 @@ export default function OxygenOnTheGo({ config }) {
           {items.map((item, i) => (
             <div key={i} className={styles.item}>
               <div className={styles.imgWrap}>
-                <img src={item.image} alt={item.label} className={styles.img} />
+                <img src={item.image} loading="lazy" alt={item.label} className={styles.img} />
               </div>
               <p className={styles.label}>{item.label}</p>
             </div>

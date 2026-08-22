@@ -13,6 +13,7 @@ export default function Hero() {
         height={620}
         className={styles.desktopImg}
         priority
+        fetchPriority="high"
       />
       <div className={styles.overlay}>
         <div className={styles.content}>
@@ -39,6 +40,7 @@ export default function Hero() {
           height={190}
           className={styles.mobileImg}
           priority
+          fetchPriority="high"
         />
         <div className={styles.mobileOverlay}>
           <h1 className={styles.mobileTitle}>
