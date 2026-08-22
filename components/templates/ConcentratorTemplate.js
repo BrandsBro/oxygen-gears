@@ -47,7 +47,7 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
       {config.productFeatures && <ProductFeatures config={config.productFeatures} />}
 
       {/* 3 — Why Switching icons */}
-      <WhySwitching />
+      {config.showWhySwitching !== false && <WhySwitching />}
 
       {/* 4 — Oxygen On The Go */}
       {config.oxygenOnTheGo && <OxygenOnTheGo config={config.oxygenOnTheGo} />}
@@ -56,7 +56,7 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
       {config.productDetails && <ProductDetails sections={config.productDetails} />}
 
       {/* 6 — Stay Powered */}
-      <StayPowered />
+      {config.showStayPowered !== false && <StayPowered />}
 
       {/* 7 — Additional Info accordion */}
       {config.additionalInfo && <AdditionalInfo config={config.additionalInfo} />}
