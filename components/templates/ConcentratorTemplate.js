@@ -1,17 +1,20 @@
+import dynamic from "next/dynamic";
 import ImageGallery from "@/components/ProductShowcase/ImageGallery";
 import ProductInfo from "@/components/ProductPage/ProductInfo";
-import ProductFeatures from "@/components/ProductFeatures/ProductFeatures";
-import WhySwitching from "@/components/WhySwitching/WhySwitching";
-import OxygenOnTheGo from "@/components/OxygenOnTheGo/OxygenOnTheGo";
-import ProductDetails from "@/components/ProductDetails/ProductDetails";
-import StayPowered from "@/components/StayPowered/StayPowered";
-import AdditionalInfo from "@/components/AdditionalInfo/AdditionalInfo";
-import InsideBox from "@/components/InsideBox/InsideBox";
-import TrustedBy from "@/components/TrustedBy/TrustedBy";
-import Reviews from "@/components/Reviews/Reviews";
-import ProductFAQ from "@/components/ProductFAQ/ProductFAQ";
-import ContactBar from "@/components/ContactBar/ContactBar";
 import styles from "@/components/ProductPage/ProductPage.module.css";
+
+// Lazy load everything below the fold
+const ProductFeatures = dynamic(() => import("@/components/ProductFeatures/ProductFeatures"));
+const WhySwitching = dynamic(() => import("@/components/WhySwitching/WhySwitching"));
+const OxygenOnTheGo = dynamic(() => import("@/components/OxygenOnTheGo/OxygenOnTheGo"));
+const ProductDetails = dynamic(() => import("@/components/ProductDetails/ProductDetails"));
+const StayPowered = dynamic(() => import("@/components/StayPowered/StayPowered"));
+const AdditionalInfo = dynamic(() => import("@/components/AdditionalInfo/AdditionalInfo"));
+const InsideBox = dynamic(() => import("@/components/InsideBox/InsideBox"));
+const TrustedBy = dynamic(() => import("@/components/TrustedBy/TrustedBy"));
+const Reviews = dynamic(() => import("@/components/Reviews/Reviews"));
+const ProductFAQ = dynamic(() => import("@/components/ProductFAQ/ProductFAQ"));
+const ContactBar = dynamic(() => import("@/components/ContactBar/ContactBar"));
 
 export default function ConcentratorTemplate({ product, mediaItems, config }) {
   const originalPrice = product.price?.price;
@@ -22,7 +25,7 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
 
   return (
     <>
-      {/* 1 — Product Hero */}
+      {/* Above fold — loads immediately */}
       <div className={styles.page}>
         <div className={styles.inner}>
           <div className={styles.left}>
@@ -43,37 +46,17 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
         </div>
       </div>
 
-      {/* 2 — Flip Cards */}
+      {/* Below fold — lazy loaded */}
       {config.productFeatures && <ProductFeatures config={config.productFeatures} />}
-
-      {/* 3 — Why Switching icons */}
       {config.showWhySwitching !== false && <WhySwitching />}
-
-      {/* 4 — Oxygen On The Go */}
       {config.oxygenOnTheGo && <OxygenOnTheGo config={config.oxygenOnTheGo} />}
-
-      {/* 5 — Product Details left/right */}
       {config.productDetails && <ProductDetails sections={config.productDetails} />}
-
-      {/* 6 — Stay Powered */}
       {config.showStayPowered !== false && <StayPowered />}
-
-      {/* 7 — Additional Info accordion */}
       {config.additionalInfo && <AdditionalInfo config={config.additionalInfo} />}
-
-      {/* 8 — Inside Box */}
       {config.insideBox && <InsideBox config={config.insideBox} />}
-
-      {/* 9 — Trusted By */}
       <TrustedBy />
-
-      {/* 10 — Reviews */}
       <Reviews csvUrl={config.reviewsCsv} />
-
-      {/* 11 — Product FAQ */}
       {config.productFaq && <ProductFAQ faqs={config.productFaq} />}
-
-      {/* 12 — Contact Bar */}
       <ContactBar />
     </>
   );

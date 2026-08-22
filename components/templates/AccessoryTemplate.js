@@ -1,8 +1,10 @@
+import dynamic from "next/dynamic";
 import ImageGallery from "@/components/ProductShowcase/ImageGallery";
 import ProductInfo from "@/components/ProductPage/ProductInfo";
-import ProductFAQ from "@/components/ProductFAQ/ProductFAQ";
-import YouMayAlsoLike from "@/components/YouMayAlsoLike/YouMayAlsoLike";
 import styles from "@/components/ProductPage/ProductPage.module.css";
+
+const ProductFAQ = dynamic(() => import("@/components/ProductFAQ/ProductFAQ"));
+const YouMayAlsoLike = dynamic(() => import("@/components/YouMayAlsoLike/YouMayAlsoLike"));
 
 export default function AccessoryTemplate({ product, mediaItems, config, slug }) {
   const originalPrice = product.price?.price;
@@ -32,7 +34,7 @@ export default function AccessoryTemplate({ product, mediaItems, config, slug })
           </div>
         </div>
       </div>
-      <ProductFAQ faqs={config.productFaq} />
+      {config.productFaq && <ProductFAQ faqs={config.productFaq} />}
       <YouMayAlsoLike currentSlug={slug} />
     </>
   );
