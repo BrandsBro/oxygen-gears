@@ -42,3 +42,4 @@ export default async function ProductPage({ params }) {
     />
   );
 }
+export const revalidate = 3600;
