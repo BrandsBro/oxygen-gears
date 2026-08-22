@@ -43,3 +43,14 @@ export default async function ProductPage({ params }) {
   );
 }
 export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  const { createClient, OAuthStrategy } = await import("@wix/sdk");
+  const { products } = await import("@wix/stores");
+  const client = createClient({
+    modules: { products },
+    auth: OAuthStrategy({ clientId: process.env.NEXT_PUBLIC_WIX_CLIENT_ID }),
+  });
+  const { items } = await client.products.queryProducts().find();
+  return items.map((p) => ({ slug: p.slug }));
+}
