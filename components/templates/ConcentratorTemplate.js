@@ -22,6 +22,7 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
 
   return (
     <>
+      {/* 1 — Product Hero */}
       <div className={styles.page}>
         <div className={styles.inner}>
           <div className={styles.left}>
@@ -41,16 +42,38 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
           </div>
         </div>
       </div>
+
+      {/* 2 — Flip Cards */}
       {config.productFeatures && <ProductFeatures config={config.productFeatures} />}
+
+      {/* 3 — Why Switching icons */}
       <WhySwitching />
+
+      {/* 4 — Oxygen On The Go */}
       {config.oxygenOnTheGo && <OxygenOnTheGo config={config.oxygenOnTheGo} />}
+
+      {/* 5 — Product Details left/right */}
       {config.productDetails && <ProductDetails sections={config.productDetails} />}
+
+      {/* 6 — Stay Powered */}
       <StayPowered />
+
+      {/* 7 — Additional Info accordion */}
       {config.additionalInfo && <AdditionalInfo config={config.additionalInfo} />}
+
+      {/* 8 — Inside Box */}
       {config.insideBox && <InsideBox config={config.insideBox} />}
+
+      {/* 9 — Trusted By */}
       <TrustedBy />
+
+      {/* 10 — Reviews */}
       <Reviews csvUrl={config.reviewsCsv} />
+
+      {/* 11 — Product FAQ */}
       {config.productFaq && <ProductFAQ faqs={config.productFaq} />}
+
+      {/* 12 — Contact Bar */}
       <ContactBar />
     </>
   );
