@@ -1,16 +1,18 @@
 import styles from "./Hero.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import brand from "@/config/brand";
 
 export default function Hero() {
   return (
     <section className={styles.hero}>
-
-      {/* Desktop */}
-      <img
-        src="https://static.wixstatic.com/media/8f1bc7_b623cc5ebfe543fda64c27ddf0d209bc~mv2.avif"
+      <Image
+        src={brand.heroBannerDesktop || "https://static.wixstatic.com/media/8f1bc7_b623cc5ebfe543fda64c27ddf0d209bc~mv2.avif"}
         alt="Hero"
+        width={1440}
+        height={620}
         className={styles.desktopImg}
+        priority
       />
       <div className={styles.overlay}>
         <div className={styles.content}>
@@ -29,12 +31,14 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Mobile — image with text overlay */}
       <div className={styles.mobileHero}>
-        <img
-          src="https://static.wixstatic.com/media/8f1bc7_b623cc5ebfe543fda64c27ddf0d209bc~mv2.avif"
+        <Image
+          src={brand.heroBannerMobile || "https://static.wixstatic.com/media/8f1bc7_b623cc5ebfe543fda64c27ddf0d209bc~mv2.avif"}
           alt="Hero Mobile"
+          width={768}
+          height={190}
           className={styles.mobileImg}
+          priority
         />
         <div className={styles.mobileOverlay}>
           <h1 className={styles.mobileTitle}>
@@ -45,7 +49,6 @@ export default function Hero() {
           </Link>
         </div>
       </div>
-
     </section>
   );
 }
