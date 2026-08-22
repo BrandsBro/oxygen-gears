@@ -1,6 +1,5 @@
 const product = {
   // ── VIDEO ──
-  videoUrl: "https://video.wixstatic.com/video/8f1bc7_380736ba1d54466aaee83e43b802a1fc/480p/mp4/file.mp4",
 
   // ── REVIEWS ──
   reviewsCsv: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7ViyXXaS8ztprK23idlwxqx7Yew74w1QT-qHyjr4EjZHccxdA_DD3yfhsQmsBmWPzK5t00a2m--qh/pub?output=csv",
