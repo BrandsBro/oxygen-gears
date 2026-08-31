@@ -18,8 +18,8 @@ const product = {
 
   // ── FEATURES — update images when ready ──
   productFeatures: {
-    heading: "Go Further With a Smarter Portable Oxygen",
-    description: "Oxygen support should move at your speed, and this concentrator does exactly that. It reads your breathing and sends a pulse of oxygen with every inhale. Carry it to the park, out to dinner, or across town without a second thought. Everything you need in one compact case.",
+    heading: "Why This Oxygen Concentrator Stands Out",
+    description: "This lightweight oxygen concentrator is built for daily comfort at home or away. Its compact body rests easily on your shoulder, while 95% oxygen purity, advanced filtration, and a longer-lasting battery provide dependable performance through everyday errands, quiet afternoons, family visits, and outdoor plans.",
     cards: [
       { label: "Smart AI Sensing", front: "https://static.wixstatic.com/media/20cc08_829938bde0bb45ffa065e57ab19670fa~mv2.avif", back: "https://static.wixstatic.com/media/20cc08_0682d3a5ae3f441490e6cdd7fc8f429d~mv2.webp" },
       { label: "High-Purity", front: "https://static.wixstatic.com/media/20cc08_bbc15f7062c04f36934bdebab534045b~mv2.avif", back: "https://static.wixstatic.com/media/20cc08_af7736bd6cbf48e0a1f3c3c6943c4388~mv2.webp" },
@@ -30,13 +30,13 @@ const product = {
 
   // ── OXYGEN ON THE GO — update images when ready ──
   oxygenOnTheGo: {
-    heading: "Your Oxygen, Always With You",
-    subtext: "Your day should not wait on your oxygen. Oxliv is light, easy to carry, and ready to go, keeping up to 95% oxygen purity with you from morning to night.",
+    heading: "Built For Everyday Outings",
+    subtext: "Daily plans become easier with a device made for movement. Carry it in the car, through the market, around the garden, or along mountain paths with up to six hours of battery use.",
     items: [
-      { image: "https://static.wixstatic.com/media/8f1bc7_906a51bcb5db46399f98d2934416cee0~mv2.avif", label: "Walking" },
-      { image: "https://static.wixstatic.com/media/8f1bc7_4958f1b6e25f43c7b84b186250c69fd7~mv2.avif", label: "At Indoors" },
-      { image: "https://static.wixstatic.com/media/8f1bc7_1cd09645060d4913b904fb36add92f08~mv2.avif", label: "In a Car" },
-      { image: "https://static.wixstatic.com/media/8f1bc7_d6af48e45af746dcbf8765685502a08b~mv2.avif", label: "Outdoors" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_739d404d68bd48e39abc7ca464e6c514~mv2.webp", label: "Driving" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_95934897713b4217a648f3203acf70e6~mv2.webp", label: "Trekking" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_7220d95cef15477f98b6ed047636f4f4~mv2.webp", label: "Shopping" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_49c48df44ee94d64b9a68939f0e943bc~mv2.webp", label: "Gardening" },
     ],
   },
 
@@ -76,9 +76,9 @@ const product = {
 
   // ── INSIDE BOX — update when ready ──
   insideBox: {
-    image: "https://static.wixstatic.com/media/8f1bc7_fe9d6e01321c4763ad7c7c477a211ed0~mv2.avif",
+    image: "https://static.wixstatic.com/media/8f1bc7_bb9dd429e6bf4e99aed4f49b128c4c6b~mv2.webp",
     items: [
-      "1 Portable Oxygen Concentrator",
+      "Portable Oxygen Concentrator",
       "1 Charger",
       "1 Battery",
       "1 Instruction manual + warranty card",
