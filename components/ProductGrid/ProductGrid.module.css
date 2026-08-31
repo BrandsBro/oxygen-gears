@@ -163,7 +163,7 @@
 /* Tablet */
 @media (max-width: 900px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
   }
   .heading { font-size: 26px; }
@@ -176,7 +176,7 @@
   .section { padding: 24px 20px; }
 
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 
@@ -186,4 +186,10 @@
   .name { font-size: 13px; }
   .price { font-size: 22px; }
   .viewBtn { padding: 10px; font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
