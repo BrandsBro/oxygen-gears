@@ -29,7 +29,7 @@
 }
 
 .subtext {
-  font-size: 15px;
+  font-size: 22px;
   color: #555;
   margin: 0;
   line-height: 1.6;
@@ -89,7 +89,7 @@
   color: #fff;
   border: none;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 700;
   cursor: pointer;
   transition: background 0.2s;
@@ -131,7 +131,7 @@
 }
 
 .infoText {
-  font-size: 15px;
+  font-size: 22px;
   color: #555;
   line-height: 1.7;
   margin: 0;
@@ -151,7 +151,7 @@
 }
 
 .contactInfo p {
-  font-size: 15px;
+  font-size: 22px;
   color: #333;
   margin: 0;
 }
@@ -272,7 +272,7 @@
 }
 
 .popupText {
-  font-size: 15px;
+  font-size: 22px;
   color: #555;
   line-height: 1.7;
   margin: 0;
@@ -291,7 +291,7 @@
   color: #fff;
   border: none;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 700;
   cursor: pointer;
   transition: background 0.2s;

@@ -56,7 +56,7 @@
 }
 
 .para {
-  font-size: 15px;
+  font-size: 22px;
   color: #444;
   line-height: 1.8;
   margin: 0;
@@ -95,7 +95,7 @@
   padding: 14px 32px;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 700;
   width: fit-content;
   transition: background 0.2s;

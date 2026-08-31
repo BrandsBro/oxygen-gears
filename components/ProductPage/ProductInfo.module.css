@@ -59,7 +59,7 @@
 .original {
   text-decoration: line-through;
   color: #999;
-  font-size: 15px;
+  font-size: 22px;
 }
 
 .discounted {
@@ -155,7 +155,7 @@
   font-weight: 800;
   color: #111;
   margin-top: 4px;
-  font-size: 15px;
+  font-size: 22px;
 }
 
 /* Shop Now */

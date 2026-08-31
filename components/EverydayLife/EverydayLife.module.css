@@ -81,7 +81,7 @@
 }
 
 .desc {
-  font-size: 15px;
+  font-size: 22px;
   color: #555;
   line-height: 1.8;
   margin: 0;
@@ -98,7 +98,7 @@
 }
 
 .boxItem {
-  font-size: 15px;
+  font-size: 22px;
   color: #444;
   display: flex;
   align-items: center;
