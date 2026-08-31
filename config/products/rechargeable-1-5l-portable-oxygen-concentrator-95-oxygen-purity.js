@@ -27,7 +27,18 @@ const product = {
       { label: "Longtime Runtime", front: "https://static.wixstatic.com/media/8f1bc7_08a2c9c280f540fdb3b372fd0734269c~mv2.webp", back: "https://static.wixstatic.com/media/8f1bc7_1aef18196da045d1915f130317052f6c~mv2.jpg" },
     ],
   },
-
+  whySwitching: {
+    heading: "Designed Around Daily Life",
+    subtext: "This compact oxygen concentrator brings easy control, cleaner output, and flexible power into one portable design. Five levels, layered filtration, low-noise operation, and a long-lasting battery help it fit naturally into everyday use.",
+    items: [
+      { icon: "https://static.wixstatic.com/media/8f1bc7_a86fd544c1ed4c239bcdcbae3d8ce805~mv2.webp", label: "1-5L Pulse Flow" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_de1f3f583a114a64a22c8995a6ab9107~mv2.webp", label: "Dual Output Modes" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_b8b62a846a29469a8995255d57b8e3fb~mv2.webp", label: "95% Oxygen Purity" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_2314140da24f488982d3e68e98b2c2aa~mv2.webp", label: "Advanced Filtration" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_d81e9f9ec55e4e01be6bd8f0ec5fdd44~mv2.webp", label: "6400mAh Battery" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_377440bdb7cc454c82e838ebd4a1b261~mv2.webp", label: "≤49dB Operation" },
+    ],
+  },
   // ── OXYGEN ON THE GO — update images when ready ──
   oxygenOnTheGo: {
     heading: "Built For Everyday Outings",
@@ -100,18 +111,7 @@ const product = {
     { q: "When can I expect delivery?", a: "Orders ship free across the USA and usually arrive within 8 to 11 business days." },
     { q: "Can I see the product specification?", a: "Yes, please check the details in our product specification page." },
   ],
-  whySwitching: {
-    heading: "Designed Around Daily Life",
-    subtext: "This compact oxygen concentrator brings easy control, cleaner output, and flexible power into one portable design. Five levels, layered filtration, low-noise operation, and a long-lasting battery help it fit naturally into everyday use.",
-    items: [
-      { icon: "https://static.wixstatic.com/media/8f1bc7_a86fd544c1ed4c239bcdcbae3d8ce805~mv2.webp", label: "1-5L Pulse Flow" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_de1f3f583a114a64a22c8995a6ab9107~mv2.webp", label: "Dual Output Modes" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_b8b62a846a29469a8995255d57b8e3fb~mv2.webp", label: "95% Oxygen Purity" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_2314140da24f488982d3e68e98b2c2aa~mv2.webp", label: "Advanced Filtration" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_d81e9f9ec55e4e01be6bd8f0ec5fdd44~mv2.webp", label: "6400mAh Battery" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_377440bdb7cc454c82e838ebd4a1b261~mv2.webp", label: "≤49dB Operation" },
-    ],
-  },
+
 };
 
 export default product;
