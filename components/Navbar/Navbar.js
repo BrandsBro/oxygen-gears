@@ -33,10 +33,10 @@ export default function Navbar() {
 
         <div className={styles.navRight}>
           <Link href={`/products/${brand.featuredProductSlug}`} className={styles.orderBtn}>Order Now</Link>
-          <Link href="/cart" className={styles.cartIcon}>
+          {/* <Link href="/cart" className={styles.cartIcon}>
             🛒
             {cartCount > 0 && <span className={styles.cartBadge}>{cartCount}</span>}
-          </Link>
+          </Link> */}
         </div>
 
         <button className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>☰</button>
