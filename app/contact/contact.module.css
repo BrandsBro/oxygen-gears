@@ -23,7 +23,7 @@
 
 .heading {
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 600;
   color: #111;
   margin: 0;
 }
@@ -125,7 +125,7 @@
 
 .infoHeading {
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 600;
   color: #111;
   margin: 0;
 }
@@ -266,7 +266,7 @@
 
 .popupTitle {
   font-size: 35px;
-  font-weight: 800;
+  font-weight: 600;
   color: #111;
   margin: 0;
 }
