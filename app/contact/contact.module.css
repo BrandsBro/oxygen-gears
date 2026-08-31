@@ -30,7 +30,7 @@
 
 .subtext {
   font-size: 22px;
-  color: #555;
+  color: #000;
   margin: 0;
   line-height: 1.6;
 }
@@ -132,7 +132,7 @@
 
 .infoText {
   font-size: 22px;
-  color: #555;
+  color: #000;
   line-height: 1.7;
   margin: 0;
 }
@@ -273,7 +273,7 @@
 
 .popupText {
   font-size: 22px;
-  color: #555;
+  color: #000;
   line-height: 1.7;
   margin: 0;
 }

@@ -30,7 +30,7 @@ export async function POST(req) {
             .body { padding: 32px; }
             .row { display: flex; margin-bottom: 16px; border-bottom: 1px solid #f0f0f0; padding-bottom: 16px; }
             .label { font-weight: 600; color: #333; min-width: 160px; font-size: 14px; }
-            .value { color: #555; font-size: 14px; flex: 1; }
+            .value { color: #000; font-size: 14px; flex: 1; }
             .message-box { background: #f8faff; border-left: 4px solid #58ACAF; padding: 16px; border-radius: 4px; margin-top: 8px; }
             .message-box p { margin: 0; color: #444; font-size: 14px; line-height: 1.7; }
             .footer { background: #f8f8f8; padding: 20px 32px; text-align: center; border-top: 1px solid #eee; }

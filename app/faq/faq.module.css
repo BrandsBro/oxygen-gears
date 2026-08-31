@@ -61,7 +61,7 @@
   font-size: 18px;
   font-weight: 400;
   flex-shrink: 0;
-  color: #555;
+  color: #000;
   transition: border-color 0.2s, color 0.2s;
   line-height: 1;
 }
@@ -84,7 +84,7 @@
 .answer {
   padding: 0 24px 20px;
   font-size: 14px;
-  color: #555;
+  color: #000;
   line-height: 1.8;
   margin: 0;
 }
