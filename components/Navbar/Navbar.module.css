@@ -34,14 +34,14 @@
 
 .navLeft {
   display: flex;
-  gap: 24px;
+  gap: 18px;
   flex: 1;
 }
 
 .navLeft a {
   text-decoration: none;
   color: #333;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   transition: color 0.2s;
 }
@@ -125,7 +125,7 @@
 .mobileMenu a {
   text-decoration: none;
   color: #333;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 }
 
