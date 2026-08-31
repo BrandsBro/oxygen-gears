@@ -100,7 +100,7 @@
 }
 
 .li {
-  font-size: 14px;
+  font-size: 18px;
   color: #444;
   line-height: 1.6;
 }
@@ -116,7 +116,7 @@
 
 .tdLabel {
   padding: 10px 16px;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 600;
   color: #111;
   width: 40%;
@@ -125,7 +125,7 @@
 
 .tdValue {
   padding: 10px 16px;
-  font-size: 13px;
+  font-size: 18px;
   color: #000;
   border-bottom: 1px solid #eee;
 }
