@@ -93,26 +93,29 @@ const product = {
     image: "https://static.wixstatic.com/media/8f1bc7_bb9dd429e6bf4e99aed4f49b128c4c6b~mv2.webp",
     items: [
       "Portable Oxygen Concentrator",
-      "1 Charger",
+      "Wall Power Adapter",
       "1 Battery",
-      "1 Instruction manual + warranty card",
-      "1 Car charging cable",
-      "2 Nasal oxygen tubes",
-      "1 Certificate of conformity",
-      "1 Backpack",
-      "1 Case",
+      "Car Charging Cable",
+      "2pc Nasal Cannula",
+      "Travel Carry Bag",
+      "Adjustable Shoulder Strap",
+      "5pc Filter Cotton",
+      "User Instruction Manual",
     ],
   },
 
   // ── PRODUCT FAQ ──
   productFaq: [
-    { q: "Is this a continuous flow oxygen concentrator?", a: "No, our portable concentrators use a smart pulse flow system that detects your breath and delivers oxygen precisely when you inhale." },
-    { q: "Is the oxygen clean and pure?", a: "Yes, our portable oxygen concentrators deliver 90-95% pure oxygen, drawn directly from the surrounding air." },
-    { q: "How long does the battery last?", a: "A single charge runs several hours depending on your level. The battery is replaceable, so a spare keeps you going longer." },
-    { q: "How can I power the device?", a: "You can run it on home AC power, a car DC socket, or its battery. It also works while plugged in and charging." },
-    { q: "How heavy is it to carry?", a: "It is light enough for a shoulder strap. The compact build fits errands, travel, and time around the house." },
-    { q: "When can I expect delivery?", a: "Orders ship free across the USA and usually arrive within 8 to 11 business days." },
-    { q: "Can I see the product specification?", a: "Yes, please check the details in our product specification page." },
+    { q: "How long does the battery last?", a: "The 6400mAh battery provides up to 6 hours of use. Actual runtime can vary based on the selected output level, operating mode, battery condition, and surrounding temperature." },
+    { q: "Can I adjust the output?", a: "Yes, the device offers 5 adjustable levels. Use the simple controls to move between settings and select the output level that best fits your current routine." },
+    { q: "How much noise does it make?", a: "The device operates at ≤49 dB. Its controlled sound level makes it easier to use while reading, watching television, working, or spending time with family." },
+    { q: "Can I travel with it?", a: "Yes, the 3.53 lbs body and included carry bag make it easy to transport. For air travel, confirm the device and battery requirements with your airline before departure." },
+    { q: "What comes inside the box?", a: "Your order includes the device, rechargeable battery, wall adapter, car charging cable, two oxygen tubes, an adjustable carry bag, and a user instruction manual." },
+    { q: "Is the device easy to operate?", a: "Yes, connect the oxygen tube, choose a power source, turn on the device, and select your preferred level and mode. The included manual explains each control." },
+    { q: "What power options are available?", a: "The device supports wall power at home, power inside a compatible vehicle, and cordless use through its rechargeable battery." },
+    { q: "Is a user manual included?", a: "Yes. A printed user manual is included inside the box. It explains the controls, power options, operating modes, setup process, and basic product care." },
+    { q: "How often should I clean the filter?", a: "Check the filter regularly for visible dust or debris. Follow the cleaning and replacement instructions provided in the manual to help maintain steady airflow and proper operation." },
+
   ],
 
 };
