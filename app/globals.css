@@ -53,3 +53,15 @@ img {
 [id] {
   scroll-margin-top: 90px;
 }
+
+@font-face {
+  font-family: 'GeologicaRoman';
+  src: url('https://cdn.shopify.com/s/files/1/1014/5274/2935/files/GeologicaRoman-Regular.ttf?v=1788173963') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'GeologicaRoman', sans-serif;
+}

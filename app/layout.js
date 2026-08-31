@@ -3,15 +3,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { CartProvider } from "@/lib/cartContext";
 import brand from "@/config/brand";
-import { Geologica } from "next/font/google";
 import ScrollToTop from "@/components/ScrollToTop";
-
-const geologica = Geologica({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-  display: "swap",
-  preload: true,
-});
 
 export const metadata = {
   title: "Oxliv — Non-Medical Oxygen Concentrators",
@@ -20,9 +12,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={geologica.className}>
+    <html lang="en">
       <head>
         <link rel="icon" href={brand.favicon} type="image/webp" />
+        <link
+          rel="preload"
+          href="https://cdn.shopify.com/s/files/1/1014/5274/2935/files/GeologicaRoman-Regular.ttf?v=1788173963"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
         <CartProvider>
