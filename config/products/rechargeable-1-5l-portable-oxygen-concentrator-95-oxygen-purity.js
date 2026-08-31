@@ -21,10 +21,10 @@ const product = {
     heading: "Why This Oxygen Concentrator Stands Out",
     description: "This lightweight oxygen concentrator is built for daily comfort at home or away. Its compact body rests easily on your shoulder, while 95% oxygen purity, advanced filtration, and a longer-lasting battery provide dependable performance through everyday errands, quiet afternoons, family visits, and outdoor plans.",
     cards: [
-      { label: "Smart AI Sensing", front: "https://static.wixstatic.com/media/20cc08_829938bde0bb45ffa065e57ab19670fa~mv2.avif", back: "https://static.wixstatic.com/media/20cc08_0682d3a5ae3f441490e6cdd7fc8f429d~mv2.webp" },
-      { label: "High-Purity", front: "https://static.wixstatic.com/media/20cc08_bbc15f7062c04f36934bdebab534045b~mv2.avif", back: "https://static.wixstatic.com/media/20cc08_af7736bd6cbf48e0a1f3c3c6943c4388~mv2.webp" },
-      { label: "All-Day Power", front: "https://static.wixstatic.com/media/20cc08_389026b252f142eba763c7d7a66f4a5e~mv2.png", back: "https://static.wixstatic.com/media/20cc08_5b5ee60f4bc54bf480d37fd26e86fe4f~mv2.jpg" },
-      { label: "100% Tank Free", front: "https://static.wixstatic.com/media/20cc08_c4b2b5bb7c104e55a71aa25b49f7452c~mv2.avif", back: "https://static.wixstatic.com/media/20cc08_a110ff57dff44ee29e4e5e61525e3b45~mv2.jpg" },
+      { label: "Lightweight Carry", front: "https://static.wixstatic.com/media/8f1bc7_f9779b3d038645a993e208ad89e965ff~mv2.webp", back: "https://static.wixstatic.com/media/8f1bc7_300778c1c5684bcd997020a0dca71266~mv2.jpg" },
+      { label: "Pure Oxygen", front: "https://static.wixstatic.com/media/8f1bc7_dfae2e25a4724feca816dee83bb9ba8a~mv2.webp", back: "https://static.wixstatic.com/media/8f1bc7_0c5cb6ad7a844cd0bc1045276eecd4f5~mv2.jpg" },
+      { label: "Advanced Filteration", front: "https://static.wixstatic.com/media/8f1bc7_c56046d47676467794e3b9539eae5809~mv2.webp", back: "https://static.wixstatic.com/media/8f1bc7_caf7934e991a47d2baf9343bf6d2cc8c~mv2.jpg" },
+      { label: "Longtime Runtime", front: "https://static.wixstatic.com/media/8f1bc7_08a2c9c280f540fdb3b372fd0734269c~mv2.webp", back: "https://static.wixstatic.com/media/8f1bc7_1aef18196da045d1915f130317052f6c~mv2.jpg" },
     ],
   },
 
@@ -101,15 +101,15 @@ const product = {
     { q: "Can I see the product specification?", a: "Yes, please check the details in our product specification page." },
   ],
   whySwitching: {
-    heading: "Meet the 1–5L/Min Smart Portable Oxygen Concentrator",
-    subtext: "Set your flow across five levels from 1 to 5 liters per minute. At about 3 pounds it rides easily on a shoulder strap wherever you go.",
+    heading: "Designed Around Daily Life",
+    subtext: "This compact oxygen concentrator brings easy control, cleaner output, and flexible power into one portable design. Five levels, layered filtration, low-noise operation, and a long-lasting battery help it fit naturally into everyday use.",
     items: [
-      { icon: "https://static.wixstatic.com/media/8f1bc7_0d98baff82384a69980e86af1a1416b9~mv2.avif", label: "Lightweight Build" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_e0325b7852c34f7e88686dfd8e9f3b6b~mv2.avif", label: "1-5L/min Adjustable Flow" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_857f66bbd5834361b152b9a92c63e4e8~mv2.avif", label: "Portable Design" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_aa13bd0229ce4e3cbbc5c72ae8ee735b~mv2.avif", label: "Zero Tanks Required" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_c4306d458f384be09013c57d31ea9c9c~mv2.avif", label: "Swappable Battery" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_d99e126153214119b1c3428dfce1f5cb~mv2.avif", label: "Advanced Filtration" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_a86fd544c1ed4c239bcdcbae3d8ce805~mv2.webp", label: "1-5L Pulse Flow" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_de1f3f583a114a64a22c8995a6ab9107~mv2.webp", label: "Dual Output Modes" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_b8b62a846a29469a8995255d57b8e3fb~mv2.webp", label: "95% Oxygen Purity" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_2314140da24f488982d3e68e98b2c2aa~mv2.webp", label: "Advanced Filtration" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_d81e9f9ec55e4e01be6bd8f0ec5fdd44~mv2.webp", label: "6400mAh Battery" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_377440bdb7cc454c82e838ebd4a1b261~mv2.webp", label: "≤49dB Operation" },
     ],
   },
 };
