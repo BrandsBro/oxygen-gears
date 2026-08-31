@@ -3,10 +3,10 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { CartProvider } from "@/lib/cartContext";
 import brand from "@/config/brand";
-import { Geologica_Art } from "next/font/google";
+import { Geologica } from "next/font/google";
 import ScrollToTop from "@/components/ScrollToTop";
 
-const geologica = Geologica_Art({
+const geologica = Geologica({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
