@@ -48,7 +48,7 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
 
       {/* Below fold — lazy loaded */}
       {config.productFeatures && <ProductFeatures config={config.productFeatures} />}
-      {config.showWhySwitching !== false && <WhySwitching />}
+      {config.showWhySwitching !== false && <WhySwitching config={config.whySwitching} />}
       {config.oxygenOnTheGo && <OxygenOnTheGo config={config.oxygenOnTheGo} />}
       {config.productDetails && <ProductDetails sections={config.productDetails} />}
       {config.showStayPowered !== false && <StayPowered />}
