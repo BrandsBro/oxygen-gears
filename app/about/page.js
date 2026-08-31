@@ -7,13 +7,10 @@ export default function AboutPage() {
         <h1 className={styles.heading}>About Oxliv</h1>
         <div className={styles.content}>
           <p>
-       We create portable oxygen concentrators designed to seamlessly integrate into your life, so you can maintain your mobility and independence without worrying about refills or heavy equipment.
+            At Oxliv, we started with a simple mission: to make breathing support feel less like a burden and more like a natural part of everyday life. We set out to create a portable oxygen solution that's lightweight, easy to use, and designed to help you maintain your independence.
           </p>
           <p>
-         We focus on the details that make a real difference in your day-to-day experience. Our lightweight concentrators are easy to carry, set up in seconds, and feature adjustable flow settings that put you in control. With reliable performance you can count on, whether you're at home or on the go, Oxliv ensures you always have access to the oxygen you need.
-          </p>
-          <p>
-          Say goodbye to bulky tanks and complicated routines. Our intuitive designs prioritize simplicity, so you can focus on living life to the fullest. We believe that breathing support should never hold you back – and with Oxliv, it won't.
+            Our smart pulse flow concentrator uses advanced AI breath detection to deliver oxygen precisely when you need it. By generating oxygen on demand, it eliminates heavy tanks and constant refills, giving you a reliable source of oxygen that moves with you.
           </p>
         </div>
       </div>
