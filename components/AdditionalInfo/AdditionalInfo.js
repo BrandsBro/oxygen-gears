@@ -5,11 +5,12 @@ import styles from "./AdditionalInfo.module.css";
 export default function AdditionalInfo({ config }) {
   const [open, setOpen] = useState(null);
   if (!config) return null;
-  const { features, specs, disclaimer } = config;
+  const { features, specs, disclaimer, everydayUseCases } = config;
 
   const sections = [
-    { title: "Features & Benefits", content: features, type: "list" },
-    { title: "Specifications", content: specs, type: "specs" },
+    ...(everydayUseCases ? [{ title: "Everyday Use Cases", content: everydayUseCases, type: "list" }] : []),
+    ...(features ? [{ title: "Features & Benefits", content: features, type: "list" }] : []),
+    ...(specs ? [{ title: "Specifications", content: specs, type: "specs" }] : []),
   ];
 
   return (

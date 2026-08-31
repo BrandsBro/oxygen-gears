@@ -28,12 +28,12 @@ const product = {
     ],
   },
   stayPowered: {
-    heading: "Charged and Ready, Wherever You Are",
-    subtext: "Three power options mean you are always covered. Charge at home, plug into the car, or head out on the battery, and move through your day without a single worry about running low.",
+    heading: "3 Ways To Stay Powered",
+    subtext: "Use wall power at home, a car charging cable while traveling, and battery power outdoors. Three simple options keep the device ready wherever you go.",
     items: [
-      { image: "https://static.wixstatic.com/media/8f1bc7_bdc54fd7eb194c11b0306f3961cb1c37~mv2.avif", label: "At Home" },
-      { image: "https://static.wixstatic.com/media/8f1bc7_7d04b14cb9244c5e9b6e20e8d794e0b0~mv2.avif", label: "In a Car" },
-      { image: "https://static.wixstatic.com/media/8f1bc7_ecb1cf3dc0ba411c96d5365d816781d3~mv2.avif", label: "On Battery" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_659dda34b6854e3c82d66ba4f5bd09c6~mv2.webp", label: "Wall Outlet" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_e1b9fc38bb464c05823c32b1bcbc8256~mv2.webp", label: "Car Charging" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_af06eec56d674447a334db5243cac538~mv2.webp", label: "Battery Power" },
     ],
   },
   whySwitching: {
@@ -72,31 +72,48 @@ const product = {
 
   ],
 
-  // ── ADDITIONAL INFO — update when ready ──
-  additionalInfo: {
-    features: [
-      "Delivers high-purity oxygen up to 95% for reliable daily breathing support",
-      "Uses pulse oxygen technology that responds to your natural inhalation",
-      "Automatically switches to fixed-frequency mode when no breath is detected",
-      "Runs quietly below 56dB for comfortable use on the go",
-      "Provides portable power with the replaceable battery box",
-      "Offers five adjustable oxygen levels for personalized airflow",
-      "Compact design fits easily in a backpack or travel bag",
-      "Supports home, car, outdoor, and travel use with multiple power options",
-      "Simple one-touch operation with a clear digital screen",
-      "Includes a free carry bag, chargers and nasal tubes for instant setup",
-    ],
-    specs: [
-      { label: "Oxygen Flow Range", value: "1-5L pulse gear levels" },
-      { label: "Oxygen Purity", value: "90%-95% (varies with breathing frequency & gear)" },
-      { label: "Battery Life", value: "Up to 5 hours (single battery)" },
-      { label: "Charging Time", value: "~4 hours" },
-      { label: "Operating Noise", value: "≤ 56 dB" },
-      { label: "Power Input", value: "AC100-240V, 50/60 Hz" },
-    ],
-    disclaimer: "The Oxliv 1-5L Portable Oxygen Concentrator is not a medical device. They are designed for travel, recreation, fitness, and everyday comfort, not to diagnose, treat, or prevent any illness or condition. Anyone with a medical condition should speak with a healthcare professional before using the device.",
-  },
-
+ additionalInfo: {
+  everydayUseCases: [
+    "Road Trips: Connect it inside your vehicle.",
+    "Trail Walks: Carry it on gentle outdoor routes.",
+    "Grocery Runs: Keep it close while shopping.",
+    "Yard Work: Use it during light outdoor tasks.",
+    "Reading Time: Place it beside your chair.",
+    "Meal Prep: Keep it nearby in the kitchen.",
+    "Desk Work: Set it beside your workspace.",
+    "Family Visits: Bring it along for the day.",
+    "Park Visits: Use battery power while outdoors.",
+    "Café Stops: Keep it beside your seat.",
+    "Hotel Stays: Use wall or battery power.",
+    "Porch Time: Relax outdoors with cordless power.",
+  ],
+  features: [
+    "1-5 adjustable output levels",
+    "Pulse and Active modes",
+    "Up to 95% oxygen purity",
+    "Six-layer filtration system",
+    "Up to 6 hours of power",
+    "Quiet ≤49 dB operation",
+    "Lightweight 3.53 lbs design",
+    "Wall, Car charging cable, and battery power",
+  ],
+  specs: [
+    { label: "Product", value: "1-5L Mobile Oxygen Concentrator" },
+    { label: "Output", value: "Five adjustable levels" },
+    { label: "Operating Modes", value: "Pulse and Active" },
+    { label: "Oxygen Purity", value: "Up to 95%" },
+    { label: "Battery Capacity", value: "6400mAh" },
+    { label: "Battery Life", value: "Up to 6 hours" },
+    { label: "Noise Level", value: "≤49 dB" },
+    { label: "Net Weight", value: "3.53 lbs (1.7 kg)" },
+    { label: "Filtration", value: "6 layers" },
+    { label: "Power Options", value: "Wall, Car charging cable, battery" },
+    { label: "Material", value: "Metal and ABS" },
+    { label: "Color", value: "White" },
+    { label: "Warranty", value: "1 year" },
+  ],
+  disclaimer: "The Oxliv 1-5L Portable Oxygen Concentrator is not a medical device. They are designed for travel, recreation, fitness, and everyday comfort, not to diagnose, treat, or prevent any illness or condition. Anyone with a medical condition should speak with a healthcare professional before using the device.",
+},
   // ── INSIDE BOX — update when ready ──
   insideBox: {
     image: "https://static.wixstatic.com/media/8f1bc7_bb9dd429e6bf4e99aed4f49b128c4c6b~mv2.webp",
