@@ -6,8 +6,10 @@ const brand = {
   email: "support@oxliv.store",
   phone: "+1 307-310-7781",
   freeShippingText: "🚚 FREE SHIPPING ON ALL ORDERS",
-  featuredProductSlug: "1-7lmin-smart-portable-oxygen-concentrator-10-hours-battery-adjustable-flow",
+  featuredProductSlug: "1to7l-portable-oxygen-concentrator",
   featuredProductVideo: "https://video.wixstatic.com/video/8f1bc7_380736ba1d54466aaee83e43b802a1fc/480p/mp4/file.mp4",
+  heroBannerDesktop: "https://static.wixstatic.com/media/8f1bc7_b623cc5ebfe543fda64c27ddf0d209bc~mv2.avif",
+  heroBannerMobile: "https://static.wixstatic.com/media/8f1bc7_b623cc5ebfe543fda64c27ddf0d209bc~mv2.avif",
 };
 
 export default brand;

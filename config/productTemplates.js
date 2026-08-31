@@ -1,6 +1,6 @@
 const productTemplates = {
 
-  "1-7lmin-smart-portable-oxygen-concentrator-10-hours-battery-adjustable-flow": {
+  "1to7l-portable-oxygen-concentrator": {
     template: "concentrator",
     config: () => import("@/config/products/1-7lmin-smart-portable-oxygen-concentrator-10-hours-battery-adjustable-flow"),
   },
