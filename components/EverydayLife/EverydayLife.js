@@ -33,7 +33,7 @@ const items = [
     number: "05",
     title: "What's In The Box?",
     isList: true,
-    intro: "Getting started should feel simple, not incomplete. Oxliv includes all the essentials for setup, daily use, travel, and comfortable breathing, right out of the box.",
+    intro: "",
     items: [
       "1 Oxygen concentrator",
       "1 Rechargeable battery",
