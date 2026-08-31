@@ -4,6 +4,7 @@ import Footer from "@/components/Footer/Footer";
 import { CartProvider } from "@/lib/cartContext";
 import brand from "@/config/brand";
 import { Geologica } from "next/font/google";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const geologica = Geologica({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <CartProvider>
+          <ScrollToTop />
           <Navbar />
           {children}
           <Footer />
