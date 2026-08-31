@@ -41,7 +41,7 @@
 
 .avgRating {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   color: #111;
 }
 
@@ -218,7 +218,7 @@
 }
 
 .author {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   color: #111;
 }
@@ -272,7 +272,7 @@
   border: none;
   border-radius: 30px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -365,7 +365,7 @@
 }
 
 .modalAuthor {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   color: #111;
   display: flex;

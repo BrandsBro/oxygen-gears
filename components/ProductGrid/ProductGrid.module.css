@@ -103,7 +103,7 @@
   background: #e53935;
   color: #fff;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   padding: 4px 10px;
   border-radius: 20px;
   z-index: 2;
@@ -120,7 +120,7 @@
 
 .name {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   color: #111;
   line-height: 1.4;
   margin: 0;
@@ -152,7 +152,7 @@
   border: none;
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
   margin-top: auto;

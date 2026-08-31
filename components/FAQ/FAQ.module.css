@@ -44,7 +44,7 @@
   border: none;
   cursor: pointer;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   color: #111;
   text-align: left;
   gap: 16px;
@@ -59,7 +59,7 @@
 
 .answer {
   padding: 0 24px 20px;
-  font-size: 14px;
+  font-size: 18px;
   color: #555;
   line-height: 1.8;
   margin: 0;

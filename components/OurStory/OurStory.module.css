@@ -40,7 +40,7 @@
   background: #58ACAF;
   color: #fff;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   padding: 6px 16px;
   border-radius: 20px;
   letter-spacing: 0.5px;
@@ -96,7 +96,7 @@
   border-radius: 8px;
   text-decoration: none;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   width: fit-content;
   transition: background 0.2s;
 }

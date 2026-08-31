@@ -29,7 +29,7 @@ export async function POST(req) {
             .header p { color: rgba(255,255,255,0.85); margin: 8px 0 0; font-size: 14px; }
             .body { padding: 32px; }
             .row { display: flex; margin-bottom: 16px; border-bottom: 1px solid #f0f0f0; padding-bottom: 16px; }
-            .label { font-weight: 700; color: #333; min-width: 160px; font-size: 14px; }
+            .label { font-weight: 600; color: #333; min-width: 160px; font-size: 14px; }
             .value { color: #555; font-size: 14px; flex: 1; }
             .message-box { background: #f8faff; border-left: 4px solid #58ACAF; padding: 16px; border-radius: 4px; margin-top: 8px; }
             .message-box p { margin: 0; color: #444; font-size: 14px; line-height: 1.7; }

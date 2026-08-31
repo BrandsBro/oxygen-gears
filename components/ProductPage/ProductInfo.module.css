@@ -39,7 +39,7 @@
 
 .rating {
   color: #111;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
 }
 
@@ -72,7 +72,7 @@
   background: #e53935;
   color: #fff;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   padding: 4px 12px;
   border-radius: 20px;
 }
@@ -101,7 +101,7 @@
 
 .optionLabel {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   color: #111;
 }
 
@@ -139,7 +139,7 @@
   background: #e53935;
   color: #fff;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
   padding: 3px 10px;
   border-radius: 20px;
   white-space: nowrap;
@@ -187,7 +187,7 @@
 
 .secureTitle {
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   color: #555;
   margin: 0;
   text-align: center;
