@@ -131,7 +131,7 @@
   /* Featured product centered */
   .col:first-child {
     align-items: center;
-    padding-bottom: 28px;
+    padding-bottom: 35px;
     border-bottom: 1px solid #ddd;
     width: 100%;
   }

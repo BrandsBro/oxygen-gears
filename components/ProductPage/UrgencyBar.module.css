@@ -42,11 +42,11 @@
     #58ACAF 10px,
     #58ACAF 20px
   );
-  background-size: 28px 28px;
+  background-size: 35px 35px;
   animation: stripeMove 0.8s linear infinite;
 }
 
 @keyframes stripeMove {
   from { background-position: 0 0; }
-  to { background-position: 28px 0; }
+  to { background-position: 35px 0; }
 }

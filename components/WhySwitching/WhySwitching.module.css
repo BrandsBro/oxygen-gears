@@ -84,7 +84,7 @@
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
+    gap: 35px;
   }
 
   .heading { font-size: 22px; }
