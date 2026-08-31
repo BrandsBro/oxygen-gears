@@ -114,6 +114,15 @@ const product = {
     { q: "When can I expect delivery?", a: "Orders ship free across the USA and usually arrive within 8 to 11 business days." },
     { q: "Can I see the product specification?", a: "Yes, please check the details in our product specification page." },
   ],
+  stayPowered: {
+    heading: "Charged and Ready, Wherever You Are",
+    subtext: "Three power options mean you are always covered. Charge at home, plug into the car, or head out on the battery, and move through your day without a single worry about running low.",
+    items: [
+      { image: "https://static.wixstatic.com/media/8f1bc7_bdc54fd7eb194c11b0306f3961cb1c37~mv2.avif", label: "At Home" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_7d04b14cb9244c5e9b6e20e8d794e0b0~mv2.avif", label: "In a Car" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_ecb1cf3dc0ba411c96d5365d816781d3~mv2.avif", label: "On Battery" },
+    ],
+  },
   whySwitching: {
     heading: "Meet the 1–7L/Min Smart Portable Oxygen Concentrator",
     subtext: "Set your flow across seven levels from 1 to 7 liters per minute, adjusting in one touch as your day shifts. At about 3 pounds it rides easily on a shoulder strap wherever you go, and when the battery runs low, a fresh one snaps in within seconds to keep you moving.",

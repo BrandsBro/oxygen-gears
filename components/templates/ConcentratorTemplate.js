@@ -51,7 +51,7 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
       {config.showWhySwitching !== false && <WhySwitching config={config.whySwitching} />}
       {config.oxygenOnTheGo && <OxygenOnTheGo config={config.oxygenOnTheGo} />}
       {config.productDetails && <ProductDetails sections={config.productDetails} />}
-      {config.showStayPowered !== false && <StayPowered />}
+      {config.showStayPowered !== false && <StayPowered config={config.stayPowered} />}
       {config.additionalInfo && <AdditionalInfo config={config.additionalInfo} />}
       {config.insideBox && <InsideBox config={config.insideBox} />}
       <TrustedBy />

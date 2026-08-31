@@ -27,6 +27,15 @@ const product = {
       { label: "Longtime Runtime", front: "https://static.wixstatic.com/media/8f1bc7_08a2c9c280f540fdb3b372fd0734269c~mv2.webp", back: "https://static.wixstatic.com/media/8f1bc7_1aef18196da045d1915f130317052f6c~mv2.jpg" },
     ],
   },
+  stayPowered: {
+    heading: "Charged and Ready, Wherever You Are",
+    subtext: "Three power options mean you are always covered. Charge at home, plug into the car, or head out on the battery, and move through your day without a single worry about running low.",
+    items: [
+      { image: "https://static.wixstatic.com/media/8f1bc7_bdc54fd7eb194c11b0306f3961cb1c37~mv2.avif", label: "At Home" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_7d04b14cb9244c5e9b6e20e8d794e0b0~mv2.avif", label: "In a Car" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_ecb1cf3dc0ba411c96d5365d816781d3~mv2.avif", label: "On Battery" },
+    ],
+  },
   whySwitching: {
     heading: "Designed Around Daily Life",
     subtext: "This compact oxygen concentrator brings easy control, cleaner output, and flexible power into one portable design. Five levels, layered filtration, low-noise operation, and a long-lasting battery help it fit naturally into everyday use.",
