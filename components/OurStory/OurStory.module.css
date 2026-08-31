@@ -1,7 +1,7 @@
 .section {
   width: 100%;
   background: #e8f4f8;
-  padding: 40px 40px;
+  padding: 80px 40px;
 }
 
 .inner {
@@ -115,6 +115,11 @@
     grid-template-columns: 1fr;
     gap: 32px;
   }
+
+.para {
+  font-size: 15px;
+
+}
 
   .heading {
     font-size: 35px;

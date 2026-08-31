@@ -193,3 +193,14 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .cardBody {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .card {
+    margin-bottom: 8px;
+  }
+}
