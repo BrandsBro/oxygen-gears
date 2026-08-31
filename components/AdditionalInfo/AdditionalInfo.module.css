@@ -1,7 +1,7 @@
 .section {
   width: 100%;
   background: #fff;
-  padding: 40px 40px;
+  padding: 80px 40px;
 }
 
 .inner {
@@ -131,7 +131,7 @@
 }
 
 @media (max-width: 768px) {
-  .section { padding: 48px 20px; }
+  .section { padding: 20px 20px; }
   .heading { font-size: 24px; margin-bottom: 32px; }
   .trigger { font-size: 14px; padding: 16px 18px; }
   .bodyInner { padding: 0 18px; }

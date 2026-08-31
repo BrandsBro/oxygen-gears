@@ -1,7 +1,7 @@
 .section {
   width: 100%;
   background: #fff;
-  padding: 40px 40px;
+  padding: 80px 40px;
 }
 
 .inner {
@@ -94,7 +94,7 @@
 }
 
 @media (max-width: 768px) {
-  .section { padding: 48px 20px; }
+  .section { padding: 20px 20px; }
   .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .heading { font-size: 22px; }
 }

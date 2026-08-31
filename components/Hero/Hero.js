@@ -17,7 +17,8 @@ export default function Hero() {
       />
       <div className={styles.overlay}>
         <div className={styles.content}>
-          <h1 className={styles.title}>
+          <div className={styles.textcontent}>
+             <h1 className={styles.title}>
             Non-Medical Oxygen Concentrators<br />
             Built for Comfort and Mobility
           </h1>
@@ -29,6 +30,8 @@ export default function Hero() {
           <Link href={`/products/${brand.featuredProductSlug}`} className={styles.btn}>
             Order Now
           </Link>
+          </div>
+         
         </div>
       </div>
 
