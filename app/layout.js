@@ -3,10 +3,11 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { CartProvider } from "@/lib/cartContext";
 import brand from "@/config/brand";
-import { Inter } from "next/font/google";
+import { Geologica } from "next/font/google";
 
-const inter = Inter({
+const geologica = Geologica({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
   preload: true,
 });
@@ -18,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={geologica.className}>
       <head>
         <link rel="icon" href={brand.favicon} type="image/webp" />
       </head>
