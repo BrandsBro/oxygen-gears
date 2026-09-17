@@ -12,7 +12,7 @@ const items = [
     number: "02",
     title: "Flow You Control",
     description: "Turn the flow up when you need more and ease it back when you don't. The controls are simple, so any change takes a second. Your oxygen matches the moment instead of one fixed setting.",
-    image: "https://static.wixstatic.com/media/8f1bc7_441be3d229d24be6b6b039d3c73e3f44~mv2.avif",
+    image: "https://static.wixstatic.com/media/8f1bc7_a59703353d4340c69fb64b4add67ed28~mv2.avif",
     reverse: true,
   },
   {
