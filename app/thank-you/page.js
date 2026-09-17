@@ -1,8 +1,29 @@
+"use client";
 import styles from "./thankyou.module.css";
 import Link from "next/link";
 import brand from "@/config/brand";
+import { useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
-export default function ThankYouPage() {
+function ThankYouContent() {
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const orderId = searchParams.get("orderId");
+    const clickId = searchParams.get("atclid");
+
+    // Fire AnyTrack Purchase event
+    if (typeof window !== "undefined" && window.AnyTrack && orderId) {
+      window.AnyTrack("postback",
+        `https://t1.anytrack.io/YOUR_ACCOUNT_ID/collect/custom-integration?click_id=${clickId || ""}`, {
+        event_name: "Purchase",
+        transactionId: orderId,
+        currency: "USD",
+      });
+    }
+  }, [searchParams]);
+
   return (
     <div className={styles.page}>
       <div className={styles.inner}>
@@ -34,5 +55,13 @@ export default function ThankYouPage() {
         </p>
       </div>
     </div>
+  );
+}
+
+export default function ThankYouPage() {
+  return (
+    <Suspense>
+      <ThankYouContent />
+    </Suspense>
   );
 }

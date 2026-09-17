@@ -3,26 +3,15 @@ import { useEffect } from "react";
 
 export function ViewContentEvent({ productName, price, productId }) {
   useEffect(() => {
-    // Meta Pixel — ViewContent
-    if (typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", "ViewContent", {
-        content_name: productName,
-        content_ids: [productId],
-        content_type: "product",
+    if (typeof window !== "undefined" && window.AnyTrack) {
+      window.AnyTrack("trigger", "ViewContent", {
         value: price,
         currency: "USD",
-      });
-    }
-
-    // GA4 — view_item
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "view_item", {
-        currency: "USD",
-        value: price,
         items: [{
-          item_id: productId,
-          item_name: productName,
+          id: productId,
+          name: productName,
           price: price,
+          quantity: 1,
         }],
       });
     }

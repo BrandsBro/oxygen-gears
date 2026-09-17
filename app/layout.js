@@ -4,10 +4,12 @@ import Footer from "@/components/Footer/Footer";
 import { CartProvider } from "@/lib/cartContext";
 import brand from "@/config/brand";
 import ScrollToTop from "@/components/ScrollToTop";
+import RouteTracker from "@/components/RouteTracker";
+import Script from "next/script";
 
 export const metadata = {
   title: "Oxliv — Non-Medical Oxygen Concentrators",
-  description: "Stay comfortable at home or on the move. Lightweight oxygen concentrators with adjustable flow and reliable battery power.",
+  description: "Stay comfortable at home or on the move.",
 };
 
 export default function RootLayout({ children }) {
@@ -22,10 +24,19 @@ export default function RootLayout({ children }) {
           type="font/ttf"
           crossOrigin="anonymous"
         />
+        {/* AnyTrack Tag — must be beforeInteractive */}
+        <Script id="anytrack" strategy="beforeInteractive">
+          {`!function(e,t,n,s,a){(a=t.createElement(n)).async=!0,
+          a.src="PASTE_YOUR_ANYTRACK_TAG_URL_HERE",
+          (t=t.getElementsByTagName(n)[0]).parentNode.insertBefore(a,t),
+          e[s]=e[s]||function(){(e[s].q=e[s].q||[]).push(arguments)}}
+          (window,document,"script","AnyTrack");`}
+        </Script>
       </head>
       <body>
         <CartProvider>
           <ScrollToTop />
+          <RouteTracker />
           <Navbar />
           {children}
           <Footer />
