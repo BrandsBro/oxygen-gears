@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import ImageGallery from "@/components/ProductShowcase/ImageGallery";
 import ProductInfo from "@/components/ProductPage/ProductInfo";
 import styles from "@/components/ProductPage/ProductPage.module.css";
+import { ViewContentEvent } from "@/components/PixelEvents";
 
 // Lazy load everything below the fold
 const ProductFeatures = dynamic(() => import("@/components/ProductFeatures/ProductFeatures"));
@@ -26,6 +27,7 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
   return (
     <>
       {/* Above fold — loads immediately */}
+      <ViewContentEvent productName={product.name} price={discountedPrice} productId={product._id} />
       <div className={styles.page}>
         <div className={styles.inner}>
           <div className={styles.left}>

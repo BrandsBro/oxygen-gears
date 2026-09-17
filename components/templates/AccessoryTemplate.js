@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import ImageGallery from "@/components/ProductShowcase/ImageGallery";
 import ProductInfo from "@/components/ProductPage/ProductInfo";
 import styles from "@/components/ProductPage/ProductPage.module.css";
+import { ViewContentEvent } from "@/components/PixelEvents";
 
 const ProductFAQ = dynamic(() => import("@/components/ProductFAQ/ProductFAQ"));
 const YouMayAlsoLike = dynamic(() => import("@/components/YouMayAlsoLike/YouMayAlsoLike"));
@@ -15,6 +16,7 @@ export default function AccessoryTemplate({ product, mediaItems, config, slug })
 
   return (
     <>
+      <ViewContentEvent productName={product.name} price={discountedPrice} productId={product._id} />
       <div className={styles.page}>
         <div className={styles.inner}>
           <div className={styles.left}>
