@@ -12,15 +12,19 @@ function ThankYouContent() {
   useEffect(() => {
     const orderId = searchParams.get("orderId");
     const clickId = searchParams.get("atclid");
+    const value = searchParams.get("value") || searchParams.get("total") || "";
+    const productName = searchParams.get("productName") || "";
 
-    // Fire AnyTrack Purchase event
-    if (typeof window !== "undefined" && window.AnyTrack && orderId) {
-      window.AnyTrack("postback",
-        `https://t1.anytrack.io/YOUR_ACCOUNT_ID/collect/custom-integration?click_id=${clickId || ""}`, {
-        event_name: "Purchase",
-        transactionId: orderId,
-        currency: "USD",
-      });
+    // Fire AnyTrack Purchase postback
+    if (orderId && clickId) {
+      const postbackUrl =
+        `https://t1.anytrack.io/OZ1EhR5T/collect/custom-oxlivpurchasewebhook` +
+        `?click_id=${encodeURIComponent(clickId)}` +
+        `&commission=${encodeURIComponent(value)}` +
+        `&transaction_id=${encodeURIComponent(orderId)}` +
+        `&brand_name=${encodeURIComponent(productName)}`;
+
+      fetch(postbackUrl, { mode: "no-cors" }).catch(() => {});
     }
   }, [searchParams]);
 
