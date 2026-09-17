@@ -6,7 +6,7 @@ import brand from "@/config/brand";
 import { useCart } from "@/lib/cartContext";
 import UrgencyBar, { SoldCount } from "@/components/ProductPage/UrgencyBar";
 
-const DEFAULT_VARIANT_ID = "41b83593-e62e-4581-8508-1071e75fda62";
+
 
 const bullets = [
   "Adjustable 1–7L/min Oxygen Flow",
@@ -24,7 +24,7 @@ export default function ProductActions({
   const [selectedOptions, setSelectedOptions] = useState({});
   const [unitPrice, setUnitPrice] = useState(discountedPrice);
   const [unitOriginal, setUnitOriginal] = useState(originalPrice);
-  const [selectedVariantId, setSelectedVariantId] = useState(DEFAULT_VARIANT_ID);
+  const [selectedVariantId, setSelectedVariantId] = useState(variants?.[0]?._id || "");
   const { buyNow, loading } = useCart();
 
   const handleOption = (optionName, choiceValue) => {
