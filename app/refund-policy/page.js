@@ -64,7 +64,7 @@ export default function RefundPolicy() {
       <p>If there is a problem with your order, please contact <a href="mailto:support@oxliv.store">support@oxliv.store</a> before initiating a payment dispute. Contacting us first usually allows us to resolve the issue faster. This does not limit any rights available to you through your bank or applicable consumer-protection law.</p>
 
       <h2>Questions?</h2>
-      <p>📧 <a href="mailto:support@oxliv.store">support@oxliv.store</a><br />📞 <a href="tel:+13074301707">+1 307-430-1707</a></p>
+      <p>📧 <a href="mailto:support@oxliv.store">support@oxliv.store</a><br />📞 <a href="tel:+13074301707">+1 307-310-7781</a></p>
     </PolicyPage>
   );
 }
