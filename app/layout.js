@@ -25,11 +25,9 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
         {/* AnyTrack Tag — must be beforeInteractive */}
-        <Script id="anytrack" strategy="beforeInteractive">
-          {`<!-- AnyTrack Tracking Code -->
-<script>!function(e,t,n,s,a){(a=t.createElement(n)).async=!0,a.src="https://assets.anytrack.io/Ca2dbm0EcXO8.js",(t=t.getElementsByTagName(n)[0]).parentNode.insertBefore(a,t),e[s]=e[s]||function(){(e[s].q=e[s].q||[]).push(arguments)}}(window,document,"script","AnyTrack");</script>
-<!-- End AnyTrack Tracking Code -->`}
-        </Script>
+       <Script id="anytrack" strategy="beforeInteractive">
+  {`!function(e,t,n,s,a){(a=t.createElement(n)).async=!0,a.src="https://assets.anytrack.io/Ca2dbm0EcXO8.js",(t=t.getElementsByTagName(n)[0]).parentNode.insertBefore(a,t),e[s]=e[s]||function(){(e[s].q=e[s].q||[]).push(arguments)}}(window,document,"script","AnyTrack");`}
+</Script>
       </head>
       <body>
         <CartProvider>
