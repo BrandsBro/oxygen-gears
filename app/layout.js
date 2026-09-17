@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         {/* AnyTrack Tag — must be beforeInteractive */}
         <Script id="anytrack" strategy="beforeInteractive">
           {`!function(e,t,n,s,a){(a=t.createElement(n)).async=!0,
-          a.src="PASTE_YOUR_ANYTRACK_TAG_URL_HERE",
+          a.src="https://assets.anytrack.io/Ca2dbm0EcXO8.js",
           (t=t.getElementsByTagName(n)[0]).parentNode.insertBefore(a,t),
           e[s]=e[s]||function(){(e[s].q=e[s].q||[]).push(arguments)}}
           (window,document,"script","AnyTrack");`}
