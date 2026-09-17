@@ -6,7 +6,7 @@ import brand from "@/config/brand";
 import { useCart } from "@/lib/cartContext";
 import UrgencyBar, { SoldCount } from "@/components/ProductPage/UrgencyBar";
 
-const DEFAULT_VARIANT_ID = "c0bb889f-9bfb-47ea-ad3d-e5ff250cd2fb";
+const DEFAULT_VARIANT_ID = "41b83593-e62e-4581-8508-1071e75fda62";
 
 const bullets = [
   "Adjustable 1–7L/min Oxygen Flow",
