@@ -12,20 +12,34 @@ function ThankYouContent() {
   useEffect(() => {
     const orderId = searchParams.get("orderId");
     const clickId = searchParams.get("atclid");
-    const value = searchParams.get("value") || searchParams.get("total") || "";
-    const productName = searchParams.get("productName") || "";
 
-    // Fire AnyTrack Purchase postback
-    if (orderId && clickId) {
-      const postbackUrl =
-        `https://t1.anytrack.io/OZ1EhR5T/collect/custom-oxlivpurchasewebhook` +
-        `?click_id=${encodeURIComponent(clickId)}` +
-        `&commission=${encodeURIComponent(value)}` +
-        `&transaction_id=${encodeURIComponent(orderId)}` +
-        `&brand_name=${encodeURIComponent(productName)}`;
+    if (!orderId || !clickId) return;
 
-      fetch(postbackUrl, { mode: "no-cors" }).catch(() => {});
-    }
+    // Fetch real order total from Wix then fire postback
+    fetch(`/api/wix-order?orderId=${orderId}`)
+      .then((res) => res.json())
+      .then((data) => {
+        const value = data.total || "0";
+
+        const postbackUrl =
+          `https://t1.anytrack.io/OZ1EhR5T/collect/custom-oxlivpurchasewebhook` +
+          `?click_id=${encodeURIComponent(clickId)}` +
+          `&commission=${encodeURIComponent(value)}` +
+          `&transaction_id=${encodeURIComponent(orderId)}`;
+
+        fetch(postbackUrl, { mode: "no-cors" }).catch(() => {});
+        console.log("AnyTrack Purchase fired — orderId:", orderId, "value:", value, "clickId:", clickId);
+      })
+      .catch(() => {
+        // Fallback: fire postback without value if API fails
+        const postbackUrl =
+          `https://t1.anytrack.io/OZ1EhR5T/collect/custom-oxlivpurchasewebhook` +
+          `?click_id=${encodeURIComponent(clickId)}` +
+          `&commission=0` +
+          `&transaction_id=${encodeURIComponent(orderId)}`;
+
+        fetch(postbackUrl, { mode: "no-cors" }).catch(() => {});
+      });
   }, [searchParams]);
 
   return (
