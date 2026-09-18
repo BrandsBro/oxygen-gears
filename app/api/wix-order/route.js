@@ -25,8 +25,9 @@ export async function GET(request) {
     const data = await res.json();
     const total = data.order?.priceSummary?.total?.amount || "0";
     const currency = data.order?.currency || "USD";
+    const checkoutId = data.order?.checkoutId || null;
 
-    return NextResponse.json({ total, currency });
+    return NextResponse.json({ total, currency, checkoutId });
   } catch (err) {
     console.error("wix-order route error:", err.message);
     return NextResponse.json({ error: err.message }, { status: 500 });

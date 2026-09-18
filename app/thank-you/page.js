@@ -11,34 +11,49 @@ function ThankYouContent() {
 
   useEffect(() => {
     const orderId = searchParams.get("orderId");
-    const clickId = searchParams.get("atclid");
+    const urlAtclid = searchParams.get("atclid");
 
-    if (!orderId || !clickId) return;
+    if (!orderId) return;
 
-    // Fetch real order total from Wix then fire postback
+    const firePostback = (clickId, value) => {
+      const postbackUrl =
+        `https://t1.anytrack.io/OZ1EhR5T/collect/custom-oxlivpurchasewebhook` +
+        `?click_id=${encodeURIComponent(clickId)}` +
+        `&commission=${encodeURIComponent(value)}` +
+        `&transaction_id=${encodeURIComponent(orderId)}`;
+
+      fetch(postbackUrl, { mode: "no-cors" }).catch(() => {});
+      console.log("AnyTrack Purchase fired — orderId:", orderId, "value:", value, "clickId:", clickId);
+    };
+
+    // Fetch order total from Wix (also returns checkoutId for fallback)
     fetch(`/api/wix-order?orderId=${orderId}`)
       .then((res) => res.json())
-      .then((data) => {
+      .then(async (data) => {
         const value = data.total || "0";
 
-        const postbackUrl =
-          `https://t1.anytrack.io/OZ1EhR5T/collect/custom-oxlivpurchasewebhook` +
-          `?click_id=${encodeURIComponent(clickId)}` +
-          `&commission=${encodeURIComponent(value)}` +
-          `&transaction_id=${encodeURIComponent(orderId)}`;
+        if (urlAtclid) {
+          // Primary: atclid came through in URL
+          firePostback(urlAtclid, value);
+        } else if (data.checkoutId) {
+          // Fallback: look up atclid from Supabase using checkoutId
+          console.log("atclid missing from URL — looking up from Supabase, checkoutId:", data.checkoutId);
+          const lookup = await fetch(`/api/lookup-atclid?checkoutId=${data.checkoutId}`)
+            .then((r) => r.json())
+            .catch(() => ({ atclid: null }));
 
-        fetch(postbackUrl, { mode: "no-cors" }).catch(() => {});
-        console.log("AnyTrack Purchase fired — orderId:", orderId, "value:", value, "clickId:", clickId);
+          if (lookup.atclid) {
+            firePostback(lookup.atclid, value);
+          } else {
+            console.warn("atclid not found in Supabase either — postback skipped");
+          }
+        }
       })
       .catch(() => {
-        // Fallback: fire postback without value if API fails
-        const postbackUrl =
-          `https://t1.anytrack.io/OZ1EhR5T/collect/custom-oxlivpurchasewebhook` +
-          `?click_id=${encodeURIComponent(clickId)}` +
-          `&commission=0` +
-          `&transaction_id=${encodeURIComponent(orderId)}`;
-
-        fetch(postbackUrl, { mode: "no-cors" }).catch(() => {});
+        // If Wix API fails but we have atclid in URL, still fire with value 0
+        if (urlAtclid) {
+          firePostback(urlAtclid, "0");
+        }
       });
   }, [searchParams]);
 
