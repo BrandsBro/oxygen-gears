@@ -1,10 +1,9 @@
 "use client";
-import styles from "./thankyou.module.css";
-import Link from "next/link";
 import brand from "@/config/brand";
-import { useEffect } from "react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
+import styles from "./thankyou.module.css";
 
 function ThankYouContent() {
   const searchParams = useSearchParams();
@@ -15,55 +14,42 @@ function ThankYouContent() {
 
     if (!orderId) return;
 
-    const fireEvents = (value) => {
-      // Primary: fire via AnyTrack JS — maps correctly to Purchase in Meta
+    const firePurchase = (value) => {
       if (typeof window !== "undefined" && window.AnyTrack) {
         window.AnyTrack("trigger", "Purchase", {
           revenue: parseFloat(value) || 0,
           transactionId: orderId,
           currency: "USD",
         });
-        console.log("AnyTrack JS Purchase fired — orderId:", orderId, "value:", value);
-      }
-
-      // Backup: also fire postback URL (belt and suspenders)
-      if (urlAtclid) {
-        const postbackUrl =
-          `https://t1.anytrack.io/OZ1EhR5T/collect/custom-oxlivpurchasewebhook` +
-          `?click_id=${encodeURIComponent(urlAtclid)}` +
-          `&commission=${encodeURIComponent(value)}` +
-          `&transaction_id=${encodeURIComponent(orderId)}`;
-        fetch(postbackUrl, { mode: "no-cors" }).catch(() => {});
-        console.log("Postback also fired as backup");
+        console.log(
+          "AnyTrack Purchase fired — orderId:",
+          orderId,
+          "value:",
+          value,
+        );
       }
     };
 
-    // Fetch real order value from Wix first
     fetch(`/api/wix-order?orderId=${orderId}`)
       .then((res) => res.json())
       .then(async (data) => {
         const value = data.total || "0";
 
         if (urlAtclid) {
-          fireEvents(value);
+          firePurchase(value);
         } else if (data.checkoutId) {
-          // Fallback: look up atclid from Supabase
-          console.log("atclid missing from URL — checking Supabase");
-          const lookup = await fetch(`/api/lookup-atclid?checkoutId=${data.checkoutId}`)
+          const lookup = await fetch(
+            `/api/lookup-atclid?checkoutId=${data.checkoutId}`,
+          )
             .then((r) => r.json())
             .catch(() => ({ atclid: null }));
-
-          if (lookup.atclid) {
-            fireEvents(value);
-          } else {
-            // Fire JS event anyway — AnyTrack may still have session
-            fireEvents(value);
-          }
+          firePurchase(value);
+        } else {
+          firePurchase("0");
         }
       })
       .catch(() => {
-        // Wix API failed — still fire JS event
-        fireEvents("0");
+        firePurchase("0");
       });
   }, [searchParams]);
 
@@ -73,7 +59,9 @@ function ThankYouContent() {
         <div className={styles.icon}>🎉</div>
         <h1 className={styles.heading}>Thank You for Your Order!</h1>
         <p className={styles.text}>
-          Your order has been placed successfully. You will receive a confirmation email shortly with your order details and tracking information.
+          Your order has been placed successfully. You will receive a
+          confirmation email shortly with your order details and tracking
+          information.
         </p>
         <div className={styles.details}>
           <div className={styles.detail}>
@@ -82,7 +70,7 @@ function ThankYouContent() {
           </div>
           <div className={styles.detail}>
             <span>🚚</span>
-            <p>Delivered in 6–12 business days</p>
+            <p>Delivered in 8–1 business days</p>
           </div>
           <div className={styles.detail}>
             <span>📧</span>
@@ -90,11 +78,16 @@ function ThankYouContent() {
           </div>
         </div>
         <div className={styles.buttons}>
-          <Link href="/" className={styles.primary}>Back to Home</Link>
-          <Link href="/collection/all" className={styles.secondary}>Continue Shopping</Link>
+          <Link href="/" className={styles.primary}>
+            Back to Home
+          </Link>
+          <Link href="/collection/all" className={styles.secondary}>
+            Continue Shopping
+          </Link>
         </div>
         <p className={styles.support}>
-          Questions? Contact us at <a href={`mailto:${brand.email}`}>{brand.email}</a>
+          Questions? Contact us at{" "}
+          <a href={`mailto:${brand.email}`}>{brand.email}</a>
         </p>
       </div>
     </div>
