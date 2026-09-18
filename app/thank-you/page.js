@@ -15,45 +15,55 @@ function ThankYouContent() {
 
     if (!orderId) return;
 
-    const firePostback = (clickId, value) => {
-      const postbackUrl =
-        `https://t1.anytrack.io/OZ1EhR5T/collect/custom-oxlivpurchasewebhook` +
-        `?click_id=${encodeURIComponent(clickId)}` +
-        `&commission=${encodeURIComponent(value)}` +
-        `&transaction_id=${encodeURIComponent(orderId)}`;
+    const fireEvents = (value) => {
+      // Primary: fire via AnyTrack JS — maps correctly to Purchase in Meta
+      if (typeof window !== "undefined" && window.AnyTrack) {
+        window.AnyTrack("trigger", "Purchase", {
+          revenue: parseFloat(value) || 0,
+          transactionId: orderId,
+          currency: "USD",
+        });
+        console.log("AnyTrack JS Purchase fired — orderId:", orderId, "value:", value);
+      }
 
-      fetch(postbackUrl, { mode: "no-cors" }).catch(() => {});
-      console.log("AnyTrack Purchase fired — orderId:", orderId, "value:", value, "clickId:", clickId);
+      // Backup: also fire postback URL (belt and suspenders)
+      if (urlAtclid) {
+        const postbackUrl =
+          `https://t1.anytrack.io/OZ1EhR5T/collect/custom-oxlivpurchasewebhook` +
+          `?click_id=${encodeURIComponent(urlAtclid)}` +
+          `&commission=${encodeURIComponent(value)}` +
+          `&transaction_id=${encodeURIComponent(orderId)}`;
+        fetch(postbackUrl, { mode: "no-cors" }).catch(() => {});
+        console.log("Postback also fired as backup");
+      }
     };
 
-    // Fetch order total from Wix (also returns checkoutId for fallback)
+    // Fetch real order value from Wix first
     fetch(`/api/wix-order?orderId=${orderId}`)
       .then((res) => res.json())
       .then(async (data) => {
         const value = data.total || "0";
 
         if (urlAtclid) {
-          // Primary: atclid came through in URL
-          firePostback(urlAtclid, value);
+          fireEvents(value);
         } else if (data.checkoutId) {
-          // Fallback: look up atclid from Supabase using checkoutId
-          console.log("atclid missing from URL — looking up from Supabase, checkoutId:", data.checkoutId);
+          // Fallback: look up atclid from Supabase
+          console.log("atclid missing from URL — checking Supabase");
           const lookup = await fetch(`/api/lookup-atclid?checkoutId=${data.checkoutId}`)
             .then((r) => r.json())
             .catch(() => ({ atclid: null }));
 
           if (lookup.atclid) {
-            firePostback(lookup.atclid, value);
+            fireEvents(value);
           } else {
-            console.warn("atclid not found in Supabase either — postback skipped");
+            // Fire JS event anyway — AnyTrack may still have session
+            fireEvents(value);
           }
         }
       })
       .catch(() => {
-        // If Wix API fails but we have atclid in URL, still fire with value 0
-        if (urlAtclid) {
-          firePostback(urlAtclid, "0");
-        }
+        // Wix API failed — still fire JS event
+        fireEvents("0");
       });
   }, [searchParams]);
 
