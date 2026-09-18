@@ -70,7 +70,7 @@ function ThankYouContent() {
           </div>
           <div className={styles.detail}>
             <span>🚚</span>
-            <p>Delivered in 8–1 business days</p>
+            <p>Delivered in 8–11 business days</p>
           </div>
           <div className={styles.detail}>
             <span>📧</span>
