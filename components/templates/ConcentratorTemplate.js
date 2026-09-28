@@ -11,6 +11,7 @@ const OxygenOnTheGo = dynamic(() => import("@/components/OxygenOnTheGo/OxygenOnT
 const ProductDetails = dynamic(() => import("@/components/ProductDetails/ProductDetails"));
 const OutputChart = dynamic(() => import("@/components/OutputChart/OutputChart"));
 const StayPowered = dynamic(() => import("@/components/StayPowered/StayPowered"));
+const VideoSection = dynamic(() => import("@/components/VideoSection/VideoSection"));
 const AdditionalInfo = dynamic(() => import("@/components/AdditionalInfo/AdditionalInfo"));
 const InsideBox = dynamic(() => import("@/components/InsideBox/InsideBox"));
 const TrustedBy = dynamic(() => import("@/components/TrustedBy/TrustedBy"));
@@ -56,6 +57,7 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
       {config.productDetails && <ProductDetails sections={config.productDetails} />}
       {config.outputChart && <OutputChart config={config.outputChart} />}
       {config.showStayPowered !== false && <StayPowered config={config.stayPowered} />}
+      {config.videoSection && <VideoSection config={config.videoSection} />}
       {config.additionalInfo && <AdditionalInfo config={config.additionalInfo} />}
       {config.insideBox && <InsideBox config={config.insideBox} />}
       <TrustedBy />

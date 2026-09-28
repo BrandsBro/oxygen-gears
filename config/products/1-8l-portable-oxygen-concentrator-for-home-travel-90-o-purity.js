@@ -98,6 +98,13 @@ const product = {
     ],
   },
 
+  // ── VIDEO SECTION ──
+  videoSection: {
+    videoUrl: "https://video.wixstatic.com/video/8f1bc7_cd2b78b50f8b44758450e36769065ad8/720p/mp4/file.mp4",
+    heading: "See It in Action",
+    subtext: "Watch the concentrator in action and see how its controls, display, oxygen outlet, and removable battery work. The video offers a closer look at the device's size, setup, and daily operation before you choose the right setting for your needs.",
+  },
+
   // ── ADDITIONAL INFO ──
   additionalInfo: {
     features: [
