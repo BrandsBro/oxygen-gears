@@ -19,10 +19,10 @@ const product = {
     heading: "Oxygen That Fits Your Routine",
     description: "Eight adjustable settings give you more control over oxygen delivery. Choose between pulse dose, constant flow, and continuous flow based on your oxygen needs.",
     cards: [
-      { label: "8 Adjustable Settings", front: "https://static.wixstatic.com/media/20cc08_829938bde0bb45ffa065e57ab19670fa~mv2.avif", back: "https://static.wixstatic.com/media/8f1bc7_bde9e0057c8e49a0a92b233eff510418~mv2.webp" },
-      { label: "3 Oxygen Modes", front: "https://static.wixstatic.com/media/20cc08_bbc15f7062c04f36934bdebab534045b~mv2.avif", back: "https://static.wixstatic.com/media/8f1bc7_16be45fafcc3421da8517619f4020861~mv2.webp" },
-      { label: "Up to 90% ±3% O₂ Purity", front: "https://static.wixstatic.com/media/20cc08_389026b252f142eba763c7d7a66f4a5e~mv2.png", back: "https://static.wixstatic.com/media/8f1bc7_2ee1f98a6dc64cb6bc3dbda9f4efdd20~mv2.webp" },
-      { label: "Up to 12 Hours", front: "https://static.wixstatic.com/media/20cc08_c4b2b5bb7c104e55a71aa25b49f7452c~mv2.avif", back: "https://static.wixstatic.com/media/8f1bc7_f54ac4792fb749ab925e3ded2eef3ecb~mv2.webp" },
+      { label: "8 Adjustable Settings", front: "https://static.wixstatic.com/media/8f1bc7_529553d86eb943a6b314aa04177890a0~mv2.avif", back: "https://static.wixstatic.com/media/8f1bc7_4343f7b410c5434cb928ace9a763b1c2~mv2.jpeg" },
+      { label: "3 Oxygen Modes", front: "https://static.wixstatic.com/media/8f1bc7_7635b9defdc44f33bc654a89ce01d1f3~mv2.png", back: "https://static.wixstatic.com/media/8f1bc7_14d3ab7fc7b349e0a27079ed511166e5~mv2.jpeg" },
+      { label: "Up to 90% ±3% O₂ Purity", front: "https://static.wixstatic.com/media/8f1bc7_4a57da408c814cbf9db60c081314195e~mv2.png", back: "https://static.wixstatic.com/media/8f1bc7_a6608d8e801c45d7a364232fd1c465b1~mv2.jpeg" },
+      { label: "Up to 12 Hours", front: "https://static.wixstatic.com/media/8f1bc7_7635b9defdc44f33bc654a89ce01d1f3~mv2.png", back: "https://static.wixstatic.com/media/8f1bc7_1a6e3f1278e04cb0b5189e8d09ba3d99~mv2.jpeg" },
     ],
   },
 
