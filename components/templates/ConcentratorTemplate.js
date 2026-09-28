@@ -15,6 +15,7 @@ const VideoSection = dynamic(() => import("@/components/VideoSection/VideoSectio
 const ComparisonTable = dynamic(() => import("@/components/ComparisonTable/ComparisonTable"));
 const AdditionalInfo = dynamic(() => import("@/components/AdditionalInfo/AdditionalInfo"));
 const InsideBox = dynamic(() => import("@/components/InsideBox/InsideBox"));
+const CTABanner = dynamic(() => import("@/components/CTABanner/CTABanner"));
 const TrustedBy = dynamic(() => import("@/components/TrustedBy/TrustedBy"));
 const Reviews = dynamic(() => import("@/components/Reviews/Reviews"));
 const ProductFAQ = dynamic(() => import("@/components/ProductFAQ/ProductFAQ"));
@@ -62,8 +63,9 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
       {config.comparisonTable && <ComparisonTable config={config.comparisonTable} productId={product._id} variantId={variants?.[0]?._id} />}
       {config.additionalInfo && <AdditionalInfo config={config.additionalInfo} />}
       {config.insideBox && <InsideBox config={config.insideBox} />}
-      <TrustedBy />
+      <CTABanner config={config.ctaBanner} />
       <Reviews csvUrl={config.reviewsCsv} />
+      <TrustedBy />
       {config.productFaq && <ProductFAQ faqs={config.productFaq} />}
       <ContactBar />
     </>

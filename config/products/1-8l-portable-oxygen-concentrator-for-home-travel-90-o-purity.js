@@ -1,6 +1,6 @@
 const product = {
   // ── REVIEWS ──
-  reviewsCsv: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7ViyXXaS8ztprK23idlwxqx7Yew74w1QT-qHyjr4EjZHccxdA_DD3yfhsQmsBmWPzK5t00a2m--qh/pub?output=csv",
+  reviewsCsv: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRXmR7oB2m9_kIHnSCt9SML9ThmRgIG6NG0qreEbKfrfArdPlyhErEbpoka6QN5jZCFpoWWVkMPv67K/pub?output=csv",
 
   // ── BULLETS ──
   productBullets: [
@@ -197,7 +197,7 @@ const product = {
 
   // ── INSIDE BOX ──
   insideBox: {
-    image: "https://static.wixstatic.com/media/8f1bc7_fe9d6e01321c4763ad7c7c477a211ed0~mv2.avif",
+    image: "https://static.wixstatic.com/media/8f1bc7_b9082b5f2bea4c9abba674239eacdb62~mv2.webp",
     items: [
       "Portable Oxygen Concentrator",
       "Carry Bag",
