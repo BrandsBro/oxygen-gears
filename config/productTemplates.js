@@ -10,6 +10,11 @@ const productTemplates = {
     config: () => import("@/config/products/rechargeable-1-5l-portable-oxygen-concentrator-95-oxygen-purity"),
   },
 
+  "1-8l-portable-oxygen-concentrator-for-home-travel-90-o-purity": {
+    template: "concentrator",
+    config: () => import("@/config/products/1-8l-portable-oxygen-concentrator-for-home-travel-90-o-purity"),
+  },
+
   "rechargeable-battery-for-1-7l-oxygen-concentrator": {
     template: "accessory",
     config: () => import("@/config/products/rechargeable-battery-for-1-7lmin-portable-oxygen-concentrator"),

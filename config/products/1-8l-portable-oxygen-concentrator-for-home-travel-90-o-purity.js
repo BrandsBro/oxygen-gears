@@ -1,0 +1,173 @@
+const product = {
+  // ── REVIEWS ──
+  reviewsCsv: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7ViyXXaS8ztprK23idlwxqx7Yew74w1QT-qHyjr4EjZHccxdA_DD3yfhsQmsBmWPzK5t00a2m--qh/pub?output=csv",
+
+  // ── BULLETS ──
+  productBullets: [
+    "8 Adjustable Settings — Pulse, Constant & Continuous Flow",
+    "Up to 2,000 mL/min at Level 8",
+    "≥90% ±3% Oxygen Purity",
+    "Up to 12–24 Hours Battery Life",
+    "Lightweight 4.85 lbs Design",
+    "Wall, Car & Battery Power",
+  ],
+
+  // ── FEATURES (flip cards) ──
+  productFeatures: {
+    heading: "Three Modes. More Control.",
+    description: "Eight adjustable settings give you more control over oxygen delivery. Choose between Pulse Dose, Constant Flow, and Continuous Flow based on your oxygen needs. The concentrator warms up in three minutes and operates below 60 dB(A), fitting naturally into daily routines at home and outside.",
+    cards: [
+      { label: "Pulse Dose", front: "https://static.wixstatic.com/media/20cc08_829938bde0bb45ffa065e57ab19670fa~mv2.avif", back: "https://static.wixstatic.com/media/8f1bc7_bde9e0057c8e49a0a92b233eff510418~mv2.webp" },
+      { label: "Constant Flow", front: "https://static.wixstatic.com/media/20cc08_bbc15f7062c04f36934bdebab534045b~mv2.avif", back: "https://static.wixstatic.com/media/8f1bc7_16be45fafcc3421da8517619f4020861~mv2.webp" },
+      { label: "Continuous Flow", front: "https://static.wixstatic.com/media/20cc08_389026b252f142eba763c7d7a66f4a5e~mv2.png", back: "https://static.wixstatic.com/media/8f1bc7_2ee1f98a6dc64cb6bc3dbda9f4efdd20~mv2.webp" },
+      { label: "12–24 Hr Battery", front: "https://static.wixstatic.com/media/20cc08_c4b2b5bb7c104e55a71aa25b49f7452c~mv2.avif", back: "https://static.wixstatic.com/media/8f1bc7_f54ac4792fb749ab925e3ded2eef3ecb~mv2.webp" },
+    ],
+  },
+
+  // ── WHY SWITCHING ──
+  whySwitching: {
+    heading: "Meet the 1–8L Portable Oxygen Concentrator",
+    subtext: "Eight adjustable settings deliver pulse dose, constant flow, and continuous flow oxygen in one compact device. At 4.85 lbs it carries easily on a shoulder strap, supports wall, car, and battery power, and operates at elevations up to 5,000 metres.",
+    items: [
+      { icon: "https://static.wixstatic.com/media/8f1bc7_0d98baff82384a69980e86af1a1416b9~mv2.avif", label: "Lightweight 4.85 lbs" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_e0325b7852c34f7e88686dfd8e9f3b6b~mv2.avif", label: "8 Adjustable Settings" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_857f66bbd5834361b152b9a92c63e4e8~mv2.avif", label: "3 Oxygen Modes" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_aa13bd0229ce4e3cbbc5c72ae8ee735b~mv2.avif", label: "Up to 2,000 mL/min" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_c4306d458f384be09013c57d31ea9c9c~mv2.avif", label: "Swappable Battery" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_d99e126153214119b1c3428dfce1f5cb~mv2.avif", label: "Advanced Filtration" },
+    ],
+  },
+
+  // ── OXYGEN ON THE GO ──
+  oxygenOnTheGo: {
+    heading: "From Home to Outdoors",
+    subtext: "The compact design makes it easier to keep oxygen support close throughout your routine. Use it at home, connect it inside the car, or carry it during short trips and outdoor activities.",
+    items: [
+      { image: "https://static.wixstatic.com/media/8f1bc7_906a51bcb5db46399f98d2934416cee0~mv2.avif", label: "Travel" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_4958f1b6e25f43c7b84b186250c69fd7~mv2.avif", label: "At Home" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_1cd09645060d4913b904fb36add92f08~mv2.avif", label: "In the Car" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_d6af48e45af746dcbf8765685502a08b~mv2.avif", label: "Outdoor" },
+    ],
+  },
+
+  // ── PRODUCT DETAILS ──
+  productDetails: [
+    {
+      image: "https://static.wixstatic.com/media/8f1bc7_7113ffd2d15e4eb99f7dda9dbcf1bb02~mv2.avif",
+      heading: "Lightweight 4.85 lbs — Carry It Like a Bag",
+      content: "At 4.85 lbs with the battery attached, the 1-8L fits easily on a shoulder strap and stays comfortable through errands, visits, and outdoor outings. The compact 182 × 86.5 × 213 mm body slides into the included carry bag so you can move through your day without leaving oxygen support behind.",
+      reverse: false,
+    },
+    {
+      image: "https://static.wixstatic.com/media/8f1bc7_f56810431420481394f65b01a0a7bf28~mv2.avif",
+      heading: "≥90% Oxygen Purity Across All Eight Settings",
+      content: "Surrounding air passes through multiple filters before reaching the molecular sieve, where nitrogen is separated from oxygen. The concentrated oxygen then moves through the outlet for delivery, providing 90% ±3% purity across all eight settings and all three delivery modes.",
+      reverse: true,
+    },
+    {
+      image: "https://static.wixstatic.com/media/8f1bc7_82ae2437c3d1409b8157907abdf27913~mv2.avif",
+      heading: "Up to 12–24 Hours on Battery",
+      content: "One rechargeable 18-cell battery gives up to 12 hours of cordless use. Add a second battery and extend that to up to 24 hours. The battery attaches and detaches in seconds, so swapping on the go keeps you moving without hunting for an outlet.",
+      reverse: false,
+    },
+    {
+      image: "https://static.wixstatic.com/media/8f1bc7_a69ba8c59e7b4a1ba1d258067eef9f9e~mv2.avif",
+      heading: "Three Modes, Eight Settings",
+      content: "Levels 1–6 use Pulse Dose, which detects each inhalation and delivers oxygen with every breath. Level 7 switches to Constant Flow at a steady 17 bursts per minute with output up to 1,200 mL/min. Level 8 adds Continuous Flow at up to 2,000 mL/min for uninterrupted delivery.",
+      reverse: true,
+    },
+    {
+      image: "https://static.wixstatic.com/media/8f1bc7_121427af9c2f4dd1b2d42b7a2dc919d3~mv2.avif",
+      heading: "Choose Your Power Source",
+      content: "Connect to a standard wall outlet at home, use the 12V DC adapter inside a vehicle, or run on the rechargeable battery. Three power options support use when moving between home, car, and outdoor locations, with a charging time of approximately four hours.",
+      reverse: false,
+    },
+  ],
+
+  // ── STAY POWERED ──
+  stayPowered: {
+    heading: "Choose Your Power Source",
+    subtext: "Connect to a wall outlet at home, use the 12V DC adapter inside your car, or run on the rechargeable battery outdoors. Three power options keep the concentrator ready wherever the day takes you.",
+    items: [
+      { image: "https://static.wixstatic.com/media/8f1bc7_bdc54fd7eb194c11b0306f3961cb1c37~mv2.avif", label: "At Home" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_7d04b14cb9244c5e9b6e20e8d794e0b0~mv2.avif", label: "In a Car" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_ecb1cf3dc0ba411c96d5365d816781d3~mv2.avif", label: "On Battery" },
+    ],
+  },
+
+  // ── ADDITIONAL INFO ──
+  additionalInfo: {
+    features: [
+      "Eight adjustable settings with output from 200 to 2,000 mL/min",
+      "Pulse Dose, Constant Flow, and Continuous Flow delivery modes",
+      "Detects inhalation and delivers oxygen during each breath in Pulse Dose",
+      "Provides 17 steady oxygen bursts per minute in Constant Flow",
+      "Delivers uninterrupted output up to 2,000 mL/min at Level 8",
+      "Provides 90% ±3% oxygen purity across all eight settings",
+      "Uses multiple filters and a molecular sieve to concentrate oxygen",
+      "Runs up to 12 hours with one rechargeable 18-cell battery",
+      "Supports wall, vehicle, and rechargeable battery power",
+      "Weighs 4.85 lbs (2.2 kg) with battery attached",
+      "Operates below 60 dB(A) and warms up in three minutes",
+      "Supports operation at elevations up to 5,000 metres",
+    ],
+    specs: [
+      { label: "Product Type", value: "Portable Oxygen Concentrator" },
+      { label: "Number of Settings", value: "8" },
+      { label: "Delivery Modes", value: "Pulse Dose, Constant Flow, and Continuous Flow" },
+      { label: "Pulse Dose", value: "Responds to detected inhalation" },
+      { label: "Constant Flow Frequency", value: "17 oxygen bursts per minute" },
+      { label: "Continuous Flow", value: "Available at Level 8" },
+      { label: "Oxygen Output Range", value: "200–2,000 mL/min" },
+      { label: "Maximum Output", value: "Up to 2,000 mL/min at Level 8" },
+      { label: "Oxygen Purity", value: "90% ±3%" },
+      { label: "Battery Type", value: "Detachable rechargeable 18-cell battery" },
+      { label: "Battery Runtime", value: "Approximately 12 hours (one battery)" },
+      { label: "Charging Time", value: "Approximately 4 hours" },
+      { label: "Device Weight Without Battery", value: "1.7 kg" },
+      { label: "Battery Weight", value: "0.5 kg" },
+      { label: "Operating Weight", value: "2.2 kg / 4.85 lbs" },
+      { label: "Dimensions", value: "182 × 86.5 × 213 mm" },
+      { label: "Operating Noise", value: "Below 60 dB(A)" },
+      { label: "Warm-Up Time", value: "3 minutes" },
+      { label: "Power Consumption", value: "Below 90W" },
+      { label: "AC Power Input", value: "100–240V, 50/60Hz" },
+      { label: "DC Power Input", value: "12V" },
+      { label: "Operating Temperature", value: "5°C–40°C" },
+      { label: "Operating Humidity", value: "80% or lower" },
+      { label: "Operating Altitude", value: "0–5,000 metres" },
+    ],
+    disclaimer: "The Oxliv 1-8L Portable Oxygen Concentrator is not a medical device. It is designed for travel, recreation, fitness, and everyday comfort, not to diagnose, treat, or prevent any illness or condition. Anyone with a medical condition should speak with a healthcare professional before using the device.",
+  },
+
+  // ── INSIDE BOX ──
+  insideBox: {
+    image: "https://static.wixstatic.com/media/8f1bc7_fe9d6e01321c4763ad7c7c477a211ed0~mv2.avif",
+    items: [
+      "Portable Oxygen Concentrator",
+      "Carry Bag",
+      "Shoulder Strap",
+      "1 Rechargeable 18-Cell Battery (or 2 based on selected option)",
+      "AC Power Adapter",
+      "12V Car Charger",
+      "Nasal Cannula",
+      "5 Replacement Filters",
+    ],
+  },
+
+  // ── PRODUCT FAQ ──
+  productFaq: [
+    { q: 'What does "1–8L" mean?', a: '"1–8L" refers to the eight device settings numbered 1 through 8. It does not mean an output of 1–8 litres per minute. Each setting increases oxygen output in steps from 200 mL/min at Level 1 up to 2,000 mL/min at Level 8.' },
+    { q: "How do the three delivery modes differ?", a: "Pulse Dose detects each inhalation and delivers a burst of oxygen with every breath. Constant Flow provides 17 steady oxygen bursts per minute with output up to 1,200 mL/min. Level 8 adds Continuous Flow, delivering uninterrupted oxygen at up to 2,000 mL/min." },
+    { q: "What oxygen purity does it provide?", a: "The concentrator provides 90% ±3% oxygen purity across all eight settings and all three delivery modes." },
+    { q: "How long does the battery last?", a: "One rechargeable 18-cell battery provides approximately 12 hours of use. Adding a second battery extends runtime to approximately 24 hours. Actual runtime varies with the selected setting, delivery mode, battery condition, temperature, and charging habits." },
+    { q: "How long does charging take?", a: "The battery charges in approximately 4 hours from a standard wall outlet." },
+    { q: "Can it use wall and vehicle power?", a: "Yes. Connect it to a standard 100–240V wall outlet at home or use the included 12V DC adapter inside a vehicle. The rechargeable battery provides cordless use when a power source is not available." },
+    { q: "Can it operate at higher elevations?", a: "Yes. The concentrator is designed to operate at elevations up to 5,000 metres, supporting stable oxygen output in high-altitude locations." },
+    { q: "Can the battery be replaced during longer trips?", a: "Yes. The 18-cell battery detaches and reattaches in seconds. Carrying a second fully charged battery allows you to extend use to approximately 24 hours without stopping to charge." },
+    { q: "How should the filters be maintained?", a: "Check the filters regularly for visible dust or debris. Follow the cleaning and replacement instructions provided in the included user manual to maintain steady airflow and proper operation." },
+    { q: "How should the concentrator and battery be stored?", a: "Store the device in a cool, dry location between 5°C and 40°C and away from direct sunlight. Remove the battery if storing for an extended period and keep it partially charged to help preserve battery life." },
+  ],
+};
+
+export default product;
