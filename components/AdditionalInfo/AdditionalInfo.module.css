@@ -140,6 +140,24 @@
   .tdValue { font-size: 12px; }
 }
 
+.tdHead {
+  background: #f0f0f0;
+  font-weight: 700;
+  color: #111;
+}
+
+.trBold td {
+  font-weight: 700;
+  color: #111;
+}
+
+.flowNote {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
 .disclaimer {
   margin-top: 32px;
   padding: 20px 24px;

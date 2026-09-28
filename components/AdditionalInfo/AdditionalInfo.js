@@ -7,10 +7,13 @@ export default function AdditionalInfo({ config }) {
   if (!config) return null;
   const { features, specs, disclaimer, everydayUseCases } = config;
 
+  const { flowTable } = config;
+
   const sections = [
     ...(everydayUseCases ? [{ title: "Everyday Use Cases", content: everydayUseCases, type: "list" }] : []),
     ...(features ? [{ title: "Features & Benefits", content: features, type: "list" }] : []),
     ...(specs ? [{ title: "Specifications", content: specs, type: "specs" }] : []),
+    ...(flowTable ? [{ title: "Flow Output By Level", content: flowTable, type: "flowTable" }] : []),
   ];
 
   return (
@@ -46,6 +49,31 @@ export default function AdditionalInfo({ config }) {
                         ))}
                       </tbody>
                     </table>
+                  )}
+                  {sec.type === "flowTable" && (
+                    <>
+                      <table className={styles.table}>
+                        <thead>
+                          <tr className={styles.tr}>
+                            <td className={`${styles.tdLabel} ${styles.tdHead}`}>Setting</td>
+                            <td className={`${styles.tdValue} ${styles.tdHead}`}>Delivery Type</td>
+                            <td className={`${styles.tdValue} ${styles.tdHead}`}>Oxygen Output</td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {sec.content.rows.map((row, j) => (
+                            <tr key={j} className={`${styles.tr} ${row.bold ? styles.trBold : ""}`}>
+                              <td className={styles.tdLabel}>{row.setting}</td>
+                              <td className={styles.tdValue}>{row.type}</td>
+                              <td className={styles.tdValue}>{row.output}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                      {sec.content.note && (
+                        <p className={styles.flowNote}><strong>Setting Note:</strong> {sec.content.note}</p>
+                      )}
+                    </>
                   )}
                 </div>
               </div>

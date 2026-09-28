@@ -179,6 +179,19 @@ const product = {
       { label: "Atmospheric Pressure", value: "54–106 kPa" },
       { label: "Operating Altitude", value: "0–5,000 metres" },
     ],
+    flowTable: {
+      rows: [
+        { setting: "Level 1", type: "Adjustable Delivery", output: "200 mL/min" },
+        { setting: "Level 2", type: "Adjustable Delivery", output: "400 mL/min" },
+        { setting: "Level 3", type: "Adjustable Delivery", output: "600 mL/min" },
+        { setting: "Level 4", type: "Adjustable Delivery", output: "800 mL/min" },
+        { setting: "Level 5", type: "Adjustable Delivery", output: "1,000 mL/min" },
+        { setting: "Level 6", type: "Adjustable Delivery", output: "1,200 mL/min" },
+        { setting: "Level 7", type: "Constant Frequency",  output: "1,200 mL/min" },
+        { setting: "Level 8", type: "Continuous Flow",     output: "Up to 2,000 mL/min", bold: true },
+      ],
+      note: '"1–8L" refers to the eight device settings. It does not mean an output of 1–8 litres per minute.',
+    },
     disclaimer: "The Oxliv 1-8L Portable Oxygen Concentrator is not a medical device. It is designed for travel, recreation, fitness, and everyday comfort, not to diagnose, treat, or prevent any illness or condition. Anyone with a medical condition should speak with a healthcare professional before using the device.",
   },
 
