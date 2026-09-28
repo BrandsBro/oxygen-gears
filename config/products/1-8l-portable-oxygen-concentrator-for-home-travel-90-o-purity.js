@@ -80,14 +80,21 @@ const product = {
     },
   ],
 
+  // ── OUTPUT CHART ──
+  outputChart: {
+    heading: "Output at Every Level",
+    subtext: "Each setting increases oxygen output in clear steps. Levels 1–6 range from 200 to 1,200 mL/min. Level 7 provides 1,200 mL/min at a constant frequency, while Level 8 delivers continuous flow at up to 2,000 mL/min.",
+    image: "https://static.wixstatic.com/media/8f1bc7_bd1356ae91214c83b5a1f564d006acae~mv2.webp",
+  },
+
   // ── STAY POWERED ──
   stayPowered: {
     heading: "Choose Your Power Source",
     subtext: "Connect the concentrator to a standard wall outlet at home, use the 12V DC adapter inside a vehicle, or run it from the rechargeable battery. These three power options support use when moving between home, car, and outdoor locations.",
     items: [
-      { image: "https://static.wixstatic.com/media/8f1bc7_bdc54fd7eb194c11b0306f3961cb1c37~mv2.avif", label: "At Home" },
-      { image: "https://static.wixstatic.com/media/8f1bc7_7d04b14cb9244c5e9b6e20e8d794e0b0~mv2.avif", label: "In a Car" },
-      { image: "https://static.wixstatic.com/media/8f1bc7_ecb1cf3dc0ba411c96d5365d816781d3~mv2.avif", label: "On Battery" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_5429a07e59b44de3a64d01fa23d0861c~mv2.webp", label: "At Home" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_5429a07e59b44de3a64d01fa23d0861c~mv2.webp", label: "In a Car" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_a852b6181623464b8ed1e5d73e61c148~mv2.webp", label: "On Battery" },
     ],
   },
 
