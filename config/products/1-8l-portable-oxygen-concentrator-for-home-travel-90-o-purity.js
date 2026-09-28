@@ -105,6 +105,34 @@ const product = {
     subtext: "Watch the concentrator in action and see how its controls, display, oxygen outlet, and removable battery work. The video offers a closer look at the device's size, setup, and daily operation before you choose the right setting for your needs.",
   },
 
+  // ── COMPARISON TABLE ──
+  comparisonTable: {
+    heading: "Dual-Mode Performance Without the Premium Price",
+    subtext: "We placed the Oxliv 1–8L beside one of the market's leading dual-mode concentrators. This comparison shows how both products measure up across oxygen delivery, battery use, portability, power choices, output, and overall price.",
+    col1: {
+      label: "Oxliv",
+      image: "https://static.wixstatic.com/media/8f1bc7_645739abe5344bb7bba87554292a86cd~mv2.avif",
+    },
+    col2: {
+      label: "OxLife Independence",
+      image: "https://static.wixstatic.com/media/8f1bc7_9d3f0f63a881497199b7a9fbe58eadb6~mv2.avif",
+    },
+    rows: [
+      { feature: "Retail Price",       col1: "$879",                                     col2: "$2,895" },
+      { feature: "Adjustable Output",  col1: "8 Settings",                               col2: "12 Pulse + 6 Continuous Settings" },
+      { feature: "Oxygen Delivery",    col1: "Pulse + Constant Frequency + Continuous Flow", col2: "Pulse + Continuous Flow" },
+      { feature: "O₂ Purity",          col1: "90% ±3%",                                  col2: "87%–95.6%" },
+      { feature: "Maximum Output",     col1: "Up to 2,000 mL/min",                       col2: "Up to 3,000 mL/min" },
+      { feature: "Battery Runtime",    col1: "Up to 12 Hours With One 18-Cell Battery",  col2: "Up to 6 Hours With Two Batteries" },
+      { feature: "Operating Noise",    col1: "Below 60 dB(A)",                           col2: "Around 40 dB(A)" },
+      { feature: "Power Options",      col1: "Wall, Car, and Battery Power",              col2: "Wall, Car, and Battery Power" },
+      { feature: "Operating Weight",   col1: "4.85 lbs",                                 col2: "From 16.7 lbs" },
+      { feature: "Operating Altitude", col1: "Up to 5,000 Metres",                       col2: "Up to 4,000 Metres" },
+      { feature: "Warm-Up Time",       col1: "3 Minutes",                                col2: "3 Minutes" },
+    ],
+    buttonText: "BUY NOW",
+  },
+
   // ── ADDITIONAL INFO ──
   additionalInfo: {
     features: [

@@ -1,0 +1,214 @@
+.section {
+  width: 100%;
+  background: #f0f4f8;
+  padding: 64px 40px;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ── Heading ── */
+.headingArea {
+  text-align: center;
+  max-width: 760px;
+}
+
+.heading {
+  font-size: 38px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.subtext {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Table wrapper ── */
+.tableWrap {
+  width: 100%;
+  background: #fff;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* ── Row base ── */
+.row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+/* ── Header row ── */
+.headerRow {
+  border-bottom: 1px solid #d0d8e4;
+}
+
+/* ── Alternating row bg ── */
+.rowOdd  { background: #fff; }
+.rowEven { background: #fafbfc; }
+
+/* ── Cells ── */
+.labelCell {
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+}
+
+.colCell {
+  padding: 14px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-left: 1px solid #e0e6ed;
+}
+
+/* ── Header cells ── */
+.col1Header {
+  background: #2c6fb5;
+  color: #fff;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 16px;
+  border-left: 1px solid #d0d8e4;
+  border-top: 1px solid #d0d8e4;
+  border-top-left-radius: 12px;
+}
+
+.col2Header {
+  background: #fff;
+  color: #2c3e50;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 16px;
+  border-left: 1px solid #d0d8e4;
+  border-top: 1px solid #d0d8e4;
+  border-right: 1px solid #d0d8e4;
+  border-top-right-radius: 12px;
+}
+
+.headerImg {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  display: block;
+}
+
+.headerLabel {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* ── Col 1 body cells (our product — highlighted) ── */
+.col1Cell {
+  background: #eef3fa;
+  color: #1a4a8a;
+  font-weight: 600;
+  border-left: 1px solid #d0d8e4;
+}
+
+/* Last row — rounded bottom corners on value columns */
+.row:last-child .col1Cell {
+  border-bottom-left-radius: 12px;
+  border-bottom: 1px solid #d0d8e4;
+}
+
+.row:last-child .col2Cell {
+  border-bottom-right-radius: 12px;
+  border-bottom: 1px solid #d0d8e4;
+  border-right: 1px solid #d0d8e4;
+}
+
+/* ── BUY NOW ── */
+.btnWrap {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 56px;
+  background: #2c6fb5;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.15s;
+}
+
+.btn:hover {
+  background: #1a5a9e;
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Tablet ── */
+@media (max-width: 900px) {
+  .heading { font-size: 28px; }
+  .row { grid-template-columns: 1.2fr 1fr 1fr; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .section { padding: 40px 16px; }
+  .heading { font-size: 24px; }
+  .subtext { font-size: 14px; }
+
+  /* Hide feature label column in header; show 2 cols */
+  .headerRow { grid-template-columns: 1fr 1fr; }
+  .headerRow .labelCell { display: none; }
+  .col1Header { border-left: 1px solid #d0d8e4; border-top-left-radius: 12px; }
+
+  /* Body rows: label full-width on top, values below */
+  .rowOdd, .rowEven {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .labelCell {
+    grid-column: 1 / -1;
+    border-bottom: 1px solid #e0e6ed;
+    border-left: 1px solid #d0d8e4;
+    border-right: 1px solid #d0d8e4;
+    background: #f5f7fa;
+    padding: 10px 14px;
+  }
+
+  .colCell { padding: 12px 10px; font-size: 12px; }
+  .col1Cell { border-left: 1px solid #d0d8e4; }
+  .col2Cell { border-right: 1px solid #d0d8e4; }
+
+  .headerImg { width: 60px; height: 60px; }
+
+  .btn { width: 100%; padding: 15px 24px; }
+}

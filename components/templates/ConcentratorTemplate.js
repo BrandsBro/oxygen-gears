@@ -12,6 +12,7 @@ const ProductDetails = dynamic(() => import("@/components/ProductDetails/Product
 const OutputChart = dynamic(() => import("@/components/OutputChart/OutputChart"));
 const StayPowered = dynamic(() => import("@/components/StayPowered/StayPowered"));
 const VideoSection = dynamic(() => import("@/components/VideoSection/VideoSection"));
+const ComparisonTable = dynamic(() => import("@/components/ComparisonTable/ComparisonTable"));
 const AdditionalInfo = dynamic(() => import("@/components/AdditionalInfo/AdditionalInfo"));
 const InsideBox = dynamic(() => import("@/components/InsideBox/InsideBox"));
 const TrustedBy = dynamic(() => import("@/components/TrustedBy/TrustedBy"));
@@ -58,6 +59,7 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
       {config.outputChart && <OutputChart config={config.outputChart} />}
       {config.showStayPowered !== false && <StayPowered config={config.stayPowered} />}
       {config.videoSection && <VideoSection config={config.videoSection} />}
+      {config.comparisonTable && <ComparisonTable config={config.comparisonTable} productId={product._id} variantId={variants?.[0]?._id} />}
       {config.additionalInfo && <AdditionalInfo config={config.additionalInfo} />}
       {config.insideBox && <InsideBox config={config.insideBox} />}
       <TrustedBy />
