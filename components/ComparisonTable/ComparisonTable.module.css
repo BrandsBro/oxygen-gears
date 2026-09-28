@@ -1,6 +1,6 @@
 .section {
   width: 100%;
-  background: #f0f4f8;
+  background: #fff;
   padding: 64px 40px;
 }
 
@@ -86,7 +86,7 @@
 
 /* ── Header cells ── */
 .col1Header {
-  background: #2c6fb5;
+  background: #58ACAF;
   color: #fff;
   flex-direction: column;
   gap: 8px;
@@ -123,8 +123,8 @@
 
 /* ── Col 1 body cells (our product — highlighted) ── */
 .col1Cell {
-  background: #eef3fa;
-  color: #1a4a8a;
+  background: #eef8f8;
+  color: #2a7a7d;
   font-weight: 600;
   border-left: 1px solid #d0d8e4;
 }
@@ -149,7 +149,7 @@
 .btn {
   display: inline-block;
   padding: 16px 56px;
-  background: #2c6fb5;
+  background: #58ACAF;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -162,7 +162,7 @@
 }
 
 .btn:hover {
-  background: #1a5a9e;
+  background: #419598;
   transform: translateY(-2px);
 }
 
