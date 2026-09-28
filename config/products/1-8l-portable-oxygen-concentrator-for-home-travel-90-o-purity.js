@@ -31,12 +31,12 @@ const product = {
     heading: "Built for Everyday Use",
     subtext: "A portable concentrator should feel simple from the moment you turn it on. This compact unit warms up in three minutes and operates below 60 dB(A). Flexible power and multiple filtration help it fit into daily routines at home and outside.",
     items: [
-      { icon: "https://static.wixstatic.com/media/8f1bc7_0d98baff82384a69980e86af1a1416b9~mv2.avif", label: "Lightweight 4.85 lbs Design" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_e0325b7852c34f7e88686dfd8e9f3b6b~mv2.avif", label: "Multiple Filtration System" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_857f66bbd5834361b152b9a92c63e4e8~mv2.avif", label: "Wall, Car & Battery Power" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_aa13bd0229ce4e3cbbc5c72ae8ee735b~mv2.avif", label: "Under 60 dB(A)" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_c4306d458f384be09013c57d31ea9c9c~mv2.avif", label: "Ready in 3 Minutes" },
-      { icon: "https://static.wixstatic.com/media/8f1bc7_d99e126153214119b1c3428dfce1f5cb~mv2.avif", label: "Up to 5,000m Altitude" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_232acfd8c2a74beabedab260016c9c5b~mv2.png", label: "Lightweight 4.85 lbs Design" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_43f3916200c845638093766b2d48dc22~mv2.png", label: "Multiple Filtration System" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_bba21672ba9f4ad8bf01ac74fd58511a~mv2.png", label: "Wall, Car & Battery Power" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_45987c8c3e574c539c1c6ab67bd7b69f~mv2.png", label: "Under 60 dB(A)" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_974c7949e2294db2882ed229aef50229~mv2.png", label: "Ready in 3 Minutes" },
+      { icon: "https://static.wixstatic.com/media/8f1bc7_4a9c8c1b39d64a1d8e36b24891a3678a~mv2.png", label: "Up to 5,000m Altitude" },
     ],
   },
 
@@ -45,10 +45,10 @@ const product = {
     heading: "From Home to Outdoors",
     subtext: "The compact design makes it easier to keep oxygen support close throughout your routine. Use it at home, connect it inside the car, or carry it during short trips and outdoor activities.",
     items: [
-      { image: "https://static.wixstatic.com/media/8f1bc7_906a51bcb5db46399f98d2934416cee0~mv2.avif", label: "Travel" },
-      { image: "https://static.wixstatic.com/media/8f1bc7_4958f1b6e25f43c7b84b186250c69fd7~mv2.avif", label: "At Home" },
-      { image: "https://static.wixstatic.com/media/8f1bc7_1cd09645060d4913b904fb36add92f08~mv2.avif", label: "In the Car" },
-      { image: "https://static.wixstatic.com/media/8f1bc7_d6af48e45af746dcbf8765685502a08b~mv2.avif", label: "Outdoor" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_758707817cda430cad94da500618f263~mv2.jpeg", label: "Travel" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_4a05caffb76a44a6a1f4fbf37cb104c1~mv2.jpeg", label: "At Home" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_ce4995eaa5bc42728aec56e6f530a458~mv2.jpeg", label: "In the Car" },
+      { image: "https://static.wixstatic.com/media/8f1bc7_f176dee9716a4329b2dc1d9a4d6597a3~mv2.jpeg", label: "Outdoor" },
     ],
   },
 
