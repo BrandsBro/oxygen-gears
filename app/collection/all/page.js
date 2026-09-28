@@ -15,21 +15,20 @@ export default async function CollectionPage() {
   // Section 1: 4 main concentrators in order.
   // Section 2: accessories grouped by model (1-3L → 1-5L → 1-7L → 1-8L).
   const MAIN_CONCENTRATORS = [
-    "1-3lmin-portable-oxygen-concentrator-10-12-hours-continuous-flow-battery-life",
     "rechargeable-1-5l-portable-oxygen-concentrator-95-oxygen-purity",
     "1to7l-portable-oxygen-concentrator",
     "1-8l-portable-oxygen-concentrator-for-home-travel-90-o-purity",
   ];
 
   function accessoryModelOrder(slug) {
-    if (slug.includes("1-3")) return 0;
-    if (slug.includes("1-5")) return 1;
-    if (slug.includes("1-7") || slug.includes("1to7")) return 2;
-    if (slug.includes("1-8")) return 3;
+    if (slug.includes("1-5")) return 0;
+    if (slug.includes("1-7") || slug.includes("1to7")) return 1;
+    if (slug.includes("1-8")) return 2;
     return 99;
   }
 
   const prods = items
+    .filter((p) => !p.slug.includes("1-3"))
     .map((p) => ({
       id: p._id,
       slug: p.slug,
