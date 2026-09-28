@@ -77,4 +77,4 @@ export default async function CollectionPage() {
     </div>
   );
 }
-export const revalidate = 3600;
+export const revalidate = 0;
