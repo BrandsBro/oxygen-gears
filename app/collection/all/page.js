@@ -12,6 +12,22 @@ export default async function CollectionPage() {
 
   const { items } = await client.products.queryProducts().find();
 
+  // Concentrators first (ordered by model size), then accessories grouped by concentrator.
+  // Add new slugs here when new products go live in Wix.
+  const SLUG_ORDER = [
+    // ── Main concentrators ──
+    "rechargeable-1-3l-portable-oxygen-concentrator",
+    "rechargeable-1-5l-portable-oxygen-concentrator-95-oxygen-purity",
+    "1to7l-portable-oxygen-concentrator",
+    "rechargeable-1-8l-portable-oxygen-concentrator",
+    // ── 1-7L accessories ──
+    "rechargeable-battery-for-1-7l-oxygen-concentrator",
+    "5-pieces-nasal-cannulas-for-1-7l",
+    "charging-adapter-for-1-7l-oxygen-concentrator",
+    "car-charging-cable-for-portable-oxygen-concentrator",
+    "carry-bag-for-1-7l-oxygen-concentrator",
+  ];
+
   const prods = items
     .map((p) => ({
       id: p._id,
@@ -22,7 +38,13 @@ export default async function CollectionPage() {
       image1: getWixImageUrl(p.media?.items?.[0]?.image?.url),
       image2: getWixImageUrl(p.media?.items?.[1]?.image?.url),
     }))
-    .sort((a, b) => b.price - a.price);
+    .sort((a, b) => {
+      const ai = SLUG_ORDER.indexOf(a.slug);
+      const bi = SLUG_ORDER.indexOf(b.slug);
+      const aPos = ai === -1 ? Infinity : ai;
+      const bPos = bi === -1 ? Infinity : bi;
+      return aPos - bPos;
+    });
 
   return (
     <div>
