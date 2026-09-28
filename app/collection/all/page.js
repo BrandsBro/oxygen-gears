@@ -12,21 +12,21 @@ export default async function CollectionPage() {
 
   const { items } = await client.products.queryProducts().find();
 
-  // Groups: concentrator first, then its accessories, ordered 1-3L → 1-5L → 1-7L → 1-8L.
-  // Detection is keyword-based so new Wix products are picked up automatically.
-  const MODEL_GROUPS = ["1-3", "1-5", "1-7", "1to7", "1-8"];
-  const ACCESSORY_KEYWORDS = ["battery", "cannula", "cable", "adapter", "bag", "strap", "nasal", "charger", "charging"];
+  // Section 1: 4 main concentrators in order.
+  // Section 2: accessories grouped by model (1-3L → 1-5L → 1-7L → 1-8L).
+  const MAIN_CONCENTRATORS = [
+    "1-3lmin-portable-oxygen-concentrator-10-12-hours-continuous-flow-battery-life",
+    "rechargeable-1-5l-portable-oxygen-concentrator-95-oxygen-purity",
+    "1to7l-portable-oxygen-concentrator",
+    "1-8l-portable-oxygen-concentrator-for-home-travel-90-o-purity",
+  ];
 
-  function modelGroup(slug) {
+  function accessoryModelOrder(slug) {
     if (slug.includes("1-3")) return 0;
     if (slug.includes("1-5")) return 1;
     if (slug.includes("1-7") || slug.includes("1to7")) return 2;
     if (slug.includes("1-8")) return 3;
     return 99;
-  }
-
-  function isAccessory(slug) {
-    return ACCESSORY_KEYWORDS.some((kw) => slug.includes(kw));
   }
 
   const prods = items
@@ -40,11 +40,16 @@ export default async function CollectionPage() {
       image2: getWixImageUrl(p.media?.items?.[1]?.image?.url),
     }))
     .sort((a, b) => {
-      const ag = modelGroup(a.slug);
-      const bg = modelGroup(b.slug);
-      if (ag !== bg) return ag - bg;
-      // Within same group: concentrator (0) before accessories (1)
-      return (isAccessory(a.slug) ? 1 : 0) - (isAccessory(b.slug) ? 1 : 0);
+      const ai = MAIN_CONCENTRATORS.indexOf(a.slug);
+      const bi = MAIN_CONCENTRATORS.indexOf(b.slug);
+      const aIsMain = ai !== -1;
+      const bIsMain = bi !== -1;
+      // Main concentrators come before accessories
+      if (aIsMain && bIsMain) return ai - bi;
+      if (aIsMain) return -1;
+      if (bIsMain) return 1;
+      // Both accessories — group by model
+      return accessoryModelOrder(a.slug) - accessoryModelOrder(b.slug);
     });
 
   return (
