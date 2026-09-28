@@ -12,21 +12,22 @@ export default async function CollectionPage() {
 
   const { items } = await client.products.queryProducts().find();
 
-  // Concentrators first (ordered by model size), then accessories grouped by concentrator.
-  // Add new slugs here when new products go live in Wix.
-  const SLUG_ORDER = [
-    // ── Main concentrators ──
-    "rechargeable-1-3l-portable-oxygen-concentrator",
-    "rechargeable-1-5l-portable-oxygen-concentrator-95-oxygen-purity",
-    "1to7l-portable-oxygen-concentrator",
-    "rechargeable-1-8l-portable-oxygen-concentrator",
-    // ── 1-7L accessories ──
-    "rechargeable-battery-for-1-7l-oxygen-concentrator",
-    "5-pieces-nasal-cannulas-for-1-7l",
-    "charging-adapter-for-1-7l-oxygen-concentrator",
-    "car-charging-cable-for-portable-oxygen-concentrator",
-    "carry-bag-for-1-7l-oxygen-concentrator",
-  ];
+  // Groups: concentrator first, then its accessories, ordered 1-3L → 1-5L → 1-7L → 1-8L.
+  // Detection is keyword-based so new Wix products are picked up automatically.
+  const MODEL_GROUPS = ["1-3", "1-5", "1-7", "1to7", "1-8"];
+  const ACCESSORY_KEYWORDS = ["battery", "cannula", "cable", "adapter", "bag", "strap", "nasal", "charger", "charging"];
+
+  function modelGroup(slug) {
+    if (slug.includes("1-3")) return 0;
+    if (slug.includes("1-5")) return 1;
+    if (slug.includes("1-7") || slug.includes("1to7")) return 2;
+    if (slug.includes("1-8")) return 3;
+    return 99;
+  }
+
+  function isAccessory(slug) {
+    return ACCESSORY_KEYWORDS.some((kw) => slug.includes(kw));
+  }
 
   const prods = items
     .map((p) => ({
@@ -39,11 +40,11 @@ export default async function CollectionPage() {
       image2: getWixImageUrl(p.media?.items?.[1]?.image?.url),
     }))
     .sort((a, b) => {
-      const ai = SLUG_ORDER.indexOf(a.slug);
-      const bi = SLUG_ORDER.indexOf(b.slug);
-      const aPos = ai === -1 ? Infinity : ai;
-      const bPos = bi === -1 ? Infinity : bi;
-      return aPos - bPos;
+      const ag = modelGroup(a.slug);
+      const bg = modelGroup(b.slug);
+      if (ag !== bg) return ag - bg;
+      // Within same group: concentrator (0) before accessories (1)
+      return (isAccessory(a.slug) ? 1 : 0) - (isAccessory(b.slug) ? 1 : 0);
     });
 
   return (
