@@ -55,34 +55,28 @@ const product = {
   // ── PRODUCT DETAILS ──
   productDetails: [
     {
-      image: "https://static.wixstatic.com/media/8f1bc7_7113ffd2d15e4eb99f7dda9dbcf1bb02~mv2.avif",
+      image: "https://static.wixstatic.com/media/8f1bc7_45496dccf5924becb9e9bd4b28440906~mv2.webp",
       heading: "Three Modes. More Control.",
       content: "Choose how the concentrator delivers oxygen across eight settings. Pulse Dose responds to each inhalation. Constant Flow provides 17 oxygen bursts per minute, with output up to 1,200 mL/min. Level 8 adds uninterrupted Continuous Flow at up to 2,000 mL/min.",
       reverse: false,
     },
     {
-      image: "https://static.wixstatic.com/media/8f1bc7_f56810431420481394f65b01a0a7bf28~mv2.avif",
+      image: "https://static.wixstatic.com/media/8f1bc7_e686ce9c9c364ffe996b22958b736984~mv2.webp",
       heading: "Consistent Oxygen Purity",
       content: "Surrounding air passes through multiple filters before reaching the molecular sieve, where nitrogen is separated from oxygen. The concentrated oxygen then moves through the outlet for delivery, providing 90% ±3% oxygen purity across all eight settings and three delivery modes.",
       reverse: true,
     },
     {
-      image: "https://static.wixstatic.com/media/8f1bc7_82ae2437c3d1409b8157907abdf27913~mv2.avif",
+      image: "https://static.wixstatic.com/media/8f1bc7_765c7cd42bc14c33843bad11784bb614~mv2.webp",
       heading: "Advanced Filtration. Cleaner Air.",
       content: "The concentrator draws in surrounding air and passes it through multiple filtration stages that help clean it before concentration. The filtered air then reaches the molecular sieve, where nitrogen is separated before concentrated oxygen moves through the outlet for delivery.",
       reverse: false,
     },
     {
-      image: "https://static.wixstatic.com/media/8f1bc7_a69ba8c59e7b4a1ba1d258067eef9f9e~mv2.avif",
+      image: "https://static.wixstatic.com/media/8f1bc7_b669455fc5bd4622be757f4d1894d7c2~mv2.webp",
       heading: "Reliable at Higher Altitudes",
       content: "Designed to operate at elevations up to 5,000 metres, the concentrator supports dependable use in high-altitude locations. Whether you are travelling through the mountains or living at elevation, it helps maintain stable oxygen output within the manufacturer's stated operating conditions.",
       reverse: true,
-    },
-    {
-      image: "https://static.wixstatic.com/media/8f1bc7_121427af9c2f4dd1b2d42b7a2dc919d3~mv2.avif",
-      heading: "Output at Every Level",
-      content: "Each setting increases oxygen output in clear steps. Levels 1–6 range from 200 to 1,200 mL/min. Level 7 provides 1,200 mL/min at a constant frequency, while Level 8 delivers continuous flow at up to 2,000 mL/min.",
-      reverse: false,
     },
   ],
 
