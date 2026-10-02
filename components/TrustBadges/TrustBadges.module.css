@@ -1,0 +1,77 @@
+.wrap {
+  border: 1.5px solid #3b9fe8;
+  border-radius: 12px;
+  padding: 18px 16px 14px;
+  background: #fff;
+}
+
+.badges {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  text-align: center;
+}
+
+.iconBox {
+  width: 68px;
+  height: 68px;
+  border: 1.5px solid #3b9fe8;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.35;
+}
+
+.delivery {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 12px;
+  font-size: 0.8rem;
+  color: #444;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.delivery strong {
+  color: #111;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .iconBox {
+    width: 54px;
+    height: 54px;
+    padding: 8px;
+  }
+
+  .label {
+    font-size: 0.72rem;
+  }
+
+  .delivery {
+    font-size: 0.75rem;
+  }
+}

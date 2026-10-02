@@ -6,6 +6,7 @@ import { useCart } from "@/lib/cartContext";
 import dynamic from "next/dynamic";
 
 const CountdownBanner = dynamic(() => import("@/components/CountdownBanner/CountdownBanner"), { ssr: false });
+const TrustBadges = dynamic(() => import("@/components/TrustBadges/TrustBadges"), { ssr: false });
 
 
 
@@ -111,8 +112,9 @@ export default function ProductInfo({ bullets: propBullets,
         </>
       )}
 
+      <TrustBadges />
+
       <div className={styles.secureBox}>
-        <p className={styles.secureTitle}>100% Secure Checkout</p>
         <img src="https://static.wixstatic.com/media/20cc08_07f97ca4fab44dff946baa18b969876e~mv2.webp" alt="Secure Payment Methods" className={styles.paymentImg} />
       </div>
 
