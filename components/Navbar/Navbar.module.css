@@ -39,7 +39,7 @@
 .links a {
   font-size: 15px;
   font-weight: 500;
-  color: #2a2a2a;
+  color: #0d3535;
   text-decoration: none;
   transition: color 0.15s;
 }
@@ -57,7 +57,7 @@
 
 .buyBtn {
   display: inline-block;
-  background: #1a3a38;
+  background: #58ACAF;
   color: #fff;
   padding: 11px 26px;
   border-radius: 50px;
@@ -96,7 +96,7 @@
 .mobileMenu a {
   font-size: 16px;
   font-weight: 500;
-  color: #2a2a2a;
+  color: #0d3535;
   text-decoration: none;
 }
 

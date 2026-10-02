@@ -29,7 +29,7 @@
 .heading {
   font-size: 32px;
   font-weight: 700;
-  color: #1a2e2e;
+  color: #0d3535;
   line-height: 1.25;
   margin: 0;
 }
@@ -52,7 +52,7 @@
   justify-content: space-between;
   padding: 13px 18px;
   font-size: 14px;
-  color: #1a2e2e;
+  color: #0d3535;
 }
 
 .rowAlt {
