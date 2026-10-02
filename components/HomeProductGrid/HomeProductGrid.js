@@ -39,9 +39,14 @@ export default async function HomeProductGrid() {
               const discount = original && price < original
                 ? Math.round((1 - price / original) * 100)
                 : 0;
-              const minPrice = product.priceRange?.minValue ?? price;
-              const maxPrice = product.priceRange?.maxValue ?? price;
-              const showRange = minPrice && maxPrice && minPrice !== maxPrice;
+
+              // Calculate range from variant discounted prices
+              const variantPrices = (product.variants || [])
+                .map(v => v.variant?.priceData?.discountedPrice ?? v.variant?.priceData?.price)
+                .filter(Boolean);
+              const minPrice = variantPrices.length ? Math.min(...variantPrices) : price;
+              const maxPrice = variantPrices.length ? Math.max(...variantPrices) : price;
+              const showRange = minPrice && maxPrice && Math.abs(maxPrice - minPrice) > 0.01;
 
               return (
                 <Link key={product._id} href={`/products/${product.slug}`} className={styles.card}>
@@ -54,10 +59,16 @@ export default async function HomeProductGrid() {
                   <div className={styles.cardBody}>
                     <h3 className={styles.name}>{product.name}</h3>
                     <div className={styles.priceRow}>
-                      {original && original > price && (
-                        <span className={styles.original}>${original?.toFixed(2)}</span>
+                      {showRange ? (
+                        <span className={styles.price}>${minPrice?.toFixed(2)} – ${maxPrice?.toFixed(2)}</span>
+                      ) : (
+                        <>
+                          {original && original > price && (
+                            <span className={styles.original}>${original?.toFixed(2)}</span>
+                          )}
+                          <span className={styles.price}>${price?.toFixed(2)}</span>
+                        </>
                       )}
-                      <span className={styles.price}>${price?.toFixed(2)}</span>
                     </div>
                     <span className={styles.viewBtn}>Select Options →</span>
                   </div>
