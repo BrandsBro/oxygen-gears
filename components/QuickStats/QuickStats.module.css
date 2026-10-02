@@ -1,6 +1,6 @@
 .section {
   background: #f0f8f8;
-  padding: 40px 20px;
+  padding: 60px 40px;
 }
 
 .inner {
@@ -8,7 +8,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  gap: 24px;
+  gap: 32px;
   flex-wrap: wrap;
 }
 
@@ -58,6 +58,10 @@
 }
 
 @media (max-width: 600px) {
+  .section {
+    padding: 40px 20px;
+  }
+
   .inner {
     gap: 16px;
   }
