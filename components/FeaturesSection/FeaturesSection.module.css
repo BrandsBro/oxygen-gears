@@ -1,15 +1,56 @@
 .section {
   background: #f8f9f7;
-  padding: 80px 20px;
+  padding: 80px 40px;
 }
 
-.inner {
+/* ── TOP — centered ── */
+.top {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: #edf7f7;
+  color: #58ACAF;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  border: 1px solid #c4e8e8;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0d3535;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.subtext {
+  font-size: 15px;
+  color: #5a6e6e;
+  line-height: 1.75;
+  margin: 0;
+  max-width: 680px;
+}
+
+/* ── BOTTOM — image + cards ── */
+.bottom {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+  gap: 48px;
+  align-items: start;
 }
 
 .left {
@@ -26,29 +67,7 @@
 .right {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-}
-
-.eyebrow {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #58ACAF;
-  margin: 0;
-}
-
-.heading {
-  font-size: 20px;
-  font-weight: 500;
-  color: #0d3535;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .card {
@@ -59,11 +78,12 @@
   border: 1px solid #e8eeee;
   border-radius: 12px;
   padding: 18px 20px;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, border-color 0.2s;
 }
 
 .card:hover {
   box-shadow: 0 4px 16px rgba(88,172,175,0.12);
+  border-color: #58ACAF;
 }
 
 .cardHighlight {
@@ -72,10 +92,10 @@
 }
 
 .cardIcon {
-  font-size: 24px;
+  font-size: 20px;
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   background: #f0f9f9;
   border-radius: 8px;
   display: flex;
@@ -87,7 +107,7 @@
   font-size: 15px;
   font-weight: 700;
   color: #0d3535;
-  margin: 0 0 6px;
+  margin: 0 0 5px;
 }
 
 .cardDesc {
@@ -98,13 +118,22 @@
 }
 
 @media (max-width: 900px) {
-  .inner {
+  .bottom {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
   }
 
-  .img {
-    max-height: 340px;
-    object-position: center;
+  .heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 60px 20px;
+  }
+
+  .heading {
+    font-size: 24px;
   }
 }

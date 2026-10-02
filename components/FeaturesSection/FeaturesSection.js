@@ -26,7 +26,19 @@ const cards = [
 export default function FeaturesSection() {
   return (
     <section className={styles.section}>
-      <div className={styles.inner}>
+      {/* Top — centered heading */}
+      <div className={styles.top}>
+        <span className={styles.eyebrow}>WHY OXLIV FITS DAILY LIFE</span>
+        <h2 className={styles.heading}>MORE CONVENIENCE, LESS HASSLE</h2>
+        <p className={styles.subtext}>
+          Oxliv portable devices combine lightweight construction, rechargeable power,
+          straightforward controls and convenient tank-free operation. Simply compare
+          the available models and choose the features that best fit your everyday routine.
+        </p>
+      </div>
+
+      {/* Bottom — image left, cards right */}
+      <div className={styles.bottom}>
         <div className={styles.left}>
           <img
             src="https://static.wixstatic.com/media/8f1bc7_aa9324cc206b43abaea6fed82a72b2d0~mv2.webp"
@@ -36,22 +48,15 @@ export default function FeaturesSection() {
           />
         </div>
         <div className={styles.right}>
-          <p className={styles.eyebrow}>EVERYDAY FEATURES</p>
-          <h2 className={styles.heading}>
-            Oxliv portable devices combine lightweight construction, rechargeable power,
-            straightforward controls and convenient tank-free operation.
-          </h2>
-          <div className={styles.cards}>
-            {cards.map((c, i) => (
-              <div key={i} className={`${styles.card} ${i === 2 ? styles.cardHighlight : ""}`}>
-                <div className={styles.cardIcon}>{c.emoji}</div>
-                <div>
-                  <h3 className={styles.cardTitle}>{c.title}</h3>
-                  <p className={styles.cardDesc}>{c.desc}</p>
-                </div>
+          {cards.map((c, i) => (
+            <div key={i} className={`${styles.card} ${i === 0 ? styles.cardHighlight : ""}`}>
+              <div className={styles.cardIcon}>{c.emoji}</div>
+              <div>
+                <h3 className={styles.cardTitle}>{c.title}</h3>
+                <p className={styles.cardDesc}>{c.desc}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
