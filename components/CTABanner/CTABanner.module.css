@@ -1,5 +1,5 @@
 .section {
-  background: #0d3535;
+  background: #58ACAF;
   padding: 90px 40px;
   position: relative;
   overflow: hidden;
@@ -12,14 +12,14 @@
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  border: 80px solid rgba(255,255,255,0.04);
+  border: 80px solid rgba(255,255,255,0.08);
   bottom: -150px;
   left: -100px;
   pointer-events: none;
 }
 
 .inner {
-  max-width: 680px;
+  max-width: 780px;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -40,7 +40,7 @@
 
 .subtext {
   font-size: 15px;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.85);
   line-height: 1.75;
   margin: 0;
 }
@@ -73,7 +73,7 @@
 }
 
 .perk {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.8);
   font-size: 13px;
   font-weight: 500;
 }
