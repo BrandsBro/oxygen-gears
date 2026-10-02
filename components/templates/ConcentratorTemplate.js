@@ -20,6 +20,8 @@ const TrustedBy = dynamic(() => import("@/components/TrustedBy/TrustedBy"));
 const Reviews = dynamic(() => import("@/components/Reviews/Reviews"));
 const ProductFAQ = dynamic(() => import("@/components/ProductFAQ/ProductFAQ"));
 const ContactBar = dynamic(() => import("@/components/ContactBar/ContactBar"));
+const QuickStats = dynamic(() => import("@/components/QuickStats/QuickStats"));
+const ProductCompare = dynamic(() => import("@/components/ProductCompare/ProductCompare"));
 
 export default function ConcentratorTemplate({ product, mediaItems, config }) {
   const originalPrice = product.price?.price;
@@ -54,21 +56,23 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
       </div>
 
       {/* Below fold — lazy loaded */}
-      {config.productFeatures && <ProductFeatures config={config.productFeatures} />}
+      {config.quickStats && <QuickStats config={config.quickStats} />}
+      {config.productFeatures && config.showProductFeatures !== false && <ProductFeatures config={config.productFeatures} />}
       {config.showWhySwitching !== false && <WhySwitching config={config.whySwitching} />}
-      {config.oxygenOnTheGo && <OxygenOnTheGo config={config.oxygenOnTheGo} />}
-      {config.productDetails && <ProductDetails sections={config.productDetails} />}
+      {config.oxygenOnTheGo && config.showOxygenOnTheGo !== false && <OxygenOnTheGo config={config.oxygenOnTheGo} />}
+      {config.productDetails && config.showProductDetails !== false && <ProductDetails sections={config.productDetails} />}
       {config.outputChart && <OutputChart config={config.outputChart} />}
       {config.showStayPowered !== false && <StayPowered config={config.stayPowered} />}
       {config.videoSection && <VideoSection config={config.videoSection} />}
-      {config.comparisonTable && <ComparisonTable config={config.comparisonTable} productId={product._id} variantId={variants?.[0]?._id} />}
-      {config.additionalInfo && <AdditionalInfo config={config.additionalInfo} />}
-      {config.insideBox && <InsideBox config={config.insideBox} />}
-      <CTABanner config={config.ctaBanner} />
+      {config.comparisonTable && config.showComparisonTable !== false && <ComparisonTable config={config.comparisonTable} productId={product._id} variantId={variants?.[0]?._id} />}
+      {config.productCompare && <ProductCompare config={config.productCompare} />}
+      {config.additionalInfo && config.showAdditionalInfo !== false && <AdditionalInfo config={config.additionalInfo} />}
+      {config.insideBox && config.showInsideBox !== false && <InsideBox config={config.insideBox} />}
+      {config.showCtaBanner !== false && <CTABanner config={config.ctaBanner} />}
       <Reviews csvUrl={config.reviewsCsv} />
-      <TrustedBy />
-      {config.productFaq && <ProductFAQ faqs={config.productFaq} />}
-      <ContactBar />
+      {config.showTrustedBy !== false && <TrustedBy />}
+      {config.productFaq && config.showProductFaq !== false && <ProductFAQ faqs={config.productFaq} />}
+      {config.showContactBar !== false && <ContactBar />}
     </>
   );
 }

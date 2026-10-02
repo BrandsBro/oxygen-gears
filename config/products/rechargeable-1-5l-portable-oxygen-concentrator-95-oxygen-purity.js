@@ -1,6 +1,67 @@
 const product = {
   template: "concentrator",
 
+  // ── SECTION VISIBILITY FLAGS ──
+  // Hides all sections except Reviews and the new quickStats / productCompare blocks.
+  // Set any flag to true (or remove it) to re-enable the section later.
+  showWhySwitching: false,
+  showStayPowered: false,
+  showProductFeatures: false,
+  showOxygenOnTheGo: false,
+  showProductDetails: false,
+  showComparisonTable: false,
+  showAdditionalInfo: false,
+  showInsideBox: false,
+  showProductFaq: false,
+  showCtaBanner: false,
+  showTrustedBy: false,
+  showContactBar: false,
+
+  // ── QUICK STATS ──
+  quickStats: {
+    items: [
+      {
+        icon: "https://static.wixstatic.com/shapes/8f1bc7_015e37953a3f43bab829335ebf70721a.svg",
+        title: "3.53 lb / 1.6 kg",
+        sub: "Light enough to keep close.",
+      },
+      {
+        icon: "https://static.wixstatic.com/shapes/8f1bc7_331acb4ba9704b8cbbc25a3c72accfaf.svg",
+        title: "Six-Layer Filtration",
+        sub: "More Consistent Oxygen Output.",
+      },
+      {
+        icon: "https://static.wixstatic.com/shapes/8f1bc7_8dfa1e44d80b4c2b9f5e07be7bdc4442.svg",
+        title: "Up To 95% Purity",
+        sub: "High-purity output at levels 1–3.",
+      },
+      {
+        icon: "https://static.wixstatic.com/shapes/8f1bc7_f2b679bf14a84af2adbd29c81e30cb19.svg",
+        title: "6600mAh Battery",
+        sub: "Up to 6 hours of battery time.",
+      },
+    ],
+  },
+
+  // ── PRODUCT COMPARE ──
+  productCompare: {
+    heading: "What Sets Oxliv Apart",
+    subtext: "See how the Oxliv 1-5L stacks up against other portable oxygen concentrators under $1000.",
+    image: "https://static.wixstatic.com/media/8f1bc7_898630002b4e4d2aa53cf452a8440558~mv2.webp",
+    imageAlt: "Oxliv 1-5L Portable Oxygen Concentrator",
+    buyLink: "#",
+    rows: [
+      { feature: "Filtration", ours: "6-layer advanced system", theirs: "No Filtration" },
+      { feature: "O₂ Purity", ours: "Up to 95% high purity", theirs: "Average 35–60% Purity" },
+      { feature: "Real-Time O₂ Display", ours: "Yes, live purity readout", theirs: "✕" },
+      { feature: "Molecular Sieve (Core Component)", ours: "High-efficiency sieve, stable output", theirs: "✕" },
+      { feature: "Dual Modes (Pulse + Active)", ours: "✓", theirs: "Only One Mode" },
+      { feature: "Smart Alerts & Protection", ours: "7-fold intelligent alarm", theirs: "✕" },
+      { feature: "Fast Charging", ours: "✓", theirs: "✕" },
+      { feature: "Swappable Battery", ours: "✓", theirs: "✕" },
+    ],
+  },
+
   // ── COUNTDOWN BANNER ──
   countdownBanner: {
     image: "https://static.wixstatic.com/media/8f1bc7_cb94d0451c94402abd0e8b2183231af5~mv2.webp",
