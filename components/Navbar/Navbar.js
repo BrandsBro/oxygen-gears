@@ -5,11 +5,6 @@ import Image from "next/image";
 import { useState } from "react";
 import brand from "@/config/brand";
 
-const shopLinks = [
-  { label: "All Products", href: "/collection/all" },
-  { label: "Portable Concentrators", href: "/collection/portable-oxygen-concentrators" },
-  { label: "Accessories", href: "/collection/accessories" },
-];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,19 +29,8 @@ export default function Navbar() {
         {/* Links — center */}
         <div className={styles.links}>
           <Link href="/">Home</Link>
+          <Link href="/collection/all">Shop</Link>
           <Link href="/about">About</Link>
-          <div className={styles.shopMenu}>
-            <button className={styles.shopToggle}>
-              Shop <span className={styles.chevron}>▾</span>
-            </button>
-            <div className={styles.dropdown}>
-              {shopLinks.map((l) => (
-                <Link key={l.href} href={l.href} className={styles.dropItem}>
-                  {l.label}
-                </Link>
-              ))}
-            </div>
-          </div>
           <Link href="/faq">FAQs</Link>
           <Link href="/contact">Contact</Link>
         </div>
@@ -71,9 +55,7 @@ export default function Navbar() {
         <div className={styles.mobileMenu}>
           <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
-          {shopLinks.map((l) => (
-            <Link key={l.href} href={l.href} onClick={() => setMenuOpen(false)}>{l.label}</Link>
-          ))}
+          <Link href="/collection/all" onClick={() => setMenuOpen(false)}>Shop</Link>
           <Link href="/faq" onClick={() => setMenuOpen(false)}>FAQs</Link>
           <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
           <Link href="/collection/all" onClick={() => setMenuOpen(false)} className={styles.buyBtn}>
