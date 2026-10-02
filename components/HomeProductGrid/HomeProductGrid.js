@@ -54,16 +54,10 @@ export default async function HomeProductGrid() {
                   <div className={styles.cardBody}>
                     <h3 className={styles.name}>{product.name}</h3>
                     <div className={styles.priceRow}>
-                      {showRange ? (
-                        <span className={styles.price}>${minPrice?.toFixed(2)} – ${maxPrice?.toFixed(2)}</span>
-                      ) : (
-                        <>
-                          <span className={styles.price}>${price?.toFixed(2)}</span>
-                          {original && original > price && (
-                            <span className={styles.original}>${original?.toFixed(2)}</span>
-                          )}
-                        </>
+                      {original && original > price && (
+                        <span className={styles.original}>${original?.toFixed(2)}</span>
                       )}
+                      <span className={styles.price}>${price?.toFixed(2)}</span>
                     </div>
                     <span className={styles.viewBtn}>Select Options →</span>
                   </div>

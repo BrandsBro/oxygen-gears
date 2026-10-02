@@ -14,10 +14,15 @@
 }
 
 .eyebrow {
+  display: inline-block;
+  background: #edf7f7;
+  color: #58ACAF;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #58ACAF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  border: 1px solid #c4e8e8;
   margin: 0;
 }
 
