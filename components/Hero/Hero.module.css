@@ -1,26 +1,34 @@
 .hero {
-  background: #0d6e6e;
-  min-height: 600px;
+  background: #2a7070;
+  min-height: 580px;
   display: flex;
   align-items: center;
-  padding: 60px 60px;
-  gap: 48px;
-  max-width: 100%;
+  justify-content: center;
   overflow: hidden;
   position: relative;
 }
 
-/* Subtle decorative circle in background */
+/* Subtle decorative circle */
 .hero::before {
   content: "";
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
-  border: 80px solid rgba(255,255,255,0.04);
-  top: -100px;
-  left: -100px;
+  border: 100px solid rgba(255,255,255,0.04);
+  top: -120px;
+  left: -120px;
   pointer-events: none;
+}
+
+.inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 60px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
 }
 
 /* ── LEFT ── */
@@ -28,8 +36,9 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 20px;
   z-index: 1;
+  max-width: 520px;
 }
 
 .badge {
@@ -37,7 +46,7 @@
   background: rgba(255,255,255,0.15);
   color: rgba(255,255,255,0.9);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1.5px;
   padding: 7px 16px;
   border-radius: 50px;
@@ -46,7 +55,7 @@
 }
 
 .title {
-  font-size: 44px;
+  font-size: 42px;
   font-weight: 700;
   color: #fff;
   line-height: 1.2;
@@ -55,18 +64,17 @@
 }
 
 .subtitle {
-  font-size: 16px;
-  color: rgba(255,255,255,0.85);
-  line-height: 1.75;
+  font-size: 15px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.8;
   margin: 0;
-  max-width: 460px;
 }
 
 .btn {
   display: inline-block;
   background: #fff;
-  color: #0d3535;
-  padding: 14px 32px;
+  color: #1a3535;
+  padding: 13px 30px;
   border-radius: 50px;
   font-size: 15px;
   font-weight: 700;
@@ -86,10 +94,11 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 4px;
 }
 
 .trustRow span {
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.75);
   font-size: 13px;
   font-weight: 500;
 }
@@ -97,15 +106,19 @@
 /* ── RIGHT ── */
 .right {
   flex: 0 0 auto;
-  width: 420px;
+  width: 380px;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .imgCard {
-  border-radius: 20px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-  aspect-ratio: 9/10;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.22);
+  width: 100%;
+  aspect-ratio: 4/5;
 }
 
 .img {
@@ -118,27 +131,30 @@
 
 /* ── TABLET ── */
 @media (max-width: 1024px) {
-  .hero {
-    padding: 50px 40px;
-    gap: 36px;
+  .inner {
+    padding: 60px 40px;
+    gap: 40px;
   }
 
   .title {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .right {
-    width: 340px;
+    width: 320px;
   }
 }
 
 /* ── MOBILE ── */
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column;
-    padding: 40px 20px 50px;
     min-height: auto;
-    gap: 32px;
+  }
+
+  .inner {
+    flex-direction: column;
+    padding: 40px 20px 48px;
+    gap: 28px;
     text-align: center;
     align-items: center;
   }
@@ -150,28 +166,25 @@
   .left {
     align-items: center;
     order: 2;
+    max-width: 100%;
   }
 
   .right {
     order: 1;
     width: 100%;
-    max-width: 320px;
+    max-width: 300px;
   }
 
   .title {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .subtitle {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .trustRow {
     justify-content: center;
     gap: 12px;
-  }
-
-  .trustRow span {
-    font-size: 12px;
   }
 }
