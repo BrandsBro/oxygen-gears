@@ -100,16 +100,21 @@ export default function ProductInfo({ bullets: propBullets,
         {loading ? "Processing..." : "Shop Now"}
       </button>
 
+      {countdownBanner && (
+        <>
+          {countdownBanner.disclaimer && (
+            <p className={styles.disclaimer}>{countdownBanner.disclaimer}</p>
+          )}
+          <div className={styles.countdownWrap}>
+            <CountdownBanner image={countdownBanner.image} imageAlt={countdownBanner.imageAlt} />
+          </div>
+        </>
+      )}
+
       <div className={styles.secureBox}>
         <p className={styles.secureTitle}>100% Secure Checkout</p>
         <img src="https://static.wixstatic.com/media/20cc08_07f97ca4fab44dff946baa18b969876e~mv2.webp" alt="Secure Payment Methods" className={styles.paymentImg} />
       </div>
-
-      {countdownBanner && (
-        <div className={styles.countdownWrap}>
-          <CountdownBanner image={countdownBanner.image} imageAlt={countdownBanner.imageAlt} />
-        </div>
-      )}
 
     </div>
   );

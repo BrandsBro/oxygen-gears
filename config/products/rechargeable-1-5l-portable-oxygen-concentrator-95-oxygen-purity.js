@@ -5,6 +5,7 @@ const product = {
   countdownBanner: {
     image: "https://static.wixstatic.com/media/8f1bc7_cb94d0451c94402abd0e8b2183231af5~mv2.webp",
     imageAlt: "Limited Time Sale — 1-5L Portable Oxygen Concentrator",
+    disclaimer: "This is NOT a medical-grade oxygen device. Designed for comfort and low-flow support only. If you need prescribed oxygen therapy, consult your doctor.",
   },
 
   // ── NO VIDEO for 1-5L ──

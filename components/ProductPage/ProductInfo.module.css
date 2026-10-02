@@ -198,6 +198,13 @@
   object-fit: contain;
 }
 
+.disclaimer {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: #555;
+  line-height: 1.5;
+}
+
 .countdownWrap {
   margin-top: 4px;
 }
