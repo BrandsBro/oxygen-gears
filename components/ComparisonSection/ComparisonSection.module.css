@@ -41,33 +41,6 @@
   margin: 0;
 }
 
-.table {
-  border: 1px solid #e0eaea;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  padding: 13px 18px;
-  font-size: 14px;
-  color: #0d3535;
-}
-
-.rowAlt {
-  background: #f0f9f9;
-}
-
-.feat {
-  font-weight: 600;
-}
-
-.val {
-  color: #58ACAF;
-  font-weight: 600;
-}
-
 .note {
   font-size: 13px;
   color: #8aabab;
