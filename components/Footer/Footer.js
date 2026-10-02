@@ -8,51 +8,51 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
 
-        {/* Col 1 — Logo + Disclaimer */}
-        <div className={styles.col}>
-          <Image src={brand.logo} alt={brand.name} width={180} height={45} style={{ objectFit: "contain" }} />
-          <p className={styles.disclaimer}>
-            <strong>Important Disclaimer:</strong> This product is intended for general wellness, comfort, and lifestyle use only. It is not a medical device and is not intended to diagnose, treat, cure, prevent, or monitor any disease or health condition. It should not be used as a substitute for professional medical care or any device recommended by a healthcare provider. Please consult a licensed healthcare professional if you have questions about whether this type of product is appropriate for you.
-          </p>
+        {/* Logo */}
+        <div className={styles.logoWrap}>
+          <Image
+            src={brand.logo}
+            alt={brand.name}
+            width={160}
+            height={44}
+            style={{ objectFit: "contain" }}
+          />
         </div>
 
-        {/* Cols 2+3 */}
-        <div className={styles.menusRow}>
-          <div className={styles.col}>
-            <p className={styles.colHeading}>PAGES</p>
-            <Link href="/">Home</Link>
-            <Link href="/collection/all">Oxygen Concentrator</Link>
-            <Link href="/about">About Us</Link>
-            <Link href="/faq">FAQ's</Link>
-            <Link href="/contact">Contact Us</Link>
-          </div>
+        {/* Disclaimer */}
+        <p className={styles.disclaimer}>
+          Important Product Information: Oxliv products are intended for general wellness,
+          personal comfort and everyday non-medical use unless otherwise specified in the
+          manufacturer's documentation. They are not intended to diagnose, treat, cure,
+          prevent or manage any disease or medical condition and are not intended as
+          replacements for prescribed medical equipment or professional healthcare advice.
+          Product specifications, operating requirements and intended use vary by model.
+          Review the applicable product information, manufacturer instructions and warnings
+          before use. If you require oxygen for medical purposes or currently use prescribed
+          oxygen, consult a qualified healthcare professional regarding equipment appropriate
+          for your needs.
+        </p>
 
-          <div className={styles.col}>
-            <p className={styles.colHeading}>POLICY PAGES</p>
-            <Link href="/refund-policy">Refund Policy</Link>
-            <Link href="/return-policy">Return Policy</Link>
-            <Link href="/payment-policy">Payment Policy</Link>
-            <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/shipping-policy">Shipping Policy</Link>
-            <Link href="/terms">Terms of Service</Link>
-          </div>
+        {/* Contact row */}
+        <div className={styles.contactRow}>
+          <a href={`mailto:${brand.email}`} className={styles.contactItem}>{brand.email}</a>
+          <span className={styles.divider}>|</span>
+          <a href={`tel:${brand.phone}`} className={styles.contactItem}>{brand.phone.replace(/\D/g, '').replace(/(\d{1})(\d{3})(\d{3})(\d{4})/, '$1$2$3$4')}</a>
+          <span className={styles.divider}>|</span>
+          <span className={styles.contactItem}>1900 W Mockingbird Ln #101, Dallas, TX 75235</span>
         </div>
 
-        {/* Col 4 — Contact */}
-        <div className={styles.col}>
-          <p className={styles.colHeading}>CONTACT INFO</p>
-          <a href={`tel:${brand.phone}`} className={styles.contact}>
-            <span>📞</span> {brand.phone}
-          </a>
-          <a href={`mailto:${brand.email}`} className={styles.contact}>
-            <span>✉️</span> {brand.email}
-          </a>
+        {/* Policy links */}
+        <div className={styles.policyRow}>
+          <Link href="/terms">Terms and Conditions</Link>
+          <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/refund-policy">Refund and Returns Policy</Link>
+          <Link href="/payment-policy">Payment Policy</Link>
+          <Link href="/shipping-policy">Shipping Policy</Link>
         </div>
 
-      </div>
-
-      <div className={styles.bottomBar}>
-        <p>© {new Date().getFullYear()} {brand.name}. All rights reserved.</p>
+        {/* Copyright */}
+        <p className={styles.copyright}>© {new Date().getFullYear()} Oxliv. All Rights Reserved.</p>
       </div>
     </footer>
   );
