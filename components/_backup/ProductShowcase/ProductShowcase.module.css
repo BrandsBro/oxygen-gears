@@ -1,0 +1,25 @@
+.section {
+  width: 100%;
+  background: #e8f4f8;
+  padding: 60px 40px;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 40px 20px;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

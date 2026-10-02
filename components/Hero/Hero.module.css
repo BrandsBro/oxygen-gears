@@ -8,59 +8,88 @@
   width: 100%;
   height: 620px;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
   display: block;
 }
 
-/* No overlay — text directly on image */
 .overlay {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
+  background: linear-gradient(to right, rgba(0,0,0,0.55) 45%, transparent 85%);
 }
 
 .content {
   max-width: 1200px;
   margin: 0 auto;
-
+  padding: 0 40px;
   width: 100%;
 }
-.textcontent
-{
-  max-width: 700px;
+
+.textcontent {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
+
+.badge {
+  display: inline-block;
+  background: rgba(88,172,175,0.85);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
 .title {
-  font-size: 45px;
-  font-weight: 600;
+  font-size: 42px;
+  font-weight: 700;
   color: #fff;
   line-height: 1.2;
-  margin-bottom: 16px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
 .subtitle {
-  font-size: 22px;
-  color: #fff;
-  max-width: 550px;
+  font-size: 17px;
+  color: rgba(255,255,255,0.92);
   line-height: 1.7;
-  margin-bottom: 35px;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.35);
 }
 
 .btn {
   display: inline-block;
-  background: #FFF;
-  color: black;
+  background: #58ACAF;
+  color: #fff;
   padding: 14px 32px;
   border-radius: 6px;
   text-decoration: none;
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
   transition: background 0.2s;
+  width: fit-content;
 }
 
-.btn:hover { background: #58ACAF; color:white }
+.btn:hover { background: #3d8f92; }
+
+.trustRow {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.trustRow span {
+  color: rgba(255,255,255,0.9);
+  font-size: 13px;
+  font-weight: 500;
+}
 
 .mobileHero { display: none; }
 
@@ -72,41 +101,52 @@
     display: block;
     position: relative;
     width: 100%;
-    height: 190px;
     overflow: hidden;
   }
 
   .mobileImg {
     width: 100%;
-    height: 190px;
+    height: 420px;
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
     display: block;
   }
 
   .mobileOverlay {
     position: absolute;
     inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.6) 60%, transparent);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 16px 20px;
-    gap: 12px;
+    padding: 24px 20px;
+    gap: 14px;
+  }
+
+  .mobileBadge {
+    display: inline-block;
+    background: rgba(88,172,175,0.85);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    border-radius: 20px;
   }
 
   .mobileTitle {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     color: #fff;
     line-height: 1.3;
     margin: 0;
-    max-width: 55%;
+    max-width: 65%;
     text-shadow: 0 1px 4px rgba(0,0,0,0.5);
   }
 
   .btn {
-    padding: 10px 20px;
-    font-size: 13px;
+    padding: 11px 22px;
+    font-size: 14px;
   }
 }
