@@ -1,5 +1,5 @@
 .section {
-  background: #58ACAF;
+  background: #3a9599;
   padding: 90px 40px;
   position: relative;
   overflow: hidden;
@@ -47,21 +47,22 @@
 
 .btn {
   display: inline-block;
-  background: #e85d2f;
-  color: #fff;
-  padding: 16px 40px;
+  background: #fff;
+  color: #0d3535;
+  padding: 16px 44px;
   border-radius: 50px;
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
   margin-top: 4px;
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 
 .btn:hover {
-  background: #c94d22;
+  background: #f0fafa;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(232,93,47,0.35);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.2);
 }
 
 .perks {
