@@ -1,5 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        destination: 'https://us.oxliv.store/:path*',
+        permanent: true,
+        has: [{ type: 'host', value: 'oxliv.store' }],
+      },
+    ]
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "static.wixstatic.com" },
