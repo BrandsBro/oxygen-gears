@@ -1,0 +1,89 @@
+.wrap {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Green bar ── */
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #3a6b3a;
+  padding: 14px 20px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.barTitle {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* ── Timer ── */
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.digit {
+  background: #fff;
+  color: #e53e00;
+  font-size: 1.25rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  min-width: 44px;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+
+.unit {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+/* ── Image ── */
+.imgWrap {
+  width: 100%;
+  line-height: 0;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .bar {
+    padding: 12px 14px;
+    gap: 8px;
+  }
+
+  .barTitle {
+    font-size: 0.95rem;
+  }
+
+  .digit {
+    font-size: 1rem;
+    padding: 3px 7px;
+    min-width: 36px;
+  }
+
+  .unit {
+    font-size: 0.75rem;
+  }
+}

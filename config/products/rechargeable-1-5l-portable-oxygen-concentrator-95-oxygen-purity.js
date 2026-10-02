@@ -1,6 +1,12 @@
 const product = {
   template: "concentrator",
 
+  // ── COUNTDOWN BANNER ──
+  countdownBanner: {
+    image: "https://static.wixstatic.com/media/8f1bc7_cb94d0451c94402abd0e8b2183231af5~mv2.webp",
+    imageAlt: "Limited Time Sale — 1-5L Portable Oxygen Concentrator",
+  },
+
   // ── NO VIDEO for 1-5L ──
 
   // ── REVIEWS ──
