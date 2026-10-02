@@ -68,7 +68,13 @@ const product = {
     disclaimer: "This is NOT a medical-grade oxygen device. Designed for comfort and low-flow support only. If you need prescribed oxygen therapy, consult your doctor.",
   },
 
-  // ── NO VIDEO for 1-5L ──
+  // ── VIDEO SECTION ──
+  videoSection: {
+    layout: "stacked",
+    heading: "Hear It From Someone Who Owns It",
+    subtext: "No script, no filter. Just a customer sharing how easy the device is to use and how well it fits into her daily routine. Hear what she loves about using it in her own words.",
+    videoUrl: "https://video.wixstatic.com/video/8f1bc7_7c2d377bc48c407186a6bf7baef6624a/1080p/mp4/file.mp4",
+  },
 
   // ── REVIEWS ──
   reviewsCsv: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRyh8SmXs3jKRu0WX3OYbdkalm0SmEPqlnGMWvyeuSCct9zAK1zDLd9lrSW0zbMoFc3KTmaxZe29eBu/pub?output=csv",

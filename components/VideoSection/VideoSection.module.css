@@ -1,3 +1,4 @@
+/* ── Side-by-side layout (default) ── */
 .section {
   width: 100%;
   background: #fff;
@@ -61,4 +62,51 @@
   }
   .heading { font-size: 24px; }
   .subtext { font-size: 15px; }
+}
+
+/* ── Stacked layout (heading above, full-width video) ── */
+.sectionStacked {
+  width: 100%;
+  background: #eef2f9;
+  padding: 60px 40px;
+}
+
+.innerStacked {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.headingStacked {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.subtextStacked {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.75;
+  max-width: 760px;
+  margin: 0 0 8px;
+}
+
+.videoWrapStacked {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .sectionStacked { padding: 40px 20px; }
+  .headingStacked { font-size: 1.4rem; }
+  .subtextStacked { font-size: 0.88rem; }
 }
