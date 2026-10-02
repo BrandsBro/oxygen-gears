@@ -27,11 +27,19 @@
   background: #f5f5f5;
   border-radius: 12px;
   overflow: hidden;
-  transition: background 0.2s;
+  border: 1px solid transparent;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.item:hover {
+  background: #f0f9f9;
+  border-color: #58ACAF;
+  box-shadow: 0 4px 12px rgba(88,172,175,0.1);
 }
 
 .item.active {
-  background: #f0f7ff;
+  background: #edf7f7;
+  border-color: #58ACAF;
 }
 
 .question {

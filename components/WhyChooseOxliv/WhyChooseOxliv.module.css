@@ -83,6 +83,15 @@
   font-size: 14.5px;
   color: rgba(255,255,255,0.85);
   font-weight: 500;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  cursor: default;
+}
+
+.listItem:hover {
+  background: rgba(88,172,175,0.15);
+  color: #fff;
 }
 
 .iconBad {
