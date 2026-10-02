@@ -1,10 +1,13 @@
+"use client";
+import { useState } from "react";
 import styles from "./ProductCompare.module.css";
-import Link from "next/link";
+import { useCart } from "@/lib/cartContext";
 
-export default function ProductCompare({ config }) {
+export default function ProductCompare({ config, productId, variantId }) {
   if (!config) return null;
 
-  const { heading, subtext, image, imageAlt, rows, buyLink } = config;
+  const { heading, subtext, image, imageAlt, rows } = config;
+  const { buyNow, loading } = useCart();
 
   return (
     <section className={styles.section}>
@@ -42,11 +45,13 @@ export default function ProductCompare({ config }) {
               </table>
             </div>
 
-            {buyLink && (
-              <Link href={buyLink} className={styles.cta}>
-                ORDER NOW
-              </Link>
-            )}
+            <button
+              className={styles.cta}
+              onClick={() => buyNow(productId, variantId, 1)}
+              disabled={loading}
+            >
+              {loading ? "Processing..." : "Shop Now"}
+            </button>
           </div>
         </div>
 

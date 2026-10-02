@@ -65,7 +65,7 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
       {config.showStayPowered !== false && <StayPowered config={config.stayPowered} />}
       {config.videoSection && <VideoSection config={config.videoSection} />}
       {config.comparisonTable && config.showComparisonTable !== false && <ComparisonTable config={config.comparisonTable} productId={product._id} variantId={variants?.[0]?._id} />}
-      {config.productCompare && <ProductCompare config={config.productCompare} />}
+      {config.productCompare && <ProductCompare config={config.productCompare} productId={product._id} variantId={variants?.[0]?._id} />}
       {config.additionalInfo && config.showAdditionalInfo !== false && <AdditionalInfo config={config.additionalInfo} />}
       {config.insideBox && config.showInsideBox !== false && <InsideBox config={config.insideBox} />}
       {config.showCtaBanner !== false && <CTABanner config={config.ctaBanner} />}

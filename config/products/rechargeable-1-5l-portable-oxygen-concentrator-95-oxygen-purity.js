@@ -49,7 +49,6 @@ const product = {
     subtext: "See how the Oxliv 1-5L stacks up against other portable oxygen concentrators under $1000.",
     image: "https://static.wixstatic.com/media/8f1bc7_898630002b4e4d2aa53cf452a8440558~mv2.webp",
     imageAlt: "Oxliv 1-5L Portable Oxygen Concentrator",
-    buyLink: "#",
     rows: [
       { feature: "Filtration", ours: "6-layer advanced system", theirs: "No Filtration" },
       { feature: "O₂ Purity", ours: "Up to 95% high purity", theirs: "Average 35–60% Purity" },
