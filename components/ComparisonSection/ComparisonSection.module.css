@@ -84,4 +84,23 @@
   .right {
     order: -1;
   }
+
+  .heading {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 60px 20px;
+  }
+
+  .heading {
+    font-size: 22px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
