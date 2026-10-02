@@ -3,6 +3,9 @@ import { useState } from "react";
 import styles from "./ProductInfo.module.css";
 import UrgencyBar, { SoldCount } from "./UrgencyBar";
 import { useCart } from "@/lib/cartContext";
+import dynamic from "next/dynamic";
+
+const CountdownBanner = dynamic(() => import("@/components/CountdownBanner/CountdownBanner"), { ssr: false });
 
 
 
@@ -18,6 +21,7 @@ const defaultBullets = [
 export default function ProductInfo({ bullets: propBullets,
   productName, originalPrice, discountedPrice,
   discountPercent, options, variants, productId,
+  countdownBanner,
 }) {
   const bullets = propBullets || defaultBullets;
   const [selectedOptions, setSelectedOptions] = useState({});
@@ -100,6 +104,12 @@ export default function ProductInfo({ bullets: propBullets,
         <p className={styles.secureTitle}>100% Secure Checkout</p>
         <img src="https://static.wixstatic.com/media/20cc08_07f97ca4fab44dff946baa18b969876e~mv2.webp" alt="Secure Payment Methods" className={styles.paymentImg} />
       </div>
+
+      {countdownBanner && (
+        <div className={styles.countdownWrap}>
+          <CountdownBanner image={countdownBanner.image} imageAlt={countdownBanner.imageAlt} />
+        </div>
+      )}
 
     </div>
   );

@@ -20,7 +20,6 @@ const TrustedBy = dynamic(() => import("@/components/TrustedBy/TrustedBy"));
 const Reviews = dynamic(() => import("@/components/Reviews/Reviews"));
 const ProductFAQ = dynamic(() => import("@/components/ProductFAQ/ProductFAQ"));
 const ContactBar = dynamic(() => import("@/components/ContactBar/ContactBar"));
-const CountdownBanner = dynamic(() => import("@/components/CountdownBanner/CountdownBanner"));
 
 export default function ConcentratorTemplate({ product, mediaItems, config }) {
   const originalPrice = product.price?.price;
@@ -48,13 +47,13 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
               variants={variants}
               productId={product._id}
               bullets={config.productBullets}
+              countdownBanner={config.countdownBanner}
             />
           </div>
         </div>
       </div>
 
       {/* Below fold — lazy loaded */}
-      {config.countdownBanner && <CountdownBanner image={config.countdownBanner.image} imageAlt={config.countdownBanner.imageAlt} />}
       {config.productFeatures && <ProductFeatures config={config.productFeatures} />}
       {config.showWhySwitching !== false && <WhySwitching config={config.whySwitching} />}
       {config.oxygenOnTheGo && <OxygenOnTheGo config={config.oxygenOnTheGo} />}
