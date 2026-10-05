@@ -98,6 +98,23 @@ const product = {
     },
   ],
 
+  // ── BOX CONTENTS ──
+  boxContents: {
+    heading: "Everything You Need. Ready To Use.",
+    image: "https://static.wixstatic.com/media/8f1bc7_b379fd1fd92a4e93aff56ae1b3b34db5~mv2.webp",
+    items: [
+      "1-5L oxygen concentrator",
+      "Removable 6600mAh battery",
+      "Wall adapter",
+      "Car charging cable",
+      "Carry bag",
+      "Adjustable shoulder strap",
+      "Nasal cannulas",
+      "5x Extra Filter cotton",
+      "User manual",
+    ],
+  },
+
   // ── FINAL FEATURE SECTIONS (after DetailGrid) ──
   featureSectionsFinal: [
     {
