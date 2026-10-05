@@ -98,6 +98,20 @@ const product = {
     },
   ],
 
+  // ── POLICY ACCORDION ──
+  policyAccordion: {
+    items: [
+      {
+        label: "Free Shipping",
+        text: "All orders ship free within the United States. Your device leaves our facility the same or next business day. Standard delivery takes 8–11 business days. You will receive a tracking number by email once your order ships.",
+      },
+      {
+        label: "Disclaimer",
+        text: "This device is intended for general wellness, comfort, and lifestyle use only. It is not a medical device and is not designed to diagnose, treat, cure, or prevent any disease or health condition. It should not replace professional medical advice or any device prescribed by a healthcare provider. Consult a licensed physician before use.",
+      },
+    ],
+  },
+
   // ── FAQ WITH IMAGE ──
   faqWithImage: {
     heading: "Frequently Asked Questions",
