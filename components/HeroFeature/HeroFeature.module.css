@@ -2,8 +2,8 @@
 .section {
   width: 100%;
   min-height: 560px;
-  background-size: auto 100%;
-  background-position: right center;
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
