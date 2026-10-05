@@ -72,8 +72,8 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
       {config.featureVideo && <VideoSection config={config.featureVideo} />}
       {config.heroFeature && <HeroFeature config={config.heroFeature} />}
       {config.heroFeatures?.map((hf, i) => <HeroFeature key={i} config={hf} />)}
-      {config.featureSections?.map((fs, i) => <FeatureSection key={i} config={fs} />)}
       {config.alternatingFeature && <AlternatingFeature config={config.alternatingFeature} />}
+      {config.featureSections?.map((fs, i) => <FeatureSection key={i} config={fs} />)}
       {config.additionalInfo && config.showAdditionalInfo !== false && <AdditionalInfo config={config.additionalInfo} />}
       {config.insideBox && config.showInsideBox !== false && <InsideBox config={config.insideBox} />}
       {config.showCtaBanner !== false && <CTABanner config={config.ctaBanner} />}
