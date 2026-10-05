@@ -28,6 +28,7 @@ const AlternatingFeature = dynamic(() => import("@/components/AlternatingFeature
 const DetailGrid = dynamic(() => import("@/components/DetailGrid/DetailGrid"));
 const BoxContents = dynamic(() => import("@/components/BoxContents/BoxContents"));
 const TechSpecs = dynamic(() => import("@/components/TechSpecs/TechSpecs"));
+const FaqWithImage = dynamic(() => import("@/components/FaqWithImage/FaqWithImage"));
 
 export default function ConcentratorTemplate({ product, mediaItems, config }) {
   const originalPrice = product.price?.price;
@@ -82,6 +83,7 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
       {config.featureSectionsFinal?.map((fs, i) => <FeatureSection key={i} config={fs} />)}
       {config.boxContents && <BoxContents config={config.boxContents} />}
       {config.techSpecs && <TechSpecs config={config.techSpecs} />}
+      {config.faqWithImage && <FaqWithImage config={config.faqWithImage} />}
       {config.additionalInfo && config.showAdditionalInfo !== false && <AdditionalInfo config={config.additionalInfo} />}
       {config.insideBox && config.showInsideBox !== false && <InsideBox config={config.insideBox} />}
       {config.showCtaBanner !== false && <CTABanner config={config.ctaBanner} />}

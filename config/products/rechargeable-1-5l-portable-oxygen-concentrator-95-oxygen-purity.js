@@ -98,6 +98,43 @@ const product = {
     },
   ],
 
+  // ── FAQ WITH IMAGE ──
+  faqWithImage: {
+    heading: "Frequently Asked Questions",
+    subtext: "Short answers to the questions our support team hears every day.",
+    image: "https://static.wixstatic.com/media/8f1bc7_d726cff9495f4377a689bb9bc7ce0b36~mv2.webp",
+    faqs: [
+      {
+        question: "How long does the battery last on one charge?",
+        answer: "The single battery runs up to 6 hours depending on your flow level. The dual-battery option gives up to 12 hours total. You can swap batteries without shutting down.",
+      },
+      {
+        question: "How do I clean and maintain the filters?",
+        answer: "Wipe the outer filter with a dry cloth every week. Replace the filter cotton when airflow feels weaker. Five replacement filters come in the box, and the manual covers each step.",
+      },
+      {
+        question: "Can I use it while charging in the car?",
+        answer: "Yes. The included car cable plugs into any 12V port. The device runs and charges at the same time, so road trips and long drives stay covered without draining the battery.",
+      },
+      {
+        question: "How does Active mode respond when no breath is detected?",
+        answer: "Active mode can provide timed backup pulses when an inhalation is not detected. Once the device senses inhalation again, it returns to breath-triggered delivery. This helps maintain output during weaker or irregular breathing.",
+      },
+      {
+        question: "Does oxygen purity stay the same at every level?",
+        answer: "Oxygen purity changes by selected level. Levels 1 to 3 can reach up to 95% purity, while higher flow settings may provide lower concentration. Always choose the setting that matches your product guidance and personal needs.",
+      },
+      {
+        question: "How long can it remain in standby mode?",
+        answer: "Standby mode can last up to six hours, depending on battery condition and surrounding temperature. It is useful during pauses between use, but runtime may change with battery age, charging history, and operating conditions.",
+      },
+      {
+        question: "Can the battery be changed during a trip?",
+        answer: "The 6400mAh battery is removable and swappable. Carrying a charged spare lets you continue your plans after the first battery runs low. Runtime still depends on the selected level, output mode, temperature, and battery condition.",
+      },
+    ],
+  },
+
   // ── TECH SPECS ──
   techSpecs: {
     heading: "Technical Specifications",
