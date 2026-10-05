@@ -17,6 +17,21 @@ const product = {
   showTrustedBy: false,
   showContactBar: false,
 
+  // ── HERO FEATURE ──
+  heroFeature: {
+    heading: "Easy To Carry. Easy To Take Along.",
+    highlight: "Only 3.53 lb",
+    highlightColor: "#e05a3a",
+    subtext: "Lighter than half a gallon of water.",
+    subtextColor: "#58ACAF",
+    bullets: [
+      "Carry it over your shoulder with the included bag and adjustable strap.",
+      "Move from home to the car with one compact device.",
+    ],
+    bgImage: "https://static.wixstatic.com/media/8f1bc7_506cbb86ff434b3c8bc8fe195b69e89f~mv2.webp",
+    mobileImage: "https://static.wixstatic.com/media/8f1bc7_1d80c301e3d24a8291fce4941c71e6db~mv2.webp",
+  },
+
   // ── QUICK STATS ──
   quickStats: {
     items: [

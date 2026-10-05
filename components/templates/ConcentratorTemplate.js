@@ -22,6 +22,7 @@ const ProductFAQ = dynamic(() => import("@/components/ProductFAQ/ProductFAQ"));
 const ContactBar = dynamic(() => import("@/components/ContactBar/ContactBar"));
 const QuickStats = dynamic(() => import("@/components/QuickStats/QuickStats"));
 const ProductCompare = dynamic(() => import("@/components/ProductCompare/ProductCompare"));
+const HeroFeature = dynamic(() => import("@/components/HeroFeature/HeroFeature"));
 
 export default function ConcentratorTemplate({ product, mediaItems, config }) {
   const originalPrice = product.price?.price;
@@ -57,6 +58,7 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
 
       {/* Below fold — lazy loaded */}
       {config.quickStats && <QuickStats config={config.quickStats} />}
+      {config.heroFeature && <HeroFeature config={config.heroFeature} />}
       {config.productFeatures && config.showProductFeatures !== false && <ProductFeatures config={config.productFeatures} />}
       {config.showWhySwitching !== false && <WhySwitching config={config.whySwitching} />}
       {config.oxygenOnTheGo && config.showOxygenOnTheGo !== false && <OxygenOnTheGo config={config.oxygenOnTheGo} />}

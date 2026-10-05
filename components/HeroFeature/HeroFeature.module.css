@@ -1,0 +1,109 @@
+/* ── Desktop: full-width bg image, text on left ── */
+.section {
+  width: 100%;
+  min-height: 520px;
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 60px 60px 60px 80px;
+  position: relative;
+}
+
+.mobileImg {
+  display: none;
+}
+
+.textCol {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.highlight {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  color: #e05a3a;
+}
+
+.subtext {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #58ACAF;
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.bulletCard {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  color: #222;
+  line-height: 1.5;
+  max-width: 380px;
+}
+
+/* ── Mobile: stacked image then text ── */
+@media (max-width: 768px) {
+  .section {
+    background-image: none !important;
+    min-height: unset;
+    padding: 0;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mobileImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .textCol {
+    max-width: 100%;
+    padding: 32px 20px 40px;
+    background: #f5f7fa;
+    gap: 14px;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .highlight {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .subtext {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .bulletCard {
+    background: #e8eaf0;
+    max-width: 100%;
+    text-align: center;
+  }
+}
