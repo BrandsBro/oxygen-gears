@@ -83,33 +83,17 @@ const product = {
     disclaimer: "This is NOT a medical-grade oxygen device. Designed for comfort and low-flow support only. If you need prescribed oxygen therapy, consult your doctor.",
   },
 
-  // ── EXTRA HERO FEATURE SECTIONS (same HeroFeature design, different content) ──
-  heroFeatures: [
+  // ── FEATURE SECTIONS (centered heading + subtext + full-width infographic image) ──
+  featureSections: [
     {
       heading: "High Purity Starts At The Core",
-      highlight: "Up to 95% O₂ Purity",
-      highlightColor: "#58ACAF",
       subtext: "We wanted a compact device without making purity an afterthought. That's why we chose a high-efficiency molecular sieve. It delivers up to 95% oxygen purity at Levels 1–3. Purity changes with the output setting, reaching 70% at Level 4 and 60% at Level 5.",
-      subtextColor: "#555",
-      bullets: [
-        "Six-layer filtration system for consistent, clean output.",
-        "Molecular sieve captures nitrogen and concentrates oxygen reliably.",
-      ],
-      bgImage: "https://static.wixstatic.com/media/8f1bc7_24f883a543ed4af3986050667e7c7a9c~mv2.webp",
-      mobileImage: "https://static.wixstatic.com/media/8f1bc7_24f883a543ed4af3986050667e7c7a9c~mv2.webp",
+      image: "https://static.wixstatic.com/media/8f1bc7_24f883a543ed4af3986050667e7c7a9c~mv2.webp",
     },
     {
       heading: "Extra Power For The Extra Hours",
-      highlight: "6600mAh Battery",
-      highlightColor: "#58ACAF",
       subtext: "Enjoy up to six hours of use with the 6600mAh battery. For longer days out, swap in a charged spare and carry on without interruption. Runtime varies by the selected level, output mode, temperature, and battery condition.",
-      subtextColor: "#555",
-      bullets: [
-        "Swappable battery — never stop for a recharge.",
-        "Up to 6 hours of continuous runtime on a single charge.",
-      ],
-      bgImage: "https://static.wixstatic.com/media/8f1bc7_baac8587191b426bbf57b5bbcdab7af4~mv2.webp",
-      mobileImage: "https://static.wixstatic.com/media/8f1bc7_baac8587191b426bbf57b5bbcdab7af4~mv2.webp",
+      image: "https://static.wixstatic.com/media/8f1bc7_baac8587191b426bbf57b5bbcdab7af4~mv2.webp",
     },
   ],
 
