@@ -69,6 +69,7 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
       {config.videoSection && <VideoSection config={config.videoSection} />}
       {config.featureVideo && <VideoSection config={config.featureVideo} />}
       {config.heroFeature && <HeroFeature config={config.heroFeature} />}
+      {config.heroFeatures?.map((hf, i) => <HeroFeature key={i} config={hf} />)}
       {config.additionalInfo && config.showAdditionalInfo !== false && <AdditionalInfo config={config.additionalInfo} />}
       {config.insideBox && config.showInsideBox !== false && <InsideBox config={config.insideBox} />}
       {config.showCtaBanner !== false && <CTABanner config={config.ctaBanner} />}
