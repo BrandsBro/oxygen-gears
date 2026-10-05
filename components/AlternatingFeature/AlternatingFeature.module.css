@@ -1,11 +1,13 @@
 .section {
-  background: #eef2f7;
   padding: 60px 40px;
 }
 
 .inner {
   max-width: 1000px;
   margin: 0 auto;
+  background: #eef2f7;
+  border-radius: 16px;
+  padding: 48px;
 }
 
 .sectionHeading {
@@ -72,7 +74,12 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 40px 20px;
+    padding: 24px 16px;
+  }
+
+  .inner {
+    padding: 28px 20px;
+    border-radius: 12px;
   }
 
   .row,
