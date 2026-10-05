@@ -97,6 +97,25 @@ const product = {
     },
   ],
 
+  // ── ALTERNATING FEATURE (section heading + image/text alternating rows) ──
+  alternatingFeature: {
+    heading: "Two Modes: Breath-Triggered Oxygen With Timed Backup Support",
+    items: [
+      {
+        image: "https://static.wixstatic.com/media/8f1bc7_1911966eed804629ab1e927fc505bf3d~mv2.webp",
+        heading: "Pulse Mode: Oxygen As You Inhale",
+        subtext: "Each detected inhale triggers an oxygen pulse. Delivery pauses as you breathe out, then resumes with your next detected breath. This directs oxygen delivery to the inhalation phase.",
+        reverse: false,
+      },
+      {
+        image: "https://static.wixstatic.com/media/8f1bc7_f0604458e12048699156c4c32609e328~mv2.webp",
+        heading: "Active Mode: Backup When Breath Detection Pauses",
+        subtext: "If the device stops detecting inhalation, it switches to timed oxygen pulses. Once it detects your breath again, it returns to Pulse mode automatically.",
+        reverse: true,
+      },
+    ],
+  },
+
   // ── FEATURE VIDEO (text left, video right) ──
   featureVideo: {
     layout: "text-video",
