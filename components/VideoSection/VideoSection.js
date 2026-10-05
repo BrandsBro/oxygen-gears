@@ -4,7 +4,7 @@ import styles from "./VideoSection.module.css";
 export default function VideoSection({ config }) {
   if (!config) return null;
 
-  // layout: "stacked" (heading above, video below) | "side" (default, side-by-side)
+  // layout: "stacked" — centered heading above full-width video
   if (config.layout === "stacked") {
     return (
       <section className={styles.sectionStacked}>
@@ -25,6 +25,33 @@ export default function VideoSection({ config }) {
     );
   }
 
+  // layout: "text-video" — text on left, video on right
+  if (config.layout === "text-video") {
+    return (
+      <section className={styles.sectionTextVideo}>
+        <div className={styles.innerTextVideo}>
+          <div className={styles.textCol}>
+            <h2 className={styles.headingTV}>{config.heading}</h2>
+            {Array.isArray(config.subtext)
+              ? config.subtext.map((p, i) => <p key={i} className={styles.subtextTV}>{p}</p>)
+              : config.subtext && <p className={styles.subtextTV}>{config.subtext}</p>
+            }
+          </div>
+          <div className={styles.videoColTV}>
+            <video
+              src={config.videoUrl}
+              controls
+              playsInline
+              className={styles.video}
+              poster={config.poster}
+            />
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // layout: "side" (default) — video left, text right
   return (
     <section className={styles.section}>
       <div className={styles.inner}>

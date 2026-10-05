@@ -68,7 +68,18 @@ const product = {
     disclaimer: "This is NOT a medical-grade oxygen device. Designed for comfort and low-flow support only. If you need prescribed oxygen therapy, consult your doctor.",
   },
 
-  // ── VIDEO SECTION ──
+  // ── FEATURE VIDEO (text left, video right) ──
+  featureVideo: {
+    layout: "text-video",
+    heading: "Small Device. Smart Features.",
+    subtext: [
+      "Take a closer look at the details that make daily use easier. A clear display keeps important information easy to see, while two output modes support different patterns of use.",
+      "Six-layer filtration and flexible power options complete a compact design made for home, car rides, and time outside.",
+    ],
+    videoUrl: "https://video.wixstatic.com/video/8f1bc7_f57f5d52ea594ef78380d03ff9d21036/1080p/mp4/file.mp4",
+  },
+
+  // ── VIDEO SECTION (stacked — customer testimonial) ──
   videoSection: {
     layout: "stacked",
     heading: "Hear It From Someone Who Owns It",
