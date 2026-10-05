@@ -58,8 +58,6 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
 
       {/* Below fold — lazy loaded */}
       {config.quickStats && <QuickStats config={config.quickStats} />}
-      {config.heroFeature && <HeroFeature config={config.heroFeature} />}
-      {config.featureVideo && <VideoSection config={config.featureVideo} />}
       {config.productFeatures && config.showProductFeatures !== false && <ProductFeatures config={config.productFeatures} />}
       {config.showWhySwitching !== false && <WhySwitching config={config.whySwitching} />}
       {config.oxygenOnTheGo && config.showOxygenOnTheGo !== false && <OxygenOnTheGo config={config.oxygenOnTheGo} />}
@@ -69,6 +67,8 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
       {config.comparisonTable && config.showComparisonTable !== false && <ComparisonTable config={config.comparisonTable} productId={product._id} variantId={variants?.[0]?._id} />}
       {config.productCompare && <ProductCompare config={config.productCompare} productId={product._id} variantId={variants?.[0]?._id} />}
       {config.videoSection && <VideoSection config={config.videoSection} />}
+      {config.featureVideo && <VideoSection config={config.featureVideo} />}
+      {config.heroFeature && <HeroFeature config={config.heroFeature} />}
       {config.additionalInfo && config.showAdditionalInfo !== false && <AdditionalInfo config={config.additionalInfo} />}
       {config.insideBox && config.showInsideBox !== false && <InsideBox config={config.insideBox} />}
       {config.showCtaBanner !== false && <CTABanner config={config.ctaBanner} />}

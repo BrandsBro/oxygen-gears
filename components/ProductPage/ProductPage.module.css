@@ -35,6 +35,7 @@
   .inner {
     grid-template-columns: 1fr;
     gap: 0;
+    padding: 7px;
   }
 
   .left {
