@@ -84,12 +84,15 @@ const product = {
   },
 
   // ── FEATURE SECTIONS (centered heading + subtext + full-width infographic image) ──
-  featureSections: [
+  featureSectionsAfter: [
     {
       heading: "Five Levels. Oxygen Flow That Fits Your Day.",
       subtext: "One compact device gives you five adjustable output levels from 200 to 1,000 mL/min. Clear controls make each level easy to select. So you can change the output without dealing with a complicated setup.",
       image: "https://static.wixstatic.com/media/8f1bc7_22ebc624bbdb4c1796e0386937a358a5~mv2.webp",
     },
+  ],
+
+  featureSections: [
     {
       heading: "High Purity Starts At The Core",
       subtext: "We wanted a compact device without making purity an afterthought. That's why we chose a high-efficiency molecular sieve. It delivers up to 95% oxygen purity at Levels 1–3. Purity changes with the output setting, reaching 70% at Level 4 and 60% at Level 5.",
