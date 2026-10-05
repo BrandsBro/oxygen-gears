@@ -31,6 +31,21 @@
   overflow: hidden;
 }
 
+.imageWrapFull {
+  width: 100%;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.sectionFull {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sectionFull .header {
+  padding: 0 40px;
+}
+
 .img {
   display: block;
   width: 100%;

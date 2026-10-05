@@ -90,6 +90,12 @@ const product = {
       subtext: "One compact device gives you five adjustable output levels from 200 to 1,000 mL/min. Clear controls make each level easy to select. So you can change the output without dealing with a complicated setup.",
       image: "https://static.wixstatic.com/media/8f1bc7_22ebc624bbdb4c1796e0386937a358a5~mv2.webp",
     },
+    {
+      heading: "Seven Alerts. Clear Signals When It Matters.",
+      subtext: "Seven built-in alerts monitor key conditions while the device is running. Each alert helps you know when something needs attention, so you can respond quickly and use the device with greater confidence.",
+      image: "https://static.wixstatic.com/media/8f1bc7_eb747182f17e41e6915761af9b83faed~mv2.webp",
+      fullWidth: true,
+    },
   ],
 
   featureSections: [
