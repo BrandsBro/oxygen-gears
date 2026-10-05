@@ -98,6 +98,18 @@ const product = {
     },
   ],
 
+  // ── DETAIL GRID — "Every Detail Built With Purpose" ──
+  detailGrid: {
+    heading: "Every Detail Built With Purpose",
+    images: [
+      "https://static.wixstatic.com/media/8f1bc7_a184b9d3c8eb4cd19dfe21059d12d930~mv2.webp",
+      "https://static.wixstatic.com/media/8f1bc7_65b1a5ee7b564d818303d58bc5c493e4~mv2.webp",
+      "https://static.wixstatic.com/media/8f1bc7_4c4dd4399f7c4005886188735278364c~mv2.webp",
+      "https://static.wixstatic.com/media/8f1bc7_58b48ef398ff4b34b30cccace94ab7b3~mv2.webp",
+      "https://static.wixstatic.com/media/8f1bc7_683fe0854e9548129b80664e8a46aaaa~mv2.webp",
+    ],
+  },
+
   featureSections: [
     {
       heading: "High Purity Starts At The Core",
