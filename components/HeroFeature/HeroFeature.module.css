@@ -79,6 +79,20 @@
   color: #222;
   line-height: 1.5;
   max-width: 380px;
+  position: relative;
+}
+
+/* Left-pointing speech bubble tail */
+.bulletCard::after {
+  content: '';
+  position: absolute;
+  left: -14px;
+  top: 28px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 14px 12px 0;
+  border-color: transparent rgba(255, 255, 255, 0.88) transparent transparent;
 }
 
 /* ── Mobile: image normal flow, text stacks below ── */
@@ -125,5 +139,9 @@
     max-width: 100%;
     backdrop-filter: none;
     text-align: center;
+  }
+
+  .bulletCard::after {
+    display: none;
   }
 }
