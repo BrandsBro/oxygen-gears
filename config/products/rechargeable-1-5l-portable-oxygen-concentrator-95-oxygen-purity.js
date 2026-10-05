@@ -98,6 +98,43 @@ const product = {
     },
   ],
 
+  // ── TECH SPECS ──
+  techSpecs: {
+    heading: "Technical Specifications",
+    tabs: [
+      {
+        label: "Physical & Tech Details",
+        rows: [
+          { label: "Net Weight", value: "3.53 lb (1.6 kg) with single battery" },
+          { label: "Oxygen Flow", value: "Flow settings 1, 2, 3, 4, 5" },
+          { label: "Oxygen Concentration", value: ["95% at levels 1–3", "70% at level 4", "60% at level 5"] },
+          { label: "Maximum Oxygen Output", value: "1000 ml/min" },
+          { label: "Flow Mode", value: "Pulse Mode, Active Mode" },
+          { label: "Technology", value: "Pressure Swing Adsorption (PSA)" },
+          { label: "Sound", value: "≤49 dB" },
+          { label: "Filtration", value: "6-layer system with molecular sieve" },
+        ],
+      },
+      {
+        label: "Battery & Charging",
+        rows: [
+          { label: "Battery Running Time", value: "6600mAh" },
+          { label: "Single Battery Runtime", value: "Up to 6 hours" },
+          { label: "Charging Sources", value: "Wall adapter, car charging cable, USB-C" },
+          { label: "Swappable Battery", value: "Yes." },
+        ],
+      },
+      {
+        label: "Warranty",
+        rows: [
+          { label: "Warranty and Support", value: "1 year" },
+          { label: "Coverage", value: "Device defects and battery issues" },
+          { label: "Support", value: "24/7 customer support via email" },
+        ],
+      },
+    ],
+  },
+
   // ── BOX CONTENTS ──
   boxContents: {
     heading: "Everything You Need. Ready To Use.",

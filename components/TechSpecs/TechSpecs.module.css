@@ -1,0 +1,118 @@
+.section {
+  background: #f4f6f9;
+  padding: 60px 40px;
+}
+
+.heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #58ACAF;
+  text-align: center;
+  margin: 0 0 36px;
+  line-height: 1.25;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  border: 1px solid #dde2ea;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid #dde2ea;
+}
+
+.tab {
+  padding: 16px 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  background: #fff;
+  border: none;
+  border-right: 1px solid #dde2ea;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab:last-child {
+  border-right: none;
+}
+
+.tabActive {
+  background: #5b8db8;
+  color: #fff;
+}
+
+.table {
+  padding: 8px 0;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 32px;
+  border-bottom: 1px solid #eef0f4;
+  gap: 24px;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  flex: 0 0 220px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.5;
+}
+
+.value {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.valueLine {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 16px;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+
+  .tab {
+    font-size: 0.78rem;
+    padding: 12px 8px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 20px;
+  }
+
+  .label {
+    flex: none;
+    font-size: 0.85rem;
+  }
+
+  .value {
+    font-size: 0.85rem;
+  }
+}
