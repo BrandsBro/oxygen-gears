@@ -11,6 +11,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: start;
+  padding: 0 40px 60px;
 }
 
 /* LEFT — sticky so it stays in view while right side scrolls */
