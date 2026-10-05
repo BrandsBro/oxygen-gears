@@ -98,6 +98,14 @@ const product = {
     },
   ],
 
+  // ── FINAL FEATURE SECTIONS (after DetailGrid) ──
+  featureSectionsFinal: [
+    {
+      heading: "Goes Where Your Day Takes You",
+      image: "https://static.wixstatic.com/media/8f1bc7_37d9c0d0339c4dd2ac7fe48b42f9d03f~mv2.webp",
+    },
+  ],
+
   // ── DETAIL GRID — "Every Detail Built With Purpose" ──
   detailGrid: {
     heading: "Every Detail Built With Purpose",
