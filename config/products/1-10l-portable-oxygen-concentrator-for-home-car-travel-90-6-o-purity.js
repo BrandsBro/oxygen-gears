@@ -161,7 +161,7 @@ const product = {
     image: "https://thepurio.com/cdn/shop/files/17._FAQs_1.webp",
     faqs: [
       {
-        question: "What does "1–10L" mean?",
+        question: "What does '1–10L' mean?",
         answer: "The product name refers to ten selectable settings. It does not mean every level delivers its number in liters per minute. Rated output ranges from 0.15 L/min at P1 to 2 L/min at P10.",
       },
       {
