@@ -268,7 +268,7 @@ const product = {
   ],
 
   // ── REVIEWS ──
-  reviewsCsv: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRyh8SmXs3jKRu0WX3OYbdkalm0SmEPqlnGMWvyeuSCct9zAK1zDLd9lrSW0zbMoFc3KTmaxZe29eBu/pub?output=csv",
+  reviewsCsv: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSSAB-3aId6VM2dyAxg4vCnwIWpvwZqjwEspm3u2IjkI8-BL06U-kg5g3LDK3oYQhd_n4KDjh7Ixw5d/pub?output=csv",
 
   // ── BULLETS ──
   productBullets: [
