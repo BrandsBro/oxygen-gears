@@ -1,5 +1,15 @@
 const productTemplates = {
 
+  "1-3lmin-portable-oxygen-concentrator-10-12-hours-continuous-flow-battery-life": {
+    template: "concentrator",
+    config: () => import("@/config/products/1-3lmin-portable-oxygen-concentrator-10-12-hours-continuous-flow-battery-life"),
+  },
+
+  "1-10l-portable-oxygen-concentrator-for-home-car-travel-90-6-o-purity": {
+    template: "concentrator",
+    config: () => import("@/config/products/1-10l-portable-oxygen-concentrator-for-home-car-travel-90-6-o-purity"),
+  },
+
   "1to7l-portable-oxygen-concentrator": {
     template: "concentrator",
     config: () => import("@/config/products/1-7lmin-smart-portable-oxygen-concentrator-10-hours-battery-adjustable-flow"),
