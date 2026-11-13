@@ -16,6 +16,7 @@ export default function StoreHeader() {
   const menuButton = useRef(null);
   const shopButton = useRef(null);
   const pathname = usePathname();
+  const supportPhone = `tel:${brand.phone.replace(/[^+\d]/g, "")}`;
 
   function close() {
     clearTimeout(closeTimer.current);
@@ -103,9 +104,9 @@ export default function StoreHeader() {
           <Link href="/about" onClick={close}>About Us</Link>
           <Link href="/faq" onClick={close}>FAQs</Link>
           <Link href="/contact" onClick={close}>Contact</Link>
-          <Link href="/contact" onClick={close} className={styles.mobileSupport}>Talk to an expert</Link>
+          <a href={supportPhone} onClick={close} className={styles.mobileSupport}>Talk to an expert</a>
         </nav>
-        <Link href="/contact" onClick={close} className={styles.expert}>Talk to an expert</Link>
+        <a href={supportPhone} onClick={close} className={styles.expert}>Talk to an expert</a>
         <Link href={shop} onClick={close} className={styles.mobileShop}>Shop</Link>
       </div>
     </header>
