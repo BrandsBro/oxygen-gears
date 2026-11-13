@@ -2,10 +2,28 @@
 .bar { max-width: 1400px; margin: auto; min-height: 72px; padding: 0 clamp(16px,4vw,54px); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .logo { display: block; width: 112px; height: auto; }
 .nav { display: flex; align-items: center; gap: clamp(16px,2.2vw,32px); font-weight: 600; }
-.announcement { background: #0b2935; color: white; text-align: center; font-size: 13px; font-weight: 650; }
-.announcement a { display: inline-block; padding: 8px 16px; }
-.announcement a:hover { text-decoration: underline; }
-.announcement span { margin-left: 5px; }
+.announcement {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3px 0;
+  min-height: 37px;
+  padding: 6px 12px;
+  background: #107c73;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.announcementItem { padding-inline: 8px; }
+.announcementItem + .announcementItem { border-inline-start: 1px solid #ffffffb3; }
+.announcement a:hover, .announcement a:focus-visible { text-decoration: underline; }
+@media (max-width: 520px) {
+  .announcement { font-size: 12px; }
+  .announcementItem { padding-inline: 5px; }
+  .announcementItem:last-child { flex-basis: 100%; border: 0; }
+}
 .dropdown { display: flex; align-items: center; }
 .dropdown button, .mobileToggle { cursor: pointer; background: none; border: 0; color: inherit; font: inherit; }
 .dropdown button { height: 100%; padding: 12px 0; }

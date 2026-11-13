@@ -53,7 +53,9 @@ export default function StoreHeader() {
   return (
     <>
       <div className={styles.announcement}>
-        <Link href="/shipping-policy">Free USA shipping <span aria-hidden="true">→</span></Link>
+        <span className={styles.announcementItem}><span aria-hidden="true">✅</span> Trusted by 150k+ Customers</span>
+        <Link className={styles.announcementItem} href="/shipping-policy">Free Shipping</Link>
+        <Link className={styles.announcementItem} href="/contact">Phone &amp; Email Support Available</Link>
       </div>
     <header ref={root} className={styles.header} onKeyDown={(event) => {
       if (event.key !== "Escape") return;
