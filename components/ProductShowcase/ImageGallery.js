@@ -3,14 +3,15 @@ import { useState, useRef } from "react";
 import styles from "./ImageGallery.module.css";
 import Image from "next/image";
 
-export default function ImageGallery({ mediaItems = [], productName }) {
+export default function ImageGallery({ mediaItems = [], productName, numberedNavigation = false }) {
   const [selected, setSelected] = useState(0);
+  const zoomDialog = useRef(null);
   const mobileSliderRef = useRef(null);
 
   const handleMobileScroll = () => {
     if (!mobileSliderRef.current) return;
     const index = Math.round(
-      mobileSliderRef.current.scrollLeft / mobileSliderRef.current.offsetWidth
+      mobileSliderRef.current.scrollLeft / mobileSliderRef.current.clientWidth
     );
     setSelected(index);
   };
@@ -18,8 +19,8 @@ export default function ImageGallery({ mediaItems = [], productName }) {
   const scrollToIndex = (index) => {
     if (!mobileSliderRef.current) return;
     mobileSliderRef.current.scrollTo({
-      left: index * mobileSliderRef.current.offsetWidth,
-      behavior: "smooth",
+      left: index * mobileSliderRef.current.clientWidth,
+      behavior: numberedNavigation ? "instant" : "smooth",
     });
     setSelected(index);
   };
@@ -27,7 +28,18 @@ export default function ImageGallery({ mediaItems = [], productName }) {
   const current = mediaItems[selected];
 
   return (
-    <div className={styles.gallery}>
+    <div className={styles.gallery} data-numbered={numberedNavigation || undefined}>
+      {numberedNavigation && current?.type === "image" && (
+        <>
+          <button type="button" className={styles.zoom} aria-label="Enlarge product image" onClick={() => zoomDialog.current?.showModal()}>
+            <span aria-hidden="true">⌕</span>
+          </button>
+          <dialog ref={zoomDialog} className={styles.zoomDialog} aria-label="Enlarged product image">
+            <form method="dialog"><button aria-label="Close enlarged image">×</button></form>
+            <img src={current.url} alt={productName} />
+          </dialog>
+        </>
+      )}
 
       {/* DESKTOP Main */}
       <div className={styles.desktopMain}>
@@ -81,11 +93,17 @@ export default function ImageGallery({ mediaItems = [], productName }) {
       </div>
 
       {/* MOBILE Dots */}
-      <div className={styles.mobileDots}>
+      {numberedNavigation ? (
+        <div className={styles.mobileCounter}>
+          <button type="button" aria-label="Previous image" disabled={selected === 0} onClick={() => scrollToIndex(selected - 1)}>‹</button>
+          <span aria-live="polite">{selected + 1}/{mediaItems.length}</span>
+          <button type="button" aria-label="Next image" disabled={selected >= mediaItems.length - 1} onClick={() => scrollToIndex(selected + 1)}>›</button>
+        </div>
+      ) : <div className={styles.mobileDots}>
         {mediaItems.map((_, i) => (
           <button key={i} className={`${styles.dot} ${selected === i ? styles.dotActive : ""}`} onClick={() => scrollToIndex(i)} />
         ))}
-      </div>
+      </div>}
 
     </div>
   );

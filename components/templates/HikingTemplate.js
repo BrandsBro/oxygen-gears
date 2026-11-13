@@ -23,9 +23,10 @@ export default function HikingTemplate({ product, mediaItems, config }) {
       <ViewContentEvent productName={product.name} price={salePrice} productId={product._id} />
       <section id="hiking-product" className={styles.product}>
         {gallery.length > 0 && <div className={styles.gallery}>
-          <ImageGallery mediaItems={gallery} productName={title} />
+          <ImageGallery mediaItems={gallery} productName={title} numberedNavigation />
         </div>}
         <ProductInfo
+          presentation="hiking"
           productName={title}
           originalPrice={price}
           discountedPrice={salePrice}
@@ -50,17 +51,20 @@ export default function HikingTemplate({ product, mediaItems, config }) {
       {config.features?.map((feature) => {
         if (feature.banner) return <HeroFeature key={feature.id} config={feature.banner} />;
         return (
-          <section key={feature.id} className={`${styles.feature} ${feature.split ? styles.split : ""} ${feature.tint ? styles.tint : ""}`}>
-            {(feature.heading || feature.description) && <div>
-              {feature.heading && <h2>{feature.heading}</h2>}
-              {feature.description && <p>{feature.description}</p>}
-            </div>}
-            {feature.image && (
-              <picture>
-                {feature.mobileImage && <source media="(max-width: 767px)" srcSet={feature.mobileImage} />}
-                <img src={feature.image} alt={feature.alt ?? ""} loading="lazy" />
-              </picture>
-            )}
+          <section key={feature.id} className={`${styles.feature} ${feature.tint ? styles.tint : ""}`}>
+            {feature.panelHeading && <h2 className={styles.panelHeading}>{feature.panelHeading}</h2>}
+            <div className={`${feature.split ? styles.split : ""} ${feature.imageFirst ? styles.imageFirst : ""}`}>
+              {(feature.heading || feature.description) && <div className={styles.featureCopy}>
+                {feature.heading && <h2>{feature.heading}</h2>}
+                {feature.description && <p>{feature.description}</p>}
+              </div>}
+              {feature.image && (
+                <picture>
+                  {feature.mobileImage && <source media="(max-width: 767px)" srcSet={feature.mobileImage} />}
+                  <img src={feature.image} alt={feature.alt ?? ""} loading="lazy" />
+                </picture>
+              )}
+            </div>
           </section>
         );
       })}

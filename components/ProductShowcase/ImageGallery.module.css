@@ -153,3 +153,41 @@
   font-size: 10px;
   pointer-events: none;
 }
+
+.gallery[data-numbered] { position: relative; }
+.gallery[data-numbered] .desktopMain { border-radius: 7px; }
+.gallery[data-numbered] .desktopThumbs { gap: 8px; }
+.gallery[data-numbered] .thumb.active { border-color: #171717; }
+.mobileCounter { display: none; }
+.zoom {
+  position: absolute;
+  z-index: 1;
+  inset: 12px auto auto 12px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  background: white;
+  color: #333;
+  font-size: 24px;
+  cursor: pointer;
+}
+.zoomDialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  max-width: 92vw;
+  max-height: 92dvh;
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+}
+.zoomDialog::backdrop { background: rgb(0 0 0 / 75%); }
+.zoomDialog form { display: flex; justify-content: flex-end; }
+.zoomDialog button { padding: 0 10px; font-size: 24px; cursor: pointer; }
+.zoomDialog img { display: block; max-height: 78dvh; max-width: 100%; object-fit: contain; }
+@media (max-width: 768px) {
+  .mobileCounter { display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 13px; }
+  .mobileCounter button { min-width: 44px; min-height: 44px; font-size: 22px; cursor: pointer; }
+  .mobileCounter button:disabled { opacity: .35; cursor: default; }
+}

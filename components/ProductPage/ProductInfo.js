@@ -22,7 +22,7 @@ const defaultBullets = [
 export default function ProductInfo({ bullets: propBullets,
   productName, originalPrice, discountedPrice,
   discountPercent, options, variants, productId,
-  countdownBanner,
+  countdownBanner, presentation,
 }) {
   const bullets = propBullets || defaultBullets;
   const [selectedOptions, setSelectedOptions] = useState({});
@@ -46,12 +46,15 @@ export default function ProductInfo({ bullets: propBullets,
     }
   };
 
+  const formatPrice = (value) => presentation === "hiking"
+    ? value?.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+    : value?.toFixed(2);
   const currentDiscount = Math.round((1 - unitPrice / unitOriginal) * 100);
 
   return (
-    <div className={styles.info}>
+    <div className={styles.info} data-presentation={presentation}>
 
-      <h1 className={styles.title}>{productName}</h1>
+      <h1 className={styles.title} data-part="title">{productName}</h1>
 
       {/* Stars — clickable, scrolls to reviews */}
       <div className={styles.meta}>
@@ -63,13 +66,13 @@ export default function ProductInfo({ bullets: propBullets,
         <SoldCount />
       </div>
 
-      <div className={styles.priceRow}>
-        <span className={styles.original}>${unitOriginal?.toFixed(2)} USD</span>
-        <span className={styles.discounted}>${unitPrice?.toFixed(2)} USD</span>
-        {currentDiscount > 0 && <span className={styles.badge}>{currentDiscount}% OFF</span>}
+      <div className={styles.priceRow} data-part="priceRow">
+        <span className={styles.original} data-part="original">${formatPrice(unitOriginal)} USD</span>
+        <span className={styles.discounted} data-part="discounted">${formatPrice(unitPrice)} USD</span>
+        {currentDiscount > 0 && <span className={styles.badge} data-part="badge">{currentDiscount}% OFF</span>}
       </div>
 
-      <ul className={styles.bullets}>
+      <ul className={styles.bullets} data-part="bullets">
         {bullets.map((b, i) => <li key={i} className={styles.bullet}>• {b}</li>)}
       </ul>
 
@@ -97,7 +100,7 @@ export default function ProductInfo({ bullets: propBullets,
         </div>
       ))}
 
-      <button className={styles.shopNow} onClick={() => buyNow(productId, selectedVariantId, 1)} disabled={loading}>
+      <button className={styles.shopNow} data-part="shopNow" onClick={() => buyNow(productId, selectedVariantId, 1)} disabled={loading}>
         {loading ? "Processing..." : "Shop Now"}
       </button>
 

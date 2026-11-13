@@ -73,17 +73,14 @@ export default {
       mobileImage: cdn + "BATTERY_SECTION_3.webp",
     },
     {
-      id: "controls",
-      heading: "Three Levels. One Simple Button.",
-      image: base.featureSections[0].image,
-      tint: true,
-    },
-    {
       id: "carry",
+      panelHeading: "Three Levels. One Simple Button.",
       heading: "Ultra Lightweight Oxygen Support",
-      description: "At 1.1 lb, this model fits in the included adjustable carry bag for easy transport.",
+      description: "At just 1.1 lb, this compact concentrator is easy to pack for hikes, travel, or everyday outings. The included adjustable bag keeps it close at hand and leaves room for the rest of your gear.",
       image: cdn + "Lighter_Than_Your__Water_Bottle_1024x1024_5bb1bb54-df13-498f-956a-455bf45a7299.webp",
+      alt: "Hiker carrying the 1–3L concentrator in its adjustable bag",
       split: true,
+      imageFirst: true,
       tint: true,
     },
     {
