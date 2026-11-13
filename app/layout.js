@@ -1,6 +1,6 @@
 import "./globals.css";
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
+import StoreHeader from "@/components/StoreChrome/StoreHeader";
+import StoreFooter from "@/components/StoreChrome/StoreFooter";
 import { CartProvider } from "@/lib/cartContext";
 import brand from "@/config/brand";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -33,9 +33,9 @@ export default function RootLayout({ children }) {
         <CartProvider>
           <ScrollToTop />
           <RouteTracker />
-          <Navbar />
+          <StoreHeader />
           {children}
-          <Footer />
+          <StoreFooter />
         </CartProvider>
       </body>
     </html>
