@@ -18,6 +18,7 @@ const nextConfig = {
   },
   images: {
     remotePatterns: [
+      { protocol: "https", hostname: "thepurio.com", pathname: "/cdn/shop/files/**" },
       { protocol: "https", hostname: "static.wixstatic.com" },
       { protocol: "https", hostname: "video.wixstatic.com" },
     ],

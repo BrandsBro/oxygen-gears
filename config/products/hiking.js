@@ -1,0 +1,104 @@
+import base from "./1-3lmin-portable-oxygen-concentrator-10-12-hours-continuous-flow-battery-life";
+
+const cdn = "https://thepurio.com/cdn/shop/files/";
+
+export default {
+  title: "1–3L/Min Portable Oxygen Concentrator for Hiking, Trekking & Traveling",
+  gallery: [
+    "WhatsApp_Image_2026-11-13_at_04.55.40.jpg",
+    "T_0.webp",
+    "T_1_eb83bec3-e7c4-46a4-9bdd-22b87f193313.webp",
+    "WhatsAppImage2025-08-02at5.38.54AM_1.webp",
+    "WhatsApp_Image_2025-08-05_at_6.15.08_AM_2_2f85e6e4-a79f-422d-83e7-82049ce6ddf1_1.webp",
+    "Oxygen_Gear_Hero_Image_Mobile.webp",
+    "T_2_fab3229b-4c5d-4546-bfda-98615ea88c75.webp",
+    "T_7_0bd19053-53fd-4e52-b203-8c0c77eb5ece.webp",
+  ].map((file) => ({ type: "image", url: cdn + file })),
+  productBullets: [
+    "Three continuous-flow settings",
+    "Adjustable 1–3 L/min output",
+    "30% ±2% oxygen concentration",
+    "Up to 10–12 hours per charge",
+    "Lightweight 1.1 lb design",
+    "Quiet operation at ≤35 dB",
+    "Built-in anion function",
+    "Wall, vehicle, and battery power",
+    "Adjustable carry bag included",
+    "Free U.S. shipping",
+  ],
+  countdownBanner: base.countdownBanner,
+  quickStats: {
+    items: [
+      { icon: cdn + "Continuous_Flow_1.webp", title: "Continuous Flow", sub: "Steady output at all three settings." },
+      { icon: cdn + "Ultra-Light_Design.webp", title: "Ultra-Light Design", sub: "Weighs only 1.1 lb." },
+      { icon: cdn + "Extended_Battery.webp", title: "Extended Battery", sub: "Up to 12 hours per charge." },
+      { icon: cdn + "Quiet_Operation_2.webp", title: "Quiet Operation", sub: "Rated at 35 dB or less." },
+    ],
+  },
+  productCompare: {
+    ...base.productCompare,
+    heading: "Small Size. Serious Convenience.",
+    subtext: "Compare the weight, noise, battery life, and power options.",
+    image: cdn + "travel-oxygen-concentrator.png",
+  },
+  video: {
+    heading: "See It Fit Daily Life",
+    description: "Watch how the compact concentrator fits into an everyday routine.",
+    poster: cdn + "preview_images/80c6342ea30145a6a14e9d470dc06f8e.thumbnail.0000000000_1600x.jpg",
+    src: "https://thepurio.com/cdn/shop/videos/c/vp/80c6342ea30145a6a14e9d470dc06f8e/80c6342ea30145a6a14e9d470dc06f8e.SD-480p-1.5Mbps-98089061.mp4",
+  },
+  features: [
+    {
+      id: "trekking",
+      description: "The compact concentrator slips into its included carry bag. Simple controls and a rechargeable battery make it easy to take along on everyday outings.",
+      image: cdn + "oxygen_concentrator_for_trekking_efe7bd23-4711-4ec9-bd99-4328ccbe0aaa_1.webp",
+      split: true,
+    },
+    {
+      id: "airflow",
+      heading: "Three Settings. Steady Continuous Flow.",
+      description: "Choose from three settings with continuous output at approximately 30% ±2% oxygen concentration.",
+      image: cdn + "airflow-section-6ad56da3876ac.webp",
+      mobileImage: cdn + "AIRFLOW_SECTION_3.webp",
+    },
+    {
+      id: "weight",
+      banner: { ...base.heroFeature, heading: "Lighter Than Your Morning Coffee", subtext: "Only 1.1 lb / 0.5 kg" },
+    },
+    {
+      id: "battery",
+      heading: "Built for Longer Days",
+      description: "The 5600mAh battery provides up to 12 hours per charge. Runtime varies with the selected flow setting and operating conditions.",
+      image: cdn + "battery-section-1-6ad56da463588.webp",
+      mobileImage: cdn + "BATTERY_SECTION_3.webp",
+    },
+    {
+      id: "controls",
+      heading: "Three Levels. One Simple Button.",
+      image: base.featureSections[0].image,
+      tint: true,
+    },
+    {
+      id: "carry",
+      heading: "Ultra Lightweight Oxygen Support",
+      description: "At 1.1 lb, this model fits in the included adjustable carry bag for easy transport.",
+      image: cdn + "Lighter_Than_Your__Water_Bottle_1024x1024_5bb1bb54-df13-498f-956a-455bf45a7299.webp",
+      split: true,
+      tint: true,
+    },
+    {
+      id: "settings",
+      heading: "Find Your Preferred Flow",
+      description: "The control button lets you switch between the three available output settings.",
+      image: cdn + "oxygen-concentration-section-6ad56dad4a372.webp",
+      mobileImage: cdn + "Continuous_Flow_Made_Simple_4.webp",
+    },
+  ],
+  detailGrid: { ...base.detailGrid, heading: "Small Details. Easier Days." },
+  lifestyle: base.featureSectionsFinal[0],
+  boxContents: { ...base.boxContents, heading: "Packed for Everyday Use" },
+  techSpecs: base.techSpecs,
+  faqWithImage: base.faqWithImage,
+  policyAccordion: base.policyAccordion,
+  reviewsCsv: base.reviewsCsv,
+};

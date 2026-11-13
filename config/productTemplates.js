@@ -1,4 +1,9 @@
 const productTemplates = {
+  "1-3l-portable-oxygen-concentrator-for-hiking": {
+    template: "hiking",
+    productSlug: "1-3lmin-portable-oxygen-concentrator-10-12-hours-continuous-flow-battery-life",
+    config: () => import("@/config/products/hiking"),
+  },
 
   "1-3lmin-portable-oxygen-concentrator-10-12-hours-continuous-flow-battery-life": {
     template: "concentrator",

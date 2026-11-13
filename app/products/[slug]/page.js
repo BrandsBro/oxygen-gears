@@ -5,7 +5,10 @@ import productTemplates from "@/config/productTemplates";
 import ConcentratorTemplate from "@/components/templates/ConcentratorTemplate";
 import AccessoryTemplate from "@/components/templates/AccessoryTemplate";
 
+import HikingTemplate from "@/components/templates/HikingTemplate";
+
 const templates = {
+  hiking: HikingTemplate,
   concentrator: ConcentratorTemplate,
   accessory: AccessoryTemplate,
 };
@@ -13,16 +16,17 @@ const templates = {
 export default async function ProductPage({ params }) {
   const { slug } = await params;
 
+  const entry = productTemplates[slug];
   const { items } = await wixClient.products.queryProducts().find();
-  const product = items.find((p) => p.slug === slug);
+  const product = items.find((p) => p.slug === (entry?.productSlug ?? slug));
   if (!product) return notFound();
 
   let config = {};
   let templateName = "concentrator";
 
-  if (productTemplates[slug]) {
-    templateName = productTemplates[slug].template;
-    const mod = await productTemplates[slug].config();
+  if (entry) {
+    templateName = entry.template;
+    const mod = await entry.config();
     config = mod.default;
   }
 
@@ -52,5 +56,9 @@ export async function generateStaticParams() {
     auth: OAuthStrategy({ clientId: process.env.NEXT_PUBLIC_WIX_CLIENT_ID }),
   });
   const { items } = await client.products.queryProducts().find();
-  return items.map((p) => ({ slug: p.slug }));
+  const slugs = new Set(items.map((p) => p.slug));
+  for (const [slug, entry] of Object.entries(productTemplates)) {
+    if (entry.productSlug && slugs.has(entry.productSlug)) slugs.add(slug);
+  }
+  return [...slugs].map((slug) => ({ slug }));
 }
