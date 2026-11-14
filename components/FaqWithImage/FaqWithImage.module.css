@@ -128,3 +128,17 @@
     font-size: 1.4rem;
   }
 }
+
+@media (min-width: 769px) {
+  .inner[data-image-layout="balanced"] {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: clamp(24px, 4vw, 48px);
+    align-items: center;
+  }
+
+  .inner[data-image-layout="balanced"] .right {
+    width: 100%;
+    max-width: none;
+  }
+}

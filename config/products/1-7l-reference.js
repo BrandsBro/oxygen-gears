@@ -107,7 +107,7 @@ export default {
       ],
     },
     {
-      id: "faq", type: "faq", heading: "Frequently Asked Questions",
+      id: "faq", type: "faq", imageLayout: "balanced", heading: "Frequently Asked Questions",
       image: image("Frequently_Asked_Questions_1.webp"),
       faqs: product.productFaq.map(({ q, a }) => ({ question: q, answer: a })),
     },

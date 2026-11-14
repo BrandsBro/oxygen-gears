@@ -8,7 +8,7 @@ export default function FaqWithImage({ config }) {
 
   return (
     <section className={styles.section}>
-      <div className={styles.inner}>
+      <div className={styles.inner} data-image-layout={config.imageLayout}>
         <div className={styles.left}>
           {config.heading && <h2 className={styles.heading}>{config.heading}</h2>}
           {config.subtext && <p className={styles.subtext}>{config.subtext}</p>}
