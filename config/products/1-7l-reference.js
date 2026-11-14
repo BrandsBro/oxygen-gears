@@ -15,6 +15,11 @@ export default {
     "1_7LPortableproductpageT4.webp",
   ].map((file) => ({ type: "image", url: image(file) })),
   productBullets: product.productBullets,
+  countdownBanner: {
+    image: image("Early_Fall_Freedom_Sale_1200x.webp"),
+    imageAlt: "Early Fall Freedom Sale — 1–7L portable oxygen concentrator",
+    disclaimer: "This is NOT a medical-grade oxygen device. Designed for comfort and low-flow support only. If you need prescribed oxygen therapy, consult your doctor.",
+  },
   sections: [
     {
       id: "quick-stats", type: "stats",

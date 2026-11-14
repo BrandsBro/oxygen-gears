@@ -47,6 +47,7 @@ export default function ReferenceProductTemplate({ product, mediaItems, config }
           productId={product._id}
           bullets={config.productBullets ?? []}
           presentation="hiking"
+          countdownBanner={config.countdownBanner}
         />
       </section>
       {config.sections.map((section) => {
