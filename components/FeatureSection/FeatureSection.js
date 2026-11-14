@@ -10,7 +10,10 @@ export default function FeatureSection({ config }) {
         {config.subtext && <p className={styles.subtext}>{config.subtext}</p>}
       </div>
       <div className={config.fullWidth ? styles.imageWrapFull : styles.imageWrap}>
-        <img src={config.image} alt={config.heading} className={styles.img} loading="lazy" />
+        <picture>
+          {config.mobileImage && <source media="(max-width: 767px)" srcSet={config.mobileImage} />}
+          <img src={config.image} alt={config.heading} className={styles.img} loading="lazy" />
+        </picture>
       </div>
     </section>
   );

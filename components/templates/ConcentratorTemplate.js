@@ -45,7 +45,7 @@ export default function ConcentratorTemplate({ product, mediaItems, config }) {
       <div className={styles.page}>
         <div className={styles.inner}>
           <div className={styles.left}>
-            <ImageGallery mediaItems={mediaItems} productName={product.name} />
+            <ImageGallery mediaItems={config.gallery?.length ? config.gallery : mediaItems} productName={product.name} />
           </div>
           <div className={styles.right}>
             <ProductInfo
