@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./ProductActions.module.css";
 import Link from "next/link";
 import brand from "@/config/brand";
+import TrustBadges from "@/components/TrustBadges/TrustBadges";
 import { useCart } from "@/lib/cartContext";
 import UrgencyBar, { SoldCount } from "@/components/ProductPage/UrgencyBar";
 
@@ -100,6 +101,9 @@ export default function ProductActions({
       <div className={styles.secureBox}>
         <img src={brand.secureCheckoutImage} alt="Secure Payment" className={styles.paymentImg} />
       </div>
+
+      <TrustBadges />
+      <p style={{ fontSize: "0.85rem", lineHeight: 1.5, marginTop: 16 }}><em>{brand.productDisclaimer}</em></p>
 
       <Link href={`/products/${brand.featuredProductSlug}`} className={styles.viewDetails}>
         View full details →

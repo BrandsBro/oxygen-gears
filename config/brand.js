@@ -1,5 +1,6 @@
 const brand = {
   name: "Oxliv",
+  productDisclaimer: "This is NOT a medical-grade oxygen device. Designed for comfort and low-flow support only. If you need prescribed oxygen therapy, consult your doctor.",
   secureCheckoutImage: "https://cdn.shopify.com/s/files/1/0959/6200/5785/files/thepurio-secure-checkout.png?v=1794613865",
   logo: "https://static.wixstatic.com/media/8f1bc7_d7500b59abbf4ac988b49d4c57d60764~mv2.webp",
   favicon: "https://static.wixstatic.com/media/8f1bc7_b51c60cd7d684b8cab86c8ae53d51ae0~mv2.webp",

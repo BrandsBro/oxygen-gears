@@ -105,22 +105,19 @@ export default function ProductInfo({ bullets: propBullets,
         {loading ? "Processing..." : "Shop Now"}
       </button>
 
-      {countdownBanner && (
-        <>
-          {countdownBanner.disclaimer && (
-            <p className={styles.disclaimer}>{countdownBanner.disclaimer}</p>
-          )}
-          <div className={styles.countdownWrap}>
-            <CountdownBanner image={countdownBanner.image} imageAlt={countdownBanner.imageAlt} />
-          </div>
-        </>
-      )}
-
       <div className={styles.secureBox}>
         <img src={brand.secureCheckoutImage} alt="Secure Payment Methods" className={styles.paymentImg} />
       </div>
 
       <TrustBadges />
+
+      <p className={styles.disclaimer}><em>{brand.productDisclaimer}</em></p>
+
+      {countdownBanner && (
+        <div className={styles.countdownWrap}>
+          <CountdownBanner image={countdownBanner.image} imageAlt={countdownBanner.imageAlt} />
+        </div>
+      )}
 
     </div>
   );
