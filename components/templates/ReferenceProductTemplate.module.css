@@ -1,0 +1,39 @@
+.page { background: white; color: #303030; }
+.product {
+  display: grid;
+  grid-template-columns: minmax(0, 48fr) minmax(0, 52fr);
+  align-items: start;
+  gap: clamp(24px, 4vw, 50px);
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  scroll-margin-top: 90px;
+}
+.gallery { min-width: 0; position: sticky; top: 90px; }
+.product [data-part="title"] { font-size: clamp(26px, 2.8vw, 38px); font-weight: 750; line-height: 1.15; }
+.product [data-part="original"] { color: #333; font-weight: 700; }
+.product [data-part="priceRow"] { gap: 12px; }
+.product [data-part="bullets"] { font-size: 16px; line-height: 1.55; }
+.product [data-part="shopNow"] { background: #25ba9c; color: #092821; }
+.section { max-width: 1200px; margin: 0 auto; padding: 48px 40px; text-align: center; }
+.copy { max-width: 1000px; margin: 0 auto 24px; }
+.copy h2 { font-size: clamp(26px, 3vw, 34px); font-weight: 750; line-height: 1.2; }
+.copy p { max-width: 78ch; margin: 14px auto 0; color: #5b6471; font-size: 16px; line-height: 1.65; }
+.media { display: block; width: 100%; height: auto; border-radius: 12px; margin: 0 auto; }
+video.media { max-width: 850px; max-height: 660px; background: #111; }
+.split { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 50px; align-items: center; text-align: left; }
+.split .copy { margin: 0; }
+.split .copy p { margin-left: 0; }
+.split > picture, .split > video { order: -1; }
+.reverse > picture, .reverse > video { order: 1; }
+@media (max-width: 767px) {
+  .product { display: block; padding: 40px 20px; }
+  .gallery { position: static; max-width: 330px; margin-bottom: 22px; }
+  .product [data-part="title"] { font-size: 26px; }
+  .product [data-part="priceRow"] { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .section { padding: 30px 20px; }
+  .split { grid-template-columns: minmax(0,1fr); gap: 24px; text-align: center; }
+  .split .copy { order: 1; }
+  .split > picture, .split > video { order: 0; }
+  .split .copy p { margin-inline: auto; }
+}

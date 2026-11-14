@@ -16,8 +16,8 @@ const productTemplates = {
   },
 
   "1to7l-portable-oxygen-concentrator": {
-    template: "concentrator",
-    config: () => import("@/config/products/1-7l-concentrator-layout"),
+    template: "reference",
+    config: () => import("@/config/products/1-7l-reference"),
   },
 
   "rechargeable-1-5l-portable-oxygen-concentrator-95-oxygen-purity": {

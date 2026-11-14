@@ -7,7 +7,10 @@ import AccessoryTemplate from "@/components/templates/AccessoryTemplate";
 
 import HikingTemplate from "@/components/templates/HikingTemplate";
 
+import ReferenceProductTemplate from "@/components/templates/ReferenceProductTemplate";
+
 const templates = {
+  reference: ReferenceProductTemplate,
   hiking: HikingTemplate,
   concentrator: ConcentratorTemplate,
   accessory: AccessoryTemplate,
