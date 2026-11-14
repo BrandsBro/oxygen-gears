@@ -26,7 +26,8 @@
 }
 .dropdown { display: flex; align-items: center; }
 .dropdown button, .mobileToggle { cursor: pointer; background: none; border: 0; color: inherit; font: inherit; }
-.dropdown button { height: 100%; padding: 12px 0; }
+.shopLink { display: flex; align-items: center; padding-block: 12px; }
+.dropdown button { height: 100%; min-width: 32px; padding: 12px 6px; }
 .dropdown button span { display: inline-block; margin-left: 3px; transition: transform 180ms ease; }
 .dropdown button[aria-expanded="true"] span { transform: rotate(180deg); }
 .dropdown button[aria-expanded="true"] { color: #10796e; box-shadow: inset 0 -3px #10796e; }
@@ -35,8 +36,6 @@
 .productCards a { display: grid; gap: 10px; text-align: center; line-height: 1.35; font-size: 14px; }
 .productCards a:hover span, .productCards a:focus-visible span { text-decoration: underline; }
 .productCards img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; background: #f2f8f7; }
-.shopAll { display: block; width: fit-content; margin: 14px auto 0; padding: 6px 12px; color: #17696e; }
-.shopAll:hover { text-decoration: underline; }
 @media (min-width: 861px) {
   .nav { align-self: stretch; }
   .dropdown { align-self: stretch; }
@@ -84,9 +83,9 @@
   .nav { display: none; position: absolute; inset: 100% 0 auto; background: white; border-bottom: 1px solid #dce8e7; padding: 12px 20px; max-height: 75dvh; overflow: auto; }
   .nav[data-open="true"] { display: grid; gap: 0; }
   .nav > a { padding: 12px 0; }
-  .dropdown { display: block; }
+  .dropdown { display: flex; flex-wrap: wrap; }
   .dropdown button { height: auto; }
-  .models { display: none; padding: 10px 0; }
+  .models { display: none; padding: 10px 0; flex-basis: 100%; }
   .models[data-open="true"] { display: block; }
   .productCards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .productCards a { font-size: 13px; }

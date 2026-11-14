@@ -82,11 +82,11 @@ export default function StoreHeader() {
             onBlur={(event) => {
               if (!event.currentTarget.contains(event.relatedTarget) && !event.currentTarget.matches(":hover")) setProducts(false);
             }}>
-            <button ref={shopButton} type="button" aria-expanded={products} aria-controls="store-models"
-              onClick={(event) => {
-                if (event.detail && window.matchMedia("(min-width: 861px) and (hover: hover)").matches) setProducts(true);
-                else setProducts((open) => !open);
-              }}>Shop <span aria-hidden="true">⌄</span></button>
+            <Link href={shop} onClick={close} className={styles.shopLink}>Shop</Link>
+            <button ref={shopButton} type="button" aria-label="Show Shop products" aria-expanded={products} aria-controls="store-models"
+              onClick={() => setProducts((open) => !open)}>
+              <span aria-hidden="true">⌄</span>
+            </button>
             <div id="store-models" className={styles.models} data-open={products} inert={!products}>
               <ul className={styles.productCards}>
                 {models.map(([label, href, image]) => (
@@ -98,7 +98,6 @@ export default function StoreHeader() {
                   </li>
                 ))}
               </ul>
-              <Link href={shop} onClick={close} className={styles.shopAll}>Shop All <span aria-hidden="true">→</span></Link>
             </div>
           </div>
           <Link href="/about" onClick={close}>About Us</Link>
